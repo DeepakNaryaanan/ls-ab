@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.psoriasis.com/",
+  "path": "index",
+  "timestamp": "2026-03-11T06:37:10.047Z",
+  "title": "Learn About Psoriasis & How to Manage It | psoriasisSPEAKS",
+  "template": "homepage",
+  "blocks": [
+    "hero",
+    "columns",
+    "cards"
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.psoriasis.com/"
+      ],
+      "description": "Main landing page with hero banner, interactive poll widget, doctor finder CTA section, and 3-card recommended resources grid",
+      "blocks": [
+        {
+          "name": "hero",
+          "instances": [".abbv-container.flat-bbg.red-pale"]
+        },
+        {
+          "name": "columns",
+          "instances": [".abbv-definition-block.abbv-find-the-right-doctor"]
+        },
+        {
+          "name": "cards",
+          "instances": [".abbv-row-container.target-rcmd-touts"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1-hero",
+          "name": "Hero Banner",
+          "selector": ".abbv-container.flat-bbg.red-pale",
+          "style": "warm-peach",
+          "blocks": ["hero"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2-poll",
+          "name": "Quick Poll",
+          "selector": ".abbv-quick-poll.qp-home",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [".abbv-quick-poll .abbv-question", ".abbv-quick-poll .qPoll-options"]
+        },
+        {
+          "id": "section-3-doctor",
+          "name": "Find the Right Doctor",
+          "selector": ".abbv-definition-block.abbv-find-the-right-doctor",
+          "style": "dark-teal",
+          "blocks": ["columns"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4-resources",
+          "name": "Recommended Topics & Resources",
+          "selector": ".abbv-background-container.recommended",
+          "style": null,
+          "blocks": ["cards"],
+          "defaultContent": [".abbv-title h2", "a.abbv-button-plain.custom-link"]
+        }
+      ]
+    },
+    {
+      "name": "article-page",
+      "urls": [
+        "https://www.psoriasis.com/about-psoriasis/what-is-psoriasis",
+        "https://www.psoriasis.com/about-psoriasis/psoriasis-types",
+        "https://www.psoriasis.com/about-psoriasis/psoriasis-symptoms",
+        "https://www.psoriasis.com/about-psoriasis/psoriasis-joint-pain",
+        "https://www.psoriasis.com/about-psoriasis/symptoms-quiz",
+        "https://www.psoriasis.com/about-psoriasis/psoriasis-causes",
+        "https://www.psoriasis.com/about-psoriasis/psoriasis-inflammation",
+        "https://www.psoriasis.com/about-psoriasis/psoriasis-severity",
+        "https://www.psoriasis.com/about-psoriasis/psoriasis-pictures",
+        "https://www.psoriasis.com/psoriasis-treatment-doctor/psoriasis-diagnosis",
+        "https://www.psoriasis.com/psoriasis-treatment-doctor/psoriasis-treatment-options",
+        "https://www.psoriasis.com/psoriasis-treatment-doctor/talk-to-doctor-treatment-goals",
+        "https://www.psoriasis.com/psoriasis-treatment-doctor/find-a-psoriasis-specialist",
+        "https://www.psoriasis.com/psoriasis-treatment-doctor/questions-to-ask-your-doctor",
+        "https://www.psoriasis.com/psoriasis-treatment-doctor/dermatologist-visit",
+        "https://www.psoriasis.com/psoriasis-treatment-doctor/find-a-dermatologist",
+        "https://www.psoriasis.com/living-with-psoriasis/psoriasis-diet-exercise",
+        "https://www.psoriasis.com/living-with-psoriasis/psoriasis-and-stress",
+        "https://www.psoriasis.com/living-with-psoriasis/psoriasis-myths",
+        "https://www.psoriasis.com/living-with-psoriasis/psoriasis-kit",
+        "https://www.psoriasis.com/psoriasis-patients/psoriasis-community",
+        "https://www.psoriasis.com/psoriasis-patients/psoriasis-patient-stories",
+        "https://www.psoriasis.com/psoriasis-patients/psoriasis-support"
+      ],
+      "description": "Standard content page with H1 title, rich body content (text, images, callout boxes), and a Recommended Topics & Resources section with 3 cards at the bottom",
+      "blocks": [
+        {
+          "name": "cards",
+          "instances": [".abbv-row-container.target-rcmd-touts"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1-title",
+          "name": "Page Title",
+          "selector": ".abbv-background-container.wave-bbg",
+          "style": "warm-yellow",
+          "blocks": [],
+          "defaultContent": ["h1"]
+        },
+        {
+          "id": "section-2-content",
+          "name": "Main Content",
+          "selector": ".abbv-row-container.psoriasis.page-main-content",
+          "style": null,
+          "blocks": [],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3-resources",
+          "name": "Recommended Topics & Resources",
+          "selector": [".abbv-background-container.recommended", ".abbv-row-container.target-rcmd-touts"],
+          "style": null,
+          "blocks": ["cards"],
+          "defaultContent": [".abbv-title h2", "a.abbv-button-plain.custom-link"]
+        }
+      ]
+    },
+    {
+      "name": "listing-page",
+      "urls": [
+        "https://www.psoriasis.com/psoriasis-patients/tips"
+      ],
+      "description": "Article listing page with intro text and a multi-row grid of article cards (image + title + description), organized into groups of 6",
+      "blocks": []
+    },
+    {
+      "name": "utility-page",
+      "urls": [
+        "https://www.psoriasis.com/sitemap",
+        "https://www.psoriasis.com/search-results"
+      ],
+      "description": "Utility pages for site navigation (sitemap) and search functionality",
+      "blocks": []
+    }
+  ]
+}

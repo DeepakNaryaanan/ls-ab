@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.psoriasis.com/about-psoriasis/psoriasis-severity",
+  "path": "about-psoriasis/psoriasis-severity",
+  "timestamp": "2026-03-11T06:50:54.426Z",
+  "title": "Mild, Moderate, and Severe Psoriasis | psoriasisSPEAKS",
+  "template": "article-page",
+  "blocks": [
+    "cards"
+  ]
+}
