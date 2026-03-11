@@ -31,6 +31,29 @@ footer {
   footer {
     margin: 0;
 
+    .section:not(.section-legal, .section-copyright) {
+      .default-content {
+        columns: 4;
+        column-gap: var(--spacing-xl);
+      }
+
+      h5 {
+        break-after: avoid;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        break-before: avoid;
+        break-inside: avoid;
+      }
+
+      li {
+        margin-block: 8px;
+      }
+    }
+
     .section-legal {
       display: flex;
       justify-content: end;
