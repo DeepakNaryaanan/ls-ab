@@ -2,62 +2,40 @@
 /* global WebImporter */
 
 // PARSER IMPORTS
-import heroProductParser from './parsers/hero-product.js';
+import columnsNutritionParser from './parsers/columns-nutrition.js';
+import accordionFaqParser from './parsers/accordion-faq.js';
 import cardsNavigationParser from './parsers/cards-navigation.js';
+import embedReviewsParser from './parsers/embed-reviews.js';
 
 // TRANSFORMER IMPORTS
 import cleanupTransformer from './transformers/ensure-cleanup.js';
 import sectionsTransformer from './transformers/ensure-sections.js';
 
-// PAGE TEMPLATE CONFIGURATION
-const PAGE_TEMPLATE = {
-  name: 'homepage',
-  description: 'Main landing page with hero banner, product highlights, and nutrition information',
-  urls: [
-    'https://www.ensure.com/home',
-  ],
-  blocks: [
-    {
-      name: 'hero-product',
-      instances: ['.o-hero-carousel.o-hero-carousel--tall'],
-    },
-    {
-      name: 'cards-navigation',
-      instances: ['.col-12.col-md-6.col-lg-2.columncontrol__column .m-card.m-card--large'],
-    },
-  ],
-  sections: [
-    {
-      id: 'section-1-hero',
-      name: 'Hero Banner',
-      selector: '.o-hero-carousel.o-hero-carousel--tall',
-      style: 'navy-blue',
-      blocks: ['hero-product'],
-      defaultContent: [],
-    },
-    {
-      id: 'section-2-cards',
-      name: 'Category Cards Row',
-      selector: '#hero-card-row',
-      style: null,
-      blocks: ['cards-navigation'],
-      defaultContent: [],
-    },
-    {
-      id: 'section-3-disclaimer',
-      name: 'Disclaimer Footnotes',
-      selector: '.text.a-text--fg.a-text--fg-alternate',
-      style: null,
-      blocks: [],
-      defaultContent: ['#text-7ad575eb2c p'],
-    },
-  ],
-};
-
 // PARSER REGISTRY
 const parsers = {
-  'hero-product': heroProductParser,
+  'columns-nutrition': columnsNutritionParser,
+  'accordion-faq': accordionFaqParser,
   'cards-navigation': cardsNavigationParser,
+  'embed-reviews': embedReviewsParser,
+};
+
+// PAGE TEMPLATE CONFIGURATION
+const PAGE_TEMPLATE = {
+  name: 'product-line-page',
+  description: 'Product line overview page showcasing a specific Ensure product variant with nutrition info and flavor options',
+  blocks: [
+    { name: 'columns-nutrition', instances: ['.columncontrol.column-align--left .columncontrol__column'] },
+    { name: 'accordion-faq', instances: ['.accordion.panelcontainer'] },
+    { name: 'cards-navigation', instances: ['.m-card.m-card--large'] },
+    { name: 'embed-reviews', instances: ['#SEO_BVRRSummaryContainer, #BVRRContainer'] },
+  ],
+  sections: [
+    { id: 'section-1-product', name: 'Product Detail', selector: '.columncontrol.column-align--left', style: null, blocks: ['columns-nutrition'], defaultContent: ['h1', 'h3'] },
+    { id: 'section-2-nutrition', name: 'Nutritional Facts & Ingredients', selector: '.columncontrol.column-align--space-evenly', style: 'dark-header', blocks: ['columns-nutrition'], defaultContent: ['h2'] },
+    { id: 'section-3-faq', name: 'Related FAQs', selector: '.accordion.panelcontainer', style: null, blocks: ['accordion-faq'], defaultContent: [] },
+    { id: 'section-4-cards', name: 'Related Content Cards', selector: ['.m-card.m-card--large'], style: null, blocks: ['cards-navigation'], defaultContent: [] },
+    { id: 'section-5-reviews', name: 'Product Reviews', selector: '#SEO_BVRRSummaryContainer', style: 'dark-header', blocks: ['embed-reviews'], defaultContent: [] },
+  ],
 };
 
 // TRANSFORMER REGISTRY
@@ -66,15 +44,8 @@ const transformers = [
   ...(PAGE_TEMPLATE.sections && PAGE_TEMPLATE.sections.length > 1 ? [sectionsTransformer] : []),
 ];
 
-/**
- * Execute all page transformers for a specific hook
- */
 function executeTransformers(hookName, element, payload) {
-  const enhancedPayload = {
-    ...payload,
-    template: PAGE_TEMPLATE,
-  };
-
+  const enhancedPayload = { ...payload, template: PAGE_TEMPLATE };
   transformers.forEach((transformerFn) => {
     try {
       transformerFn.call(null, hookName, element, enhancedPayload);
@@ -84,12 +55,8 @@ function executeTransformers(hookName, element, payload) {
   });
 }
 
-/**
- * Find all blocks on the page based on the embedded template configuration
- */
 function findBlocksOnPage(document, template) {
   const pageBlocks = [];
-
   template.blocks.forEach((blockDef) => {
     blockDef.instances.forEach((selector) => {
       const elements = document.querySelectorAll(selector);
@@ -97,16 +64,10 @@ function findBlocksOnPage(document, template) {
         console.warn(`Block "${blockDef.name}" selector not found: ${selector}`);
       }
       elements.forEach((element) => {
-        pageBlocks.push({
-          name: blockDef.name,
-          selector,
-          element,
-          section: blockDef.section || null,
-        });
+        pageBlocks.push({ name: blockDef.name, selector, element, section: blockDef.section || null });
       });
     });
   });
-
   console.log(`Found ${pageBlocks.length} block instances on page`);
   return pageBlocks;
 }
@@ -114,16 +75,12 @@ function findBlocksOnPage(document, template) {
 export default {
   transform: (payload) => {
     const { document, url, html, params } = payload;
-
     const main = document.body;
 
-    // 1. Execute beforeTransform transformers (initial cleanup)
     executeTransformers('beforeTransform', main, payload);
 
-    // 2. Find blocks on page using embedded template
     const pageBlocks = findBlocksOnPage(document, PAGE_TEMPLATE);
 
-    // 3. Parse each block using registered parsers
     pageBlocks.forEach((block) => {
       const parser = parsers[block.name];
       if (parser) {
@@ -137,17 +94,14 @@ export default {
       }
     });
 
-    // 4. Execute afterTransform transformers (final cleanup + section breaks)
     executeTransformers('afterTransform', main, payload);
 
-    // 5. Apply WebImporter built-in rules
     const hr = document.createElement('hr');
     main.appendChild(hr);
     WebImporter.rules.createMetadata(main, document);
     WebImporter.rules.transformBackgroundImages(main, document);
     WebImporter.rules.adjustImageUrls(main, url, params.originalURL);
 
-    // 6. Generate sanitized path
     let path = new URL(params.originalURL).pathname
       .replace(/\/$/, '')
       .replace(/\.html$/, '');

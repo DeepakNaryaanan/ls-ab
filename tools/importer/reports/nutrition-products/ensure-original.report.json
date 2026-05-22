@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/nutrition-products/ensure-original",
+  "path": "nutrition-products/ensure-original",
+  "timestamp": "2026-05-22T10:07:04.074Z",
+  "title": "Ensure® Original | Complete Nutrition Shakes | Milk Chocolate",
+  "template": "product-line-page",
+  "blocks": [
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "accordion-faq",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "embed-reviews",
+    "embed-reviews"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/nutrition-products/ensure-enlive-advanced-nutrition-shake",
+  "path": "nutrition-products/ensure-enlive-advanced-nutrition-shake",
+  "timestamp": "2026-05-22T10:08:27.190Z",
+  "title": "Ensure® Enlive Chocolate | Protein Shake for Muscle Health| Ensure®",
+  "template": "product-line-page",
+  "blocks": [
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "accordion-faq",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "embed-reviews",
+    "embed-reviews"
+  ]
+}

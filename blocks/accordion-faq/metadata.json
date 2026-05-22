@@ -1,0 +1,40 @@
+{
+  "variantName": "accordion-faq",
+  "baseBlock": "accordion",
+  "version": "1.0.0",
+  "created": "2026-05-22T09:52:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.ensure.com/nutrition-products/ensure-original",
+    "originPage": "product line page - related FAQs section",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "product-faq",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "3 expandable question/answer pairs",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product FAQ sections",
+      "frequently asked questions pages",
+      "support/help content with expandable answers",
+      "product information Q&A"
+    ],
+    "notSuitableFor": [
+      "navigation or category accordions",
+      "image-rich expandable content",
+      "accordion with forms or interactive elements inside"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/nutrition-products/ensure-original", "/nutrition-products/ensure-original/vanilla-shake"],
+    "reuseCount": 2,
+    "lastUsed": "2026-05-22T10:27:00.000Z"
+  }
+}

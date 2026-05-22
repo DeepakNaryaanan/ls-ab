@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/home",
+  "path": "home",
+  "timestamp": "2026-05-22T09:43:39.577Z",
+  "title": "Nutrition Drinks and Shakes for Adults",
+  "template": "homepage",
+  "blocks": [
+    "hero-product",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

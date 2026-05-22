@@ -1,0 +1,40 @@
+{
+  "variantName": "columns-nutrition",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-22T09:52:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.ensure.com/nutrition-products/ensure-original",
+    "originPage": "product line page - nutrition facts layout",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "nutrition-data",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "heading + structured text data in 2 columns",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product nutrition facts pages",
+      "ingredient and nutrient data displays",
+      "side-by-side structured text content",
+      "product specification pages"
+    ],
+    "notSuitableFor": [
+      "image-heavy side-by-side layouts",
+      "marketing/promotional column layouts",
+      "columns with CTAs or buttons"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/nutrition-products/ensure-original", "/nutrition-products/ensure-original/vanilla-shake"],
+    "reuseCount": 2,
+    "lastUsed": "2026-05-22T10:27:00.000Z"
+  }
+}

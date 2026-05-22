@@ -1,0 +1,39 @@
+{
+  "variantName": "hero-product",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-05-22T09:27:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.ensure.com/home",
+    "originPage": "homepage - product showcase",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "product-showcase",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading + subheading + 1 CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product landing pages",
+      "homepage hero banners with product imagery",
+      "brand showcase pages"
+    ],
+    "notSuitableFor": [
+      "text-only hero banners",
+      "article/blog page heroes",
+      "minimal landing pages without product imagery"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-22T09:27:00.000Z"
+  }
+}

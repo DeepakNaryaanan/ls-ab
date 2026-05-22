@@ -3,135 +3,423 @@
     {
       "name": "homepage",
       "urls": [
-        "https://www.psoriasis.com/"
+        "https://www.ensure.com/home"
       ],
-      "description": "Main landing page with hero banner, interactive poll widget, doctor finder CTA section, and 3-card recommended resources grid",
+      "description": "Main landing page with hero banner, product highlights, and nutrition information",
       "blocks": [
         {
-          "name": "hero",
-          "instances": [".abbv-container.flat-bbg.red-pale"]
+          "name": "hero-product",
+          "instances": [
+            ".o-hero-carousel.o-hero-carousel--tall"
+          ]
         },
         {
-          "name": "columns",
-          "instances": [".abbv-definition-block.abbv-find-the-right-doctor"]
-        },
-        {
-          "name": "cards",
-          "instances": [".abbv-row-container.target-rcmd-touts"]
+          "name": "cards-navigation",
+          "instances": [
+            ".col-12.col-md-6.col-lg-2.columncontrol__column .m-card.m-card--large"
+          ]
         }
       ],
       "sections": [
         {
           "id": "section-1-hero",
           "name": "Hero Banner",
-          "selector": ".abbv-container.flat-bbg.red-pale",
-          "style": "warm-peach",
-          "blocks": ["hero"],
+          "selector": ".o-hero-carousel.o-hero-carousel--tall",
+          "style": "navy-blue",
+          "blocks": [
+            "hero-product"
+          ],
           "defaultContent": []
         },
         {
-          "id": "section-2-poll",
-          "name": "Quick Poll",
-          "selector": ".abbv-quick-poll.qp-home",
+          "id": "section-2-cards",
+          "name": "Category Cards Row",
+          "selector": "#hero-card-row",
+          "style": null,
+          "blocks": [
+            "cards-navigation"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3-disclaimer",
+          "name": "Disclaimer Footnotes",
+          "selector": ".text.a-text--fg.a-text--fg-alternate",
           "style": null,
           "blocks": [],
-          "defaultContent": [".abbv-quick-poll .abbv-question", ".abbv-quick-poll .qPoll-options"]
-        },
-        {
-          "id": "section-3-doctor",
-          "name": "Find the Right Doctor",
-          "selector": ".abbv-definition-block.abbv-find-the-right-doctor",
-          "style": "dark-teal",
-          "blocks": ["columns"],
-          "defaultContent": []
-        },
-        {
-          "id": "section-4-resources",
-          "name": "Recommended Topics & Resources",
-          "selector": ".abbv-background-container.recommended",
-          "style": null,
-          "blocks": ["cards"],
-          "defaultContent": [".abbv-title h2", "a.abbv-button-plain.custom-link"]
+          "defaultContent": [
+            "#text-7ad575eb2c p"
+          ]
         }
       ]
     },
     {
-      "name": "article-page",
+      "name": "product-line-page",
       "urls": [
-        "https://www.psoriasis.com/about-psoriasis/what-is-psoriasis",
-        "https://www.psoriasis.com/about-psoriasis/psoriasis-types",
-        "https://www.psoriasis.com/about-psoriasis/psoriasis-symptoms",
-        "https://www.psoriasis.com/about-psoriasis/psoriasis-joint-pain",
-        "https://www.psoriasis.com/about-psoriasis/symptoms-quiz",
-        "https://www.psoriasis.com/about-psoriasis/psoriasis-causes",
-        "https://www.psoriasis.com/about-psoriasis/psoriasis-inflammation",
-        "https://www.psoriasis.com/about-psoriasis/psoriasis-severity",
-        "https://www.psoriasis.com/about-psoriasis/psoriasis-pictures",
-        "https://www.psoriasis.com/psoriasis-treatment-doctor/psoriasis-diagnosis",
-        "https://www.psoriasis.com/psoriasis-treatment-doctor/psoriasis-treatment-options",
-        "https://www.psoriasis.com/psoriasis-treatment-doctor/talk-to-doctor-treatment-goals",
-        "https://www.psoriasis.com/psoriasis-treatment-doctor/find-a-psoriasis-specialist",
-        "https://www.psoriasis.com/psoriasis-treatment-doctor/questions-to-ask-your-doctor",
-        "https://www.psoriasis.com/psoriasis-treatment-doctor/dermatologist-visit",
-        "https://www.psoriasis.com/psoriasis-treatment-doctor/find-a-dermatologist",
-        "https://www.psoriasis.com/living-with-psoriasis/psoriasis-diet-exercise",
-        "https://www.psoriasis.com/living-with-psoriasis/psoriasis-and-stress",
-        "https://www.psoriasis.com/living-with-psoriasis/psoriasis-myths",
-        "https://www.psoriasis.com/living-with-psoriasis/psoriasis-kit",
-        "https://www.psoriasis.com/psoriasis-patients/psoriasis-community",
-        "https://www.psoriasis.com/psoriasis-patients/psoriasis-patient-stories",
-        "https://www.psoriasis.com/psoriasis-patients/psoriasis-support"
+        "https://www.ensure.com/nutrition-products/ensure-original",
+        "https://www.ensure.com/nutrition-products/ensure-enlive-advanced-nutrition-shake",
+        "https://www.ensure.com/nutrition-products/ensure-surgery",
+        "https://www.ensure.com/nutrition-products/ensure-max-protein-shake",
+        "https://www.ensure.com/nutrition-products/ensure-high-protein",
+        "https://www.ensure.com/nutrition-products/ensure-clear-protein-drink",
+        "https://www.ensure.com/nutrition-products/ensure-light",
+        "https://www.ensure.com/nutrition-products/ensure-powder",
+        "https://www.ensure.com/nutrition-products/ensure-surgery",
+        "https://www.ensure.com/nutrition-products/ensure-pre-surgery",
+        "https://www.ensure.com/nutrition-products/ensure-complete-shake",
+        "https://www.ensure.com/nutrition-products/ensure-max-protein-42g-complete-protein",
+        "https://www.ensure.com/nutrition-products/ensure-max-protein-2in1-muscle-support"
       ],
-      "description": "Standard content page with H1 title, rich body content (text, images, callout boxes), and a Recommended Topics & Resources section with 3 cards at the bottom",
+      "description": "Product line overview page showcasing a specific Ensure product variant with nutrition info and flavor options",
       "blocks": [
         {
-          "name": "cards",
-          "instances": [".abbv-row-container.target-rcmd-touts"]
+          "name": "columns-nutrition",
+          "instances": [
+            ".columncontrol.column-align--left .columncontrol__column"
+          ]
+        },
+        {
+          "name": "accordion-faq",
+          "instances": [
+            ".accordion.panelcontainer"
+          ]
+        },
+        {
+          "name": "cards-navigation",
+          "instances": [
+            ".m-card.m-card--large"
+          ]
+        },
+        {
+          "name": "embed-reviews",
+          "instances": [
+            "#SEO_BVRRSummaryContainer, #BVRRContainer"
+          ]
         }
       ],
       "sections": [
         {
-          "id": "section-1-title",
-          "name": "Page Title",
-          "selector": ".abbv-background-container.wave-bbg",
-          "style": "warm-yellow",
-          "blocks": [],
-          "defaultContent": ["h1"]
+          "id": "section-1-product",
+          "name": "Product Detail",
+          "selector": ".columncontrol.column-align--left",
+          "style": null,
+          "blocks": [
+            "columns-nutrition"
+          ],
+          "defaultContent": [
+            "h1",
+            "h3"
+          ]
         },
         {
-          "id": "section-2-content",
-          "name": "Main Content",
-          "selector": ".abbv-row-container.psoriasis.page-main-content",
+          "id": "section-2-nutrition",
+          "name": "Nutritional Facts & Ingredients",
+          "selector": ".columncontrol.column-align--space-evenly",
+          "style": "dark-header",
+          "blocks": [
+            "columns-nutrition"
+          ],
+          "defaultContent": [
+            "h2"
+          ]
+        },
+        {
+          "id": "section-3-faq",
+          "name": "Related FAQs",
+          "selector": ".accordion.panelcontainer",
           "style": null,
-          "blocks": [],
+          "blocks": [
+            "accordion-faq"
+          ],
           "defaultContent": []
         },
         {
-          "id": "section-3-resources",
-          "name": "Recommended Topics & Resources",
-          "selector": [".abbv-background-container.recommended", ".abbv-row-container.target-rcmd-touts"],
+          "id": "section-4-cards",
+          "name": "Related Content Cards",
+          "selector": [
+            ".m-card.m-card--large"
+          ],
           "style": null,
-          "blocks": ["cards"],
-          "defaultContent": [".abbv-title h2", "a.abbv-button-plain.custom-link"]
+          "blocks": [
+            "cards-navigation"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5-reviews",
+          "name": "Product Reviews",
+          "selector": "#SEO_BVRRSummaryContainer",
+          "style": "dark-header",
+          "blocks": [
+            "embed-reviews"
+          ],
+          "defaultContent": []
         }
       ]
     },
     {
+      "name": "product-flavor-page",
+      "urls": [
+        "https://www.ensure.com/nutrition-products/ensure-original/banana-nut-shake",
+        "https://www.ensure.com/nutrition-products/ensure-original/vanilla-shake",
+        "https://www.ensure.com/nutrition-products/ensure-original/strawberry-shake",
+        "https://www.ensure.com/nutrition-products/ensure-original/dark-chocolate-shake",
+        "https://www.ensure.com/nutrition-products/ensure-original/butter-pecan-shake",
+        "https://www.ensure.com/nutrition-products/ensure-original/coffee-latte-shake",
+        "https://www.ensure.com/nutrition-products/ensure-original/milk-chocolate",
+        "https://www.ensure.com/nutrition-products/ensure-plus/vanilla-shake",
+        "https://www.ensure.com/nutrition-products/ensure-plus/strawberry-shake",
+        "https://www.ensure.com/nutrition-products/ensure-plus/dark-chocolate-shake",
+        "https://www.ensure.com/nutrition-products/ensure-plus/butter-pecan-shake",
+        "https://www.ensure.com/nutrition-products/ensure-plus/milk-chocolate",
+        "https://www.ensure.com/nutrition-products/ensure-enlive-advanced-nutrition-shake/vanilla-drink",
+        "https://www.ensure.com/nutrition-products/ensure-enlive-advanced-nutrition-shake/strawberry-drink",
+        "https://www.ensure.com/nutrition-products/ensure-enlive-advanced-nutrition-shake/milk-chocolate",
+        "https://www.ensure.com/nutrition-products/ensure-max-protein-shake/milk-chocolate-with-caffeine",
+        "https://www.ensure.com/nutrition-products/ensure-max-protein-shake/milk-chocolate",
+        "https://www.ensure.com/nutrition-products/ensure-max-protein-shake/creamy-strawberry",
+        "https://www.ensure.com/nutrition-products/ensure-max-protein-shake/french-vanilla",
+        "https://www.ensure.com/nutrition-products/ensure-max-protein-shake/creamy-peach",
+        "https://www.ensure.com/nutrition-products/ensure-max-protein-shake/cherry-cheesecake",
+        "https://www.ensure.com/nutrition-products/ensure-max-protein-shake/cafe-mocha",
+        "https://www.ensure.com/nutrition-products/ensure-high-protein/vanilla-shake",
+        "https://www.ensure.com/nutrition-products/ensure-high-protein/strawberry-shake",
+        "https://www.ensure.com/nutrition-products/ensure-high-protein/milk-chocolate-shake",
+        "https://www.ensure.com/nutrition-products/ensure-plant-based-protein/vanilla-shake",
+        "https://www.ensure.com/nutrition-products/ensure-plant-based-protein/chocolate-shake",
+        "https://www.ensure.com/nutrition-products/ensure-clear-protein-drink/mixed-fruit-drink",
+        "https://www.ensure.com/nutrition-products/ensure-clear-protein-drink/blueberry-pomegranate-nutrition-drink",
+        "https://www.ensure.com/nutrition-products/ensure-light/vanilla-shake",
+        "https://www.ensure.com/nutrition-products/ensure-light/milk-chocolate",
+        "https://www.ensure.com/nutrition-products/ensure-compact/vanilla-shake",
+        "https://www.ensure.com/nutrition-products/ensure-compact/milk-chocolate-shake",
+        "https://www.ensure.com/nutrition-products/ensure-powder/chocolate-powder",
+        "https://www.ensure.com/nutrition-products/ensure-complete-shake/vanilla",
+        "https://www.ensure.com/nutrition-products/ensure-complete-shake/strawberry",
+        "https://www.ensure.com/nutrition-products/ensure-complete-shake/milk-chocolate",
+        "https://www.ensure.com/nutrition-products/ensure-max-protein-42g-complete-protein/chocolate",
+        "https://www.ensure.com/nutrition-products/ensure-max-protein-42g-complete-protein/vanilla",
+        "https://www.ensure.com/nutrition-products/ensure-max-protein-2in1-muscle-support/chocolate",
+        "https://www.ensure.com/nutrition-products/ensure-max-protein-2in1-muscle-support/vanilla"
+      ],
+      "description": "Individual product flavor page with detailed nutrition facts, ingredients, and product imagery",
+      "blocks": [
+        {
+          "name": "columns-product",
+          "instances": [
+            ".columncontrol.column-align--left .columncontrol__column"
+          ]
+        },
+        {
+          "name": "cards-flavor",
+          "instances": [
+            ".columncontrol.column-align--center .m-card"
+          ]
+        },
+        {
+          "name": "columns-nutrition",
+          "instances": [
+            ".columncontrol.column-align--space-evenly .columncontrol__column"
+          ]
+        },
+        {
+          "name": "accordion-faq",
+          "instances": [
+            ".accordion.panelcontainer"
+          ]
+        },
+        {
+          "name": "cards-navigation",
+          "instances": [
+            ".m-card.m-card--large"
+          ]
+        },
+        {
+          "name": "embed-reviews",
+          "instances": [
+            "#SEO_BVRRSummaryContainer, #BVRRContainer"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "recipe-page",
+      "urls": [
+        "https://www.ensure.com/recipes/drinks-smoothies/key-lime-colada",
+        "https://www.ensure.com/recipes/drinks-smoothies/very-berry-smoothie",
+        "https://www.ensure.com/recipes/drinks-smoothies/banana-split-smoothie",
+        "https://www.ensure.com/recipes/drinks-smoothies/dark-chocolate-peppermint",
+        "https://www.ensure.com/recipes/drinks-smoothies/vanilla-eggnog",
+        "https://www.ensure.com/recipes/drinks-smoothies/orange-dream",
+        "https://www.ensure.com/recipes/drinks-smoothies/mango-tropical-smoothie",
+        "https://www.ensure.com/recipes/drinks-smoothies/pomegranate-cider-smoothie",
+        "https://www.ensure.com/recipes/drinks-smoothies/nutty-choco-smoothie",
+        "https://www.ensure.com/recipes/drinks-smoothies/taste-of-summer-smoothie",
+        "https://www.ensure.com/recipes/drinks-smoothies/strawberry-refresher-smoothie",
+        "https://www.ensure.com/recipes/drinks-smoothies/red-velvet-smoothie",
+        "https://www.ensure.com/recipes/drinks-smoothies/pumpkin-spiced-latte",
+        "https://www.ensure.com/recipes/drinks-smoothies/cherry-cordial",
+        "https://www.ensure.com/recipes/drinks-smoothies/peppermint-fudge",
+        "https://www.ensure.com/recipes/drinks-smoothies/coconut-mocha-frappe",
+        "https://www.ensure.com/recipes/drinks-smoothies/chocolate-peanut-butter-shake",
+        "https://www.ensure.com/recipes/drinks-smoothies/creamy-strawberry-lemon-smoothie",
+        "https://www.ensure.com/recipes/drinks-smoothies/mixed-berry-parfait",
+        "https://www.ensure.com/recipes/drinks-smoothies/basil-shortcake",
+        "https://www.ensure.com/recipes/drinks-smoothies/chocolate-covered-almonds",
+        "https://www.ensure.com/recipes/drinks-smoothies/chili-spiced-hot-chocolate",
+        "https://www.ensure.com/recipes/drinks-smoothies/pecan-and-salted-caramel",
+        "https://www.ensure.com/recipes/drinks-smoothies/tumeric-and-orange-creamsicle",
+        "https://www.ensure.com/recipes/drinks-smoothies/chocolate-pecan-turtle-smoothie",
+        "https://www.ensure.com/recipes/drinks-smoothies/peanut-butter-jelly-shake",
+        "https://www.ensure.com/recipes/drinks-smoothies/banana-smoothie",
+        "https://www.ensure.com/recipes/drinks-smoothies/hot-chocolate",
+        "https://www.ensure.com/recipes/drinks-smoothies/berry-sunrise-smoothie",
+        "https://www.ensure.com/recipes/drinks-smoothies/mint-chocolate-protein-shake",
+        "https://www.ensure.com/recipes/drinks-smoothies/rich-dark-chocolate-cherry-smoothie",
+        "https://www.ensure.com/recipes/appetizers-meals/sweet-corn-chowder",
+        "https://www.ensure.com/recipes/appetizers-meals/easy-pancakes",
+        "https://www.ensure.com/recipes/appetizers-meals/banana-blueberry-pancakes",
+        "https://www.ensure.com/recipes/appetizers-meals/ham-and-egg-breakfast-cups",
+        "https://www.ensure.com/recipes/appetizers-meals/cheddar-turkey-quiche",
+        "https://www.ensure.com/recipes/appetizers-meals/chicken-tortilla-soup",
+        "https://www.ensure.com/recipes/appetizers-meals/spinach-artichoke-dip",
+        "https://www.ensure.com/recipes/appetizers-meals/turkey-chili-cornbread-topping",
+        "https://www.ensure.com/recipes/dessert/frozen-fudge-pops",
+        "https://www.ensure.com/recipes/dessert/chocolate-pudding",
+        "https://www.ensure.com/recipes/dessert/confetti-cake",
+        "https://www.ensure.com/recipes/dessert/chocolate-chip-banana-bread",
+        "https://www.ensure.com/recipes/dessert/salted-caramel-brownies",
+        "https://www.ensure.com/recipes/dessert/apple-pecan-muffins",
+        "https://www.ensure.com/recipes/dessert/creamy-rice-pudding",
+        "https://www.ensure.com/recipes/dessert/cherry-gelatin",
+        "https://www.ensure.com/recipes/dessert/apple-streusel-quick-bread",
+        "https://www.ensure.com/recipes/dessert/banana-wafer-pudding",
+        "https://www.ensure.com/recipes/dessert/oatmeal-cookie"
+      ],
+      "description": "Recipe detail page with ingredients, preparation steps, and nutritional information using Ensure products",
+      "blocks": []
+    },
+    {
+      "name": "blog-article",
+      "urls": [
+        "https://www.ensure.com/blog/nutrition-matters/five-secret-superfoods",
+        "https://www.ensure.com/blog/nutrition-matters/getting-back-on-your-feet",
+        "https://www.ensure.com/blog/nutrition-matters/pump-up-your-pantry",
+        "https://www.ensure.com/blog/nutrition-matters/snacks-meals",
+        "https://www.ensure.com/blog/nutrition-matters/magic-of-mini-meals-dont-be-trapped-by-three-meals-a-day",
+        "https://www.ensure.com/blog/nutrition-matters/tips-for-tough-times-eating-well-when-youre-not-feeling-well",
+        "https://www.ensure.com/blog/nutrition-matters/protein-power-a-nutrient-with-a-starring-role",
+        "https://www.ensure.com/blog/nutrition-matters/try-this-not-sure-what-to-eat-today-try-this-sample-menu",
+        "https://www.ensure.com/blog/nutrition-matters/start-strong-make-breakfast-work-for-you",
+        "https://www.ensure.com/blog/nutrition-matters/the-right-stuff-do-you-know-if-youre-well-nourished0",
+        "https://www.ensure.com/blog/expert-advice/aging-and-nutrition",
+        "https://www.ensure.com/blog/expert-advice/muscle-story",
+        "https://www.ensure.com/blog/expert-advice/one-week-assessment-where-do-you-stand",
+        "https://www.ensure.com/blog/expert-advice/protect-your-muscles-why-preserving-muscle-matters",
+        "https://www.ensure.com/blog/expert-advice/learn-whats-special-about-smoothies-find-out-what-makes-them-so-popular",
+        "https://www.ensure.com/blog/expert-advice/10-protein-powerhouses-try-our-favorite-complete-proteins",
+        "https://www.ensure.com/blog/expert-advice/the-right-stuff-do-you-know-if-youre-well-nourished",
+        "https://www.ensure.com/blog/expert-advice/expert-advice-get-answers-in-an-instant-to-your-nutrition-questions",
+        "https://www.ensure.com/blog/expert-advice/enjoying-your-ensure-our-nutritionists-share-their-most-popular-tips"
+      ],
+      "description": "Blog content page with expert advice or nutrition information articles",
+      "blocks": []
+    },
+    {
+      "name": "health-article",
+      "urls": [
+        "https://www.ensure.com/health-articles-tips/nutrition/power-protein",
+        "https://www.ensure.com/health-articles-tips/nutrition/complete-balanced-nutrition",
+        "https://www.ensure.com/health-articles-tips/nutrition/immune-system-support",
+        "https://www.ensure.com/health-articles-tips/nutrition/brain-health",
+        "https://www.ensure.com/health-articles-tips/nutrition/digestive-system",
+        "https://www.ensure.com/health-articles-tips/nutrition/changing-nutrition-needs",
+        "https://www.ensure.com/health-articles-tips/nutrition/support-strong-bones",
+        "https://www.ensure.com/health-articles-tips/nutrition/weight-gain",
+        "https://www.ensure.com/health-articles-tips/fitness/morning-exercise",
+        "https://www.ensure.com/health-articles-tips/fitness/healthy-joints-happy-joints",
+        "https://www.ensure.com/health-articles-tips/fitness/feel-marvelous-30-minutes",
+        "https://www.ensure.com/health-articles-tips/fitness/sarcopenia",
+        "https://www.ensure.com/health-articles-tips/lifestyle/one-ensure-day",
+        "https://www.ensure.com/health-articles-tips/lifestyle/good-habit-builders",
+        "https://www.ensure.com/health-articles-tips/lifestyle/need-game-plan"
+      ],
+      "description": "Health tips and articles covering nutrition, fitness, and lifestyle topics",
+      "blocks": []
+    },
+    {
       "name": "listing-page",
       "urls": [
-        "https://www.psoriasis.com/psoriasis-patients/tips"
+        "https://www.ensure.com/nutrition-products",
+        "https://www.ensure.com/nutrition-products/protein-shakes-healthy-drinks",
+        "https://www.ensure.com/nutrition-products/compare-meal-replacement-shakes",
+        "https://www.ensure.com/nutrition-products/drink-ingredients",
+        "https://www.ensure.com/nutrition-products/product-snippet",
+        "https://www.ensure.com/nutrition-products/review-ensure-products",
+        "https://www.ensure.com/nutrition-products/product-demystification-test",
+        "https://www.ensure.com/health-articles-tips",
+        "https://www.ensure.com/health-articles-tips/nutrition",
+        "https://www.ensure.com/health-articles-tips/fitness",
+        "https://www.ensure.com/health-articles-tips/lifestyle",
+        "https://www.ensure.com/recipes",
+        "https://www.ensure.com/recipes/drinks-smoothies",
+        "https://www.ensure.com/recipes/appetizers-meals",
+        "https://www.ensure.com/recipes/dessert",
+        "https://www.ensure.com/blog",
+        "https://www.ensure.com/blog/nutrition-matters",
+        "https://www.ensure.com/blog/expert-advice"
       ],
-      "description": "Article listing page with intro text and a multi-row grid of article cards (image + title + description), organized into groups of 6",
+      "description": "Category listing page showing cards/grids of sub-pages (recipes, blog posts, products, health articles)",
       "blocks": []
     },
     {
       "name": "utility-page",
       "urls": [
-        "https://www.psoriasis.com/sitemap",
-        "https://www.psoriasis.com/search-results"
+        "https://www.ensure.com/coupons",
+        "https://www.ensure.com/coupons/thank-you",
+        "https://www.ensure.com/ensure-story",
+        "https://www.ensure.com/caregivers",
+        "https://www.ensure.com/muscle-loss-recovery",
+        "https://www.ensure.com/ask-nutritionist",
+        "https://www.ensure.com/contact",
+        "https://www.ensure.com/contact/contactus-success",
+        "https://www.ensure.com/nutrition-facts-questions-answers",
+        "https://www.ensure.com/where-to-buy-ensure",
+        "https://www.ensure.com/sitemap",
+        "https://www.ensure.com/terms-and-condition",
+        "https://www.ensure.com/privacy",
+        "https://www.ensure.com/error",
+        "https://www.ensure.com/search",
+        "https://www.ensure.com/unsubscribe",
+        "https://www.ensure.com/unsubscribe/success",
+        "https://www.ensure.com/test1",
+        "https://www.ensure.com/test1/glucerna-products",
+        "https://www.ensure.com/product-section-page",
+        "https://www.ensure.com/test-page",
+        "https://www.ensure.com/enlive-comingsoon",
+        "https://www.ensure.com/ensure-complete",
+        "https://www.ensure.com/ask-nutritionist-thank-you",
+        "https://www.ensure.com/bio-faq",
+        "https://www.ensure.com/bio-faq-detail",
+        "https://www.ensure.com/discovermore",
+        "https://www.ensure.com/contact-us-thank-you",
+        "https://www.ensure.com/great-taste-guarantee",
+        "https://www.ensure.com/print-coupon",
+        "https://www.ensure.com/errors",
+        "https://www.ensure.com/errors/404",
+        "https://www.ensure.com/errors/403",
+        "https://www.ensure.com/errors/503",
+        "https://www.ensure.com/coupon-print",
+        "https://www.ensure.com/print-coupon-offer",
+        "https://www.ensure.com/costco",
+        "https://www.ensure.com/6661716f727068616e70616765/faq",
+        "https://www.ensure.com/646973636c6f737572656c616e64696e6770616765/be"
       ],
-      "description": "Utility pages for site navigation (sitemap) and search functionality",
+      "description": "Utility and marketing pages including contact, coupons, privacy, FAQ, and promotional landing pages",
       "blocks": []
     }
-  ]
+  ],
+  "metadata": {
+    "projectType": "da"
+  }
 }

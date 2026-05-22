@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-navigation",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-22T09:27:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.ensure.com/home",
+    "originPage": "homepage - category navigation",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "category-navigation",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "4 cards with image + heading title only",
+    "buttonCount": 0,
+    "imageCount": 4
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage category navigation sections",
+      "site section landing pages with linked cards",
+      "product category overview grids"
+    ],
+    "notSuitableFor": [
+      "detailed content cards with descriptions",
+      "blog article listings",
+      "feature highlight cards with body text"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/home", "/nutrition-products/ensure-original", "/nutrition-products/ensure-original/vanilla-shake"],
+    "reuseCount": 3,
+    "lastUsed": "2026-05-22T10:27:00.000Z"
+  }
+}

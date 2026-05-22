@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/nutrition-products/ensure-max-protein-42g-complete-protein",
+  "path": "nutrition-products/ensure-max-protein-42g-complete-protein",
+  "timestamp": "2026-05-22T10:22:27.939Z",
+  "title": "Ensure® Max Protein 42g Complete Protein Nutrition Shake",
+  "template": "product-line-page",
+  "blocks": [
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "embed-reviews",
+    "embed-reviews"
+  ]
+}

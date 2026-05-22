@@ -1,0 +1,28 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/nutrition-products/ensure-light",
+  "path": "nutrition-products/ensure-light",
+  "timestamp": "2026-05-22T10:15:27.298Z",
+  "title": "Ensure® Products | Meal Replacement Shakes & Nutrition Drinks",
+  "template": "product-line-page",
+  "blocks": [
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

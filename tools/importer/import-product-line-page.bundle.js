@@ -35,41 +35,80 @@ var CustomImportScript = (() => {
   };
   var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-  // tools/importer/import-homepage.js
-  var import_homepage_exports = {};
-  __export(import_homepage_exports, {
-    default: () => import_homepage_default
+  // tools/importer/import-product-line-page.js
+  var import_product_line_page_exports = {};
+  __export(import_product_line_page_exports, {
+    default: () => import_product_line_page_default
   });
 
-  // tools/importer/parsers/hero-product.js
+  // tools/importer/parsers/columns-nutrition.js
   function parse(element, { document }) {
-    const heroImage = element.querySelector(".m-hero__image img, img.cmp-image__image");
-    const heading = element.querySelector("h1.m-hero__header, h1.h1-hero, .m-hero__header");
-    const subheading = element.querySelector("h2.m-hero__subtitle, h2.h2-hero, .m-hero__subtitle");
-    const ctaLink = element.querySelector(".m-hero__extras a.btn, .m-hero__extras .a-button a, .m-hero__extras a");
+    const row = element.querySelector(":scope > .container > .row");
+    if (!row) return;
+    const columns = Array.from(row.querySelectorAll(":scope > .columncontrol__column"));
+    if (columns.length < 2) return;
+    const leftCol = columns[0];
+    const rightCol = columns[1];
+    function extractContent(col) {
+      const content = [];
+      const headings = col.querySelectorAll(".cmp-title__text");
+      headings.forEach((h) => content.push(h));
+      const textSections = col.querySelectorAll(".cmp-text");
+      textSections.forEach((section) => {
+        const children = section.querySelectorAll(":scope > p, :scope > ul, :scope > ol");
+        children.forEach((child) => content.push(child));
+      });
+      const imageLinks = col.querySelectorAll(":scope > .image .cmp-image__link");
+      const standaloneImages = col.querySelectorAll(":scope > .image img.cmp-image__image");
+      imageLinks.forEach((link) => content.push(link));
+      if (imageLinks.length === 0) {
+        standaloneImages.forEach((img) => content.push(img));
+      }
+      return content.length > 0 ? content : [col];
+    }
+    const leftContent = extractContent(leftCol);
+    const rightContent = extractContent(rightCol);
+    const cells = [
+      [leftContent, rightContent]
+    ];
+    const block = WebImporter.Blocks.createBlock(document, { name: "columns-nutrition", cells });
+    element.replaceWith(block);
+  }
+
+  // tools/importer/parsers/accordion-faq.js
+  function parse2(element, { document }) {
+    const items = element.querySelectorAll(".m-accordion__content-items");
     const cells = [];
-    if (heroImage) {
-      cells.push([heroImage]);
-    }
-    const contentCell = [];
-    if (heading) {
-      contentCell.push(heading);
-    }
-    if (subheading) {
-      contentCell.push(subheading);
-    }
-    if (ctaLink) {
-      contentCell.push(ctaLink);
-    }
-    if (contentCell.length > 0) {
-      cells.push(contentCell);
-    }
-    const block = WebImporter.Blocks.createBlock(document, { name: "hero-product", cells });
+    items.forEach((item) => {
+      const titleWrapper = item.querySelector(".m-accordion__title-wrapper");
+      const titleEl = titleWrapper ? titleWrapper.querySelector("h3, h2, h4, span") : null;
+      const bodyPanel = item.querySelector(".m-accordion__body .cmp-text, .m-accordion__body .text .cmp-text");
+      let answerContent;
+      if (bodyPanel) {
+        const contentElements = bodyPanel.querySelectorAll("p, ul, ol, h2, h3, h4, h5, h6");
+        if (contentElements.length > 0) {
+          const container = document.createElement("div");
+          contentElements.forEach((el) => {
+            container.appendChild(el.cloneNode(true));
+          });
+          answerContent = container;
+        } else {
+          answerContent = bodyPanel;
+        }
+      } else {
+        const fallbackBody = item.querySelector(".m-accordion__body");
+        answerContent = fallbackBody || document.createElement("p");
+      }
+      if (titleEl) {
+        cells.push([titleEl, answerContent]);
+      }
+    });
+    const block = WebImporter.Blocks.createBlock(document, { name: "accordion-faq", cells });
     element.replaceWith(block);
   }
 
   // tools/importer/parsers/cards-navigation.js
-  function parse2(element, { document }) {
+  function parse3(element, { document }) {
     let cards = Array.from(element.querySelectorAll("article.m-card.m-card--large"));
     if (cards.length === 0 && element.matches && element.matches("article.m-card.m-card--large, .m-card.m-card--large")) {
       cards = [element];
@@ -106,6 +145,20 @@ var CustomImportScript = (() => {
       }
     });
     const block = WebImporter.Blocks.createBlock(document, { name: "cards-navigation", cells });
+    element.replaceWith(block);
+  }
+
+  // tools/importer/parsers/embed-reviews.js
+  function parse4(element, { document }) {
+    const ratingText = element.querySelector(".bv_offscreen_text, .bv_avgRating_component_container");
+    const reviewCount = element.querySelector(".bv_numReviews_text");
+    const recommendText = element.querySelector(".bv_percentRecommend_component_container");
+    const placeholder = document.createElement("p");
+    placeholder.textContent = "Product Reviews";
+    const cells = [
+      [placeholder]
+    ];
+    const block = WebImporter.Blocks.createBlock(document, { name: "embed-reviews", cells });
     element.replaceWith(block);
   }
 
@@ -184,62 +237,36 @@ var CustomImportScript = (() => {
     }
   }
 
-  // tools/importer/import-homepage.js
+  // tools/importer/import-product-line-page.js
+  var parsers = {
+    "columns-nutrition": parse,
+    "accordion-faq": parse2,
+    "cards-navigation": parse3,
+    "embed-reviews": parse4
+  };
   var PAGE_TEMPLATE = {
-    name: "homepage",
-    description: "Main landing page with hero banner, product highlights, and nutrition information",
-    urls: [
-      "https://www.ensure.com/home"
-    ],
+    name: "product-line-page",
+    description: "Product line overview page showcasing a specific Ensure product variant with nutrition info and flavor options",
     blocks: [
-      {
-        name: "hero-product",
-        instances: [".o-hero-carousel.o-hero-carousel--tall"]
-      },
-      {
-        name: "cards-navigation",
-        instances: [".col-12.col-md-6.col-lg-2.columncontrol__column .m-card.m-card--large"]
-      }
+      { name: "columns-nutrition", instances: [".columncontrol.column-align--left .columncontrol__column"] },
+      { name: "accordion-faq", instances: [".accordion.panelcontainer"] },
+      { name: "cards-navigation", instances: [".m-card.m-card--large"] },
+      { name: "embed-reviews", instances: ["#SEO_BVRRSummaryContainer, #BVRRContainer"] }
     ],
     sections: [
-      {
-        id: "section-1-hero",
-        name: "Hero Banner",
-        selector: ".o-hero-carousel.o-hero-carousel--tall",
-        style: "navy-blue",
-        blocks: ["hero-product"],
-        defaultContent: []
-      },
-      {
-        id: "section-2-cards",
-        name: "Category Cards Row",
-        selector: "#hero-card-row",
-        style: null,
-        blocks: ["cards-navigation"],
-        defaultContent: []
-      },
-      {
-        id: "section-3-disclaimer",
-        name: "Disclaimer Footnotes",
-        selector: ".text.a-text--fg.a-text--fg-alternate",
-        style: null,
-        blocks: [],
-        defaultContent: ["#text-7ad575eb2c p"]
-      }
+      { id: "section-1-product", name: "Product Detail", selector: ".columncontrol.column-align--left", style: null, blocks: ["columns-nutrition"], defaultContent: ["h1", "h3"] },
+      { id: "section-2-nutrition", name: "Nutritional Facts & Ingredients", selector: ".columncontrol.column-align--space-evenly", style: "dark-header", blocks: ["columns-nutrition"], defaultContent: ["h2"] },
+      { id: "section-3-faq", name: "Related FAQs", selector: ".accordion.panelcontainer", style: null, blocks: ["accordion-faq"], defaultContent: [] },
+      { id: "section-4-cards", name: "Related Content Cards", selector: [".m-card.m-card--large"], style: null, blocks: ["cards-navigation"], defaultContent: [] },
+      { id: "section-5-reviews", name: "Product Reviews", selector: "#SEO_BVRRSummaryContainer", style: "dark-header", blocks: ["embed-reviews"], defaultContent: [] }
     ]
-  };
-  var parsers = {
-    "hero-product": parse,
-    "cards-navigation": parse2
   };
   var transformers = [
     transform,
     ...PAGE_TEMPLATE.sections && PAGE_TEMPLATE.sections.length > 1 ? [transform2] : []
   ];
   function executeTransformers(hookName, element, payload) {
-    const enhancedPayload = __spreadProps(__spreadValues({}, payload), {
-      template: PAGE_TEMPLATE
-    });
+    const enhancedPayload = __spreadProps(__spreadValues({}, payload), { template: PAGE_TEMPLATE });
     transformers.forEach((transformerFn) => {
       try {
         transformerFn.call(null, hookName, element, enhancedPayload);
@@ -257,19 +284,14 @@ var CustomImportScript = (() => {
           console.warn(`Block "${blockDef.name}" selector not found: ${selector}`);
         }
         elements.forEach((element) => {
-          pageBlocks.push({
-            name: blockDef.name,
-            selector,
-            element,
-            section: blockDef.section || null
-          });
+          pageBlocks.push({ name: blockDef.name, selector, element, section: blockDef.section || null });
         });
       });
     });
     console.log(`Found ${pageBlocks.length} block instances on page`);
     return pageBlocks;
   }
-  var import_homepage_default = {
+  var import_product_line_page_default = {
     transform: (payload) => {
       const { document, url, html, params } = payload;
       const main = document.body;
@@ -306,5 +328,5 @@ var CustomImportScript = (() => {
       }];
     }
   };
-  return __toCommonJS(import_homepage_exports);
+  return __toCommonJS(import_product_line_page_exports);
 })();

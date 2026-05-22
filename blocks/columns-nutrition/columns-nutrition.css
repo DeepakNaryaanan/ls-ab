@@ -1,0 +1,33 @@
+.columns-nutrition > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-nutrition img {
+  width: 100%;
+}
+
+.columns-nutrition > div > div {
+  order: 1;
+}
+
+.columns-nutrition > div > .columns-nutrition-img-col {
+  order: 0;
+}
+
+.columns-nutrition > div > .columns-nutrition-img-col img {
+  display: block;
+}
+
+@media (width >= 900px) {
+  .columns-nutrition > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 24px;
+  }
+
+  .columns-nutrition > div > div {
+    flex: 1;
+    order: unset;
+  }
+}
