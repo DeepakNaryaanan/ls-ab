@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/drinks-smoothies/dark-chocolate-peppermint",
+  "path": "recipes/drinks-smoothies/dark-chocolate-peppermint",
+  "timestamp": "2026-05-22T11:59:33.587Z",
+  "title": "Ensure® COMPLETE Dark Chocolate Peppermint Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

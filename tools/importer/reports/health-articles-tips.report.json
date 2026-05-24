@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/health-articles-tips",
+  "path": "health-articles-tips",
+  "timestamp": "2026-05-24T07:34:32.600Z",
+  "title": "Healthy Living | Articles & Tips | Ensure®",
+  "template": "listing-page",
+  "blocks": [
+    "hero-blog",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

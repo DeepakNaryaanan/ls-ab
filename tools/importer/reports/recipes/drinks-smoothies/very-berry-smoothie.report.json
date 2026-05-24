@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/drinks-smoothies/very-berry-smoothie",
+  "path": "recipes/drinks-smoothies/very-berry-smoothie",
+  "timestamp": "2026-05-22T11:56:48.578Z",
+  "title": "Very Berry Smoothie Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

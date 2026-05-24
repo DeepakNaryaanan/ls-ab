@@ -1,0 +1,39 @@
+{
+  "variantName": "hero-blog",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-05-24T06:24:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.ensure.com/blog/expert-advice/aging-and-nutrition",
+    "originPage": "blog article page - Healthy Matters Blog hero banner",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "colored",
+    "density": "minimal",
+    "purpose": "blog-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "banner image only",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "blog article pages with branded banner image",
+      "content hub landing pages with category branding",
+      "image-only hero banners where text is baked into the image"
+    ],
+    "notSuitableFor": [
+      "heroes with authored heading text and CTAs",
+      "product showcase heroes with product images",
+      "recipe or category heroes with dynamic headings"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/blog/expert-advice/aging-and-nutrition"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-24T06:24:00.000Z"
+  }
+}

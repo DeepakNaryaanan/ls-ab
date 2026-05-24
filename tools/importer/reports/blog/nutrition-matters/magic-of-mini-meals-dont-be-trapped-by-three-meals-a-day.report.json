@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/blog/nutrition-matters/magic-of-mini-meals-dont-be-trapped-by-three-meals-a-day",
+  "path": "blog/nutrition-matters/magic-of-mini-meals-dont-be-trapped-by-three-meals-a-day",
+  "timestamp": "2026-05-24T06:39:02.484Z",
+  "title": "Mini Meals | Don’t be Trapped by Three Meals a Day | Ensure®",
+  "template": "blog-article",
+  "blocks": [
+    "hero-blog",
+    "columns-blog",
+    "cards-navigation"
+  ]
+}

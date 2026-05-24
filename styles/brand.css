@@ -1,0 +1,31 @@
+:root {
+  --heading-font-family: "gotham-black", sans-serif;
+  --body-font-family: "brandon_textblack", sans-serif;
+  --background-color: #ffffff;
+  --text-color: #222731;
+  --link-color: #007acc;
+  --link-hover-color: #005a99;
+  --primary-color: #002d72;
+  --primary-light: #003087;
+  --section-padding: 40px;
+  --content-max-width: 1200px;
+  --nav-height: 64px;
+  --heading-size-xxl: 36px;
+  --heading-size-xl: 28px;
+  --heading-size-l: 24px;
+  --heading-size-m: 20px;
+  --heading-size-s: 18px;
+  --heading-size-xs: 16px;
+  --border-radius: 4px;
+}
+
+@media (min-width: 900px) {
+  :root {
+    --heading-size-xxl: 42px;
+    --heading-size-xl: 32px;
+    --heading-size-l: 24px;
+    --heading-size-m: 20px;
+    --heading-size-s: 18px;
+    --heading-size-xs: 16px;
+  }
+}

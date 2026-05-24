@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/drinks-smoothies/tumeric-and-orange-creamsicle",
+  "path": "recipes/drinks-smoothies/tumeric-and-orange-creamsicle",
+  "timestamp": "2026-05-24T05:43:11.327Z",
+  "title": "Ensure® Max Protein Turmeric and Orange Creamsicle Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

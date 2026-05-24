@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/dessert/creamy-rice-pudding",
+  "path": "recipes/dessert/creamy-rice-pudding",
+  "timestamp": "2026-05-24T06:15:04.239Z",
+  "title": "Ensure® COMPLETE Creamy Rice Pudding Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

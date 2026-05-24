@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/dessert/banana-wafer-pudding",
+  "path": "recipes/dessert/banana-wafer-pudding",
+  "timestamp": "2026-05-24T06:19:14.165Z",
+  "title": "Recipes with Ensure® Nutritional Drinks | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

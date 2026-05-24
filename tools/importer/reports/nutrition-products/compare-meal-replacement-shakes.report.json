@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/nutrition-products/compare-meal-replacement-shakes",
+  "path": "nutrition-products/compare-meal-replacement-shakes",
+  "timestamp": "2026-05-24T07:27:03.187Z",
+  "title": "Compare Meal Replacement Protein Shakes | Ensure®",
+  "template": "listing-page",
+  "blocks": [
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

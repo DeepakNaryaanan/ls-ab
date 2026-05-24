@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/drinks-smoothies/rich-dark-chocolate-cherry-smoothie",
+  "path": "recipes/drinks-smoothies/rich-dark-chocolate-cherry-smoothie",
+  "timestamp": "2026-05-24T05:53:21.877Z",
+  "title": "Recipes with Ensure® Nutritional Drinks | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

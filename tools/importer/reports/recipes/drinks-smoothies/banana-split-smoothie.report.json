@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/drinks-smoothies/banana-split-smoothie",
+  "path": "recipes/drinks-smoothies/banana-split-smoothie",
+  "timestamp": "2026-05-22T11:58:10.459Z",
+  "title": "Ensure® COMPLETE Banana Split Smoothie Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

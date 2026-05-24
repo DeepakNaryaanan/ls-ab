@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes",
+  "path": "recipes",
+  "timestamp": "2026-05-24T07:40:07.137Z",
+  "title": "Recipes with Ensure® Nutritional Drinks | Ensure®",
+  "template": "listing-page",
+  "blocks": [
+    "hero-blog",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

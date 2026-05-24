@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/blog/expert-advice/aging-and-nutrition",
+  "path": "blog/expert-advice/aging-and-nutrition",
+  "timestamp": "2026-05-24T06:47:49.605Z",
+  "title": "Age Related Muscle Loss | Ensure®",
+  "template": "blog-article",
+  "blocks": [
+    "hero-blog",
+    "columns-blog",
+    "cards-navigation"
+  ]
+}

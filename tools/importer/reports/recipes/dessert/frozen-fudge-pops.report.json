@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/dessert/frozen-fudge-pops",
+  "path": "recipes/dessert/frozen-fudge-pops",
+  "timestamp": "2026-05-24T06:06:21.885Z",
+  "title": "Frozen Fudge Pops Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "embed-video",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/blog/nutrition-matters/protein-power-a-nutrient-with-a-starring-role",
+  "path": "blog/nutrition-matters/protein-power-a-nutrient-with-a-starring-role",
+  "timestamp": "2026-05-24T06:41:49.185Z",
+  "title": "Sources of Protein | A Nutrient With a Starring Role | Ensure®",
+  "template": "blog-article",
+  "blocks": [
+    "hero-blog",
+    "columns-blog",
+    "cards-navigation"
+  ]
+}

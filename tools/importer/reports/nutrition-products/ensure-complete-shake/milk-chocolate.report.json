@@ -1,0 +1,30 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/nutrition-products/ensure-complete-shake/milk-chocolate",
+  "path": "nutrition-products/ensure-complete-shake/milk-chocolate",
+  "timestamp": "2026-05-22T11:32:46.305Z",
+  "title": "Ensure® COMPLETE nutrition shake | Milk Chocolate",
+  "template": "product-flavor-page",
+  "blocks": [
+    "columns-product",
+    "columns-product",
+    "columns-product",
+    "columns-product",
+    "columns-product",
+    "cards-flavor",
+    "cards-flavor",
+    "cards-flavor",
+    "cards-flavor",
+    "cards-flavor",
+    "cards-flavor",
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "embed-reviews",
+    "embed-reviews"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/dessert/chocolate-pudding",
+  "path": "recipes/dessert/chocolate-pudding",
+  "timestamp": "2026-05-24T06:07:46.522Z",
+  "title": "Ensure® COMPLETE Chocolate Pudding Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

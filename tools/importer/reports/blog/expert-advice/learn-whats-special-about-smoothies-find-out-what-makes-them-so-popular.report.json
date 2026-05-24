@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/blog/expert-advice/learn-whats-special-about-smoothies-find-out-what-makes-them-so-popular",
+  "path": "blog/expert-advice/learn-whats-special-about-smoothies-find-out-what-makes-them-so-popular",
+  "timestamp": "2026-05-24T06:53:48.525Z",
+  "title": "Smoothies | What’s Special About Smoothies? | Ensure®",
+  "template": "blog-article",
+  "blocks": [
+    "hero-blog",
+    "columns-blog",
+    "cards-navigation"
+  ]
+}

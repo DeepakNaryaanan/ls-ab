@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/drinks-smoothies/mint-chocolate-protein-shake",
+  "path": "recipes/drinks-smoothies/mint-chocolate-protein-shake",
+  "timestamp": "2026-05-24T05:51:58.466Z",
+  "title": "Recipes with Ensure® Nutritional Drinks | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

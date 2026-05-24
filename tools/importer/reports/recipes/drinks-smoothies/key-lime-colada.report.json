@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/drinks-smoothies/key-lime-colada",
+  "path": "recipes/drinks-smoothies/key-lime-colada",
+  "timestamp": "2026-05-22T11:55:26.014Z",
+  "title": "Key Lime Colada Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

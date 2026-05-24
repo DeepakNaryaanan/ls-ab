@@ -1,0 +1,33 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/nutrition-products/ensure-complete-shake/strawberry",
+  "path": "nutrition-products/ensure-complete-shake/strawberry",
+  "timestamp": "2026-05-22T11:31:22.849Z",
+  "title": "Ensure® COMPLETE nutrition shake | Strawberry",
+  "template": "product-flavor-page",
+  "blocks": [
+    "columns-product",
+    "columns-product",
+    "columns-product",
+    "columns-product",
+    "columns-product",
+    "columns-product",
+    "columns-product",
+    "columns-product",
+    "cards-flavor",
+    "cards-flavor",
+    "cards-flavor",
+    "cards-flavor",
+    "cards-flavor",
+    "cards-flavor",
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "embed-reviews",
+    "embed-reviews"
+  ]
+}

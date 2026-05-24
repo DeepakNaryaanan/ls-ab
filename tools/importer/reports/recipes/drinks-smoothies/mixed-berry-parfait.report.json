@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/drinks-smoothies/mixed-berry-parfait",
+  "path": "recipes/drinks-smoothies/mixed-berry-parfait",
+  "timestamp": "2026-05-22T12:21:33.867Z",
+  "title": "Ensure® Max Protein Mixed Berry Parfait Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

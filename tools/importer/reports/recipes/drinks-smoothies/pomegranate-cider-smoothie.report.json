@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/drinks-smoothies/pomegranate-cider-smoothie",
+  "path": "recipes/drinks-smoothies/pomegranate-cider-smoothie",
+  "timestamp": "2026-05-22T12:05:38.682Z",
+  "title": "Ensure® COMPLETE Pomegranate Cider Smoothie Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

@@ -1,3 +1,4 @@
+/* eslint-disable */
 var CustomImportScript = (() => {
   var __defProp = Object.defineProperty;
   var __defProps = Object.defineProperties;
@@ -40,44 +41,47 @@ var CustomImportScript = (() => {
     default: () => import_utility_page_default
   });
 
-  // tools/importer/transformers/psoriasis-cleanup.js
-  var H = { before: "beforeTransform", after: "afterTransform" };
+  // tools/importer/transformers/ensure-cleanup.js
+  var TransformHook = { beforeTransform: "beforeTransform", afterTransform: "afterTransform" };
   function transform(hookName, element, payload) {
-    if (hookName === H.before) {
+    if (hookName === TransformHook.beforeTransform) {
       WebImporter.DOMUtils.remove(element, [
-        ".newpar",
-        ".par.iparys_inherited"
+        "#consent-banner",
+        "#truste-consent-track",
+        ".trustarc-banner-wrapper",
+        "#teconsent"
       ]);
       WebImporter.DOMUtils.remove(element, [
-        ".modal.parbase",
-        ".abbv-modal"
+        ".modal",
+        ".generic-modal",
+        "#site-leaving-popup-content",
+        "#site-entering-popup-content",
+        "#tender-product-disclaimer-content",
+        ".popup-wrapper",
+        ".m-popup"
       ]);
       WebImporter.DOMUtils.remove(element, [
-        "#onetrust-consent-sdk",
-        "#onetrust-pc-sdk",
-        "#onetrust-style"
+        "access-widget-ui",
+        ".acsb-sr-alert",
+        'a[href*="accessibe.com"]'
       ]);
-      WebImporter.DOMUtils.remove(element, [
-        ".abbv-quick-poll .answer",
-        ".abbv-quick-poll .loading",
-        ".abbv-quick-poll .qPoll-options"
-      ]);
-      element.querySelectorAll("picture > source:not([srcset])").forEach((src) => src.remove());
+      WebImporter.DOMUtils.remove(element, [".a-spinner"]);
     }
-    if (hookName === H.after) {
+    if (hookName === TransformHook.afterTransform) {
       WebImporter.DOMUtils.remove(element, [
-        ".header-v2.parbase",
-        "header.abbv-header-v2",
-        "footer.abbv-footer",
-        ".abv-footer-container",
-        ".abbv-clear",
-        "noscript",
-        "link"
+        ".o-header",
+        "#section-ensure-header",
+        ".a-container--header"
       ]);
+      WebImporter.DOMUtils.remove(element, [".o-footer"]);
+      WebImporter.DOMUtils.remove(element, [".abbott-alert"]);
       WebImporter.DOMUtils.remove(element, [
-        "a#target-rcmd-touts-id",
-        'img[src*="t.co/i/adsct"]',
-        'img[src*="analytics.twitter.com"]'
+        "link",
+        "noscript",
+        'input[id="onetrust-url"]',
+        'input[id="cmpidField"]',
+        'input[id="selfValue"]',
+        'input[id="wcmMode"]'
       ]);
     }
   }
@@ -85,20 +89,13 @@ var CustomImportScript = (() => {
   // tools/importer/import-utility-page.js
   var PAGE_TEMPLATE = {
     name: "utility-page",
-    description: "Utility pages for site navigation (sitemap) and search functionality",
-    urls: [
-      "https://www.psoriasis.com/sitemap",
-      "https://www.psoriasis.com/search-results"
-    ],
-    blocks: []
+    description: "Utility and marketing pages including contact, coupons, privacy, FAQ, and promotional landing pages",
+    blocks: [],
+    sections: []
   };
-  var transformers = [
-    transform
-  ];
+  var transformers = [transform];
   function executeTransformers(hookName, element, payload) {
-    const enhancedPayload = __spreadProps(__spreadValues({}, payload), {
-      template: PAGE_TEMPLATE
-    });
+    const enhancedPayload = __spreadProps(__spreadValues({}, payload), { template: PAGE_TEMPLATE });
     transformers.forEach((transformerFn) => {
       try {
         transformerFn.call(null, hookName, element, enhancedPayload);
@@ -120,15 +117,7 @@ var CustomImportScript = (() => {
       WebImporter.rules.adjustImageUrls(main, url, params.originalURL);
       let path = new URL(params.originalURL).pathname.replace(/\/$/, "").replace(/\.html$/, "");
       if (!path || path === "") path = "/index";
-      return [{
-        element: main,
-        path,
-        report: {
-          title: document.title,
-          template: PAGE_TEMPLATE.name,
-          blocks: []
-        }
-      }];
+      return [{ element: main, path, report: { title: document.title, template: PAGE_TEMPLATE.name, blocks: [] } }];
     }
   };
   return __toCommonJS(import_utility_page_exports);

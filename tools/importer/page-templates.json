@@ -297,7 +297,32 @@
         "https://www.ensure.com/recipes/dessert/oatmeal-cookie"
       ],
       "description": "Recipe detail page with ingredients, preparation steps, and nutritional information using Ensure products",
-      "blocks": []
+      "blocks": [
+        {
+          "name": "hero-recipe",
+          "instances": [
+            ".m-hero"
+          ]
+        },
+        {
+          "name": "embed-video",
+          "instances": [
+            ".s7dm-videoPlayer, .brightcove-container, .video-js"
+          ]
+        },
+        {
+          "name": "table-nutrition",
+          "instances": [
+            ".m-table, table.cmp-table__table"
+          ]
+        },
+        {
+          "name": "cards-navigation",
+          "instances": [
+            ".m-card.m-card--large"
+          ]
+        }
+      ]
     },
     {
       "name": "blog-article",
@@ -323,7 +348,26 @@
         "https://www.ensure.com/blog/expert-advice/enjoying-your-ensure-our-nutritionists-share-their-most-popular-tips"
       ],
       "description": "Blog content page with expert advice or nutrition information articles",
-      "blocks": []
+      "blocks": [
+        {
+          "name": "hero-blog",
+          "instances": [
+            ".m-hero"
+          ]
+        },
+        {
+          "name": "columns-blog",
+          "instances": [
+            ".columncontrol.column-align--left"
+          ]
+        },
+        {
+          "name": "cards-navigation",
+          "instances": [
+            ".m-card.m-card--large"
+          ]
+        }
+      ]
     },
     {
       "name": "health-article",
@@ -345,7 +389,26 @@
         "https://www.ensure.com/health-articles-tips/lifestyle/need-game-plan"
       ],
       "description": "Health tips and articles covering nutrition, fitness, and lifestyle topics",
-      "blocks": []
+      "blocks": [
+        {
+          "name": "hero-blog",
+          "instances": [
+            ".m-hero"
+          ]
+        },
+        {
+          "name": "columns-blog",
+          "instances": [
+            ".columncontrol"
+          ]
+        },
+        {
+          "name": "cards-navigation",
+          "instances": [
+            ".m-card.m-card--large"
+          ]
+        }
+      ]
     },
     {
       "name": "listing-page",

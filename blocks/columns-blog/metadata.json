@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-blog",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-24T06:24:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.ensure.com/blog/expert-advice/aging-and-nutrition",
+    "originPage": "blog article page - article body + sidebar layout",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "article-sidebar",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "2-column layout: wide article body (8-col) + narrow sidebar (4-col)",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "blog article pages with sidebar",
+      "content pages with main content + related links sidebar",
+      "article layouts with navigation/popular posts sidebar"
+    ],
+    "notSuitableFor": [
+      "product detail pages with product image",
+      "nutrition data two-column layouts",
+      "equal-width side-by-side content"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/blog/expert-advice/aging-and-nutrition"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-24T06:24:00.000Z"
+  }
+}

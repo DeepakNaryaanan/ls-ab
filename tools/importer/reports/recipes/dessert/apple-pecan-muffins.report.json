@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/dessert/apple-pecan-muffins",
+  "path": "recipes/dessert/apple-pecan-muffins",
+  "timestamp": "2026-05-24T06:13:42.097Z",
+  "title": "Apple Pecan Muffins Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

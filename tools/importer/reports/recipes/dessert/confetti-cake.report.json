@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/dessert/confetti-cake",
+  "path": "recipes/dessert/confetti-cake",
+  "timestamp": "2026-05-24T06:09:09.557Z",
+  "title": "Confetti Cake Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

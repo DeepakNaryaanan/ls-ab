@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/appetizers-meals/sweet-corn-chowder",
+  "path": "recipes/appetizers-meals/sweet-corn-chowder",
+  "timestamp": "2026-05-24T05:54:44.149Z",
+  "title": "Ensure® COMPLETE Sweet Corn Chowder Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

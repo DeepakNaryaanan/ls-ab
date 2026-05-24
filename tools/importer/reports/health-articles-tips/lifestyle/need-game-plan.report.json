@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/health-articles-tips/lifestyle/need-game-plan",
+  "path": "health-articles-tips/lifestyle/need-game-plan",
+  "timestamp": "2026-05-24T07:21:44.708Z",
+  "title": "Life Coach | Need a Game Plan for Life? | Ensure®",
+  "template": "health-article",
+  "blocks": [
+    "hero-blog",
+    "columns-blog",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

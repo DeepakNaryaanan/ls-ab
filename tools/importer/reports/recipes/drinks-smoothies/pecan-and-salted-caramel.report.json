@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/drinks-smoothies/pecan-and-salted-caramel",
+  "path": "recipes/drinks-smoothies/pecan-and-salted-caramel",
+  "timestamp": "2026-05-24T05:41:48.888Z",
+  "title": "Ensure® Max Protein Pecan and Salted Caramel Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

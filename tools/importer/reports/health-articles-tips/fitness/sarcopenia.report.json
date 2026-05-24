@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/health-articles-tips/fitness/sarcopenia",
+  "path": "health-articles-tips/fitness/sarcopenia",
+  "timestamp": "2026-05-24T07:17:08.538Z",
+  "title": "What is Sarcopenia? | Ensure® Fitness Articles",
+  "template": "health-article",
+  "blocks": [
+    "hero-blog",
+    "columns-blog",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

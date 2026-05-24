@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/blog/expert-advice/muscle-story",
+  "path": "blog/expert-advice/muscle-story",
+  "timestamp": "2026-05-24T06:49:12.064Z",
+  "title": "Building Muscle After 40 | Muscle Growth | Ensure®",
+  "template": "blog-article",
+  "blocks": [
+    "hero-blog",
+    "columns-blog",
+    "cards-navigation"
+  ]
+}

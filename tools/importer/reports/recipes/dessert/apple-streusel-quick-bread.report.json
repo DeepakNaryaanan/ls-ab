@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/dessert/apple-streusel-quick-bread",
+  "path": "recipes/dessert/apple-streusel-quick-bread",
+  "timestamp": "2026-05-24T06:17:51.387Z",
+  "title": "Ensure® COMPLETE Apple Streusel Quick Bread Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

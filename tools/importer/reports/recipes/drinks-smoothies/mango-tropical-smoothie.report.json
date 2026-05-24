@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/drinks-smoothies/mango-tropical-smoothie",
+  "path": "recipes/drinks-smoothies/mango-tropical-smoothie",
+  "timestamp": "2026-05-22T12:03:41.282Z",
+  "title": "Ensure® COMPLETE Mango Tropical Smoothie Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

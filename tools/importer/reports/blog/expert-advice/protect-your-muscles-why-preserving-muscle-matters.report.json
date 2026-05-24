@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/blog/expert-advice/protect-your-muscles-why-preserving-muscle-matters",
+  "path": "blog/expert-advice/protect-your-muscles-why-preserving-muscle-matters",
+  "timestamp": "2026-05-24T06:51:58.817Z",
+  "title": "Muscle and Strength | Why Preserving Muscle Matters | Ensure®",
+  "template": "blog-article",
+  "blocks": [
+    "hero-blog",
+    "columns-blog",
+    "cards-navigation"
+  ]
+}

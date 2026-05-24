@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/appetizers-meals/spinach-artichoke-dip",
+  "path": "recipes/appetizers-meals/spinach-artichoke-dip",
+  "timestamp": "2026-05-24T06:03:33.634Z",
+  "title": "Recipes with Ensure® Nutritional Drinks | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

@@ -1,3 +1,4 @@
+/* eslint-disable */
 var CustomImportScript = (() => {
   var __defProp = Object.defineProperty;
   var __defProps = Object.defineProperties;
@@ -40,99 +41,160 @@ var CustomImportScript = (() => {
     default: () => import_listing_page_default
   });
 
-  // tools/importer/parsers/cards-listing.js
+  // tools/importer/parsers/hero-blog.js
   function parse(element, { document }) {
-    const cardLinks = element.querySelectorAll(".abbv-col-4 a[href]");
+    const heading = element.querySelector("h1.m-hero__header, h1.h1-hero, h1, h2.m-hero__header");
+    const image = element.querySelector(".m-hero__image img.cmp-image__image, .m-hero__media img.cmp-image__image, .m-hero__image img, .m-hero__media img");
     const cells = [];
-    cardLinks.forEach((link) => {
-      const image = link.querySelector("img");
-      const heading = link.querySelector("h3, h2");
-      const description = link.querySelector("p");
-      const textContent = [];
-      if (heading) textContent.push(heading.cloneNode(true));
-      if (description) textContent.push(description.cloneNode(true));
-      const cta = document.createElement("p");
-      const ctaLink = document.createElement("a");
-      ctaLink.href = link.href;
-      ctaLink.textContent = heading ? heading.textContent : "Read More";
-      cta.appendChild(ctaLink);
-      textContent.push(cta);
-      if (image) {
-        cells.push([image.cloneNode(true), textContent]);
+    if (image) {
+      cells.push([image]);
+    }
+    if (heading) {
+      cells.push([heading]);
+    }
+    const block = WebImporter.Blocks.createBlock(document, { name: "hero-blog", cells });
+    element.replaceWith(block);
+  }
+
+  // tools/importer/parsers/cards-navigation.js
+  function parse2(element, { document }) {
+    let cards = Array.from(element.querySelectorAll("article.m-card.m-card--large"));
+    if (cards.length === 0 && element.matches && element.matches("article.m-card.m-card--large, .m-card.m-card--large")) {
+      cards = [element];
+    }
+    if (cards.length === 0) {
+      cards = Array.from(element.querySelectorAll(".m-card.m-card--large"));
+    }
+    if (cards.length === 0) {
+      cards = [element];
+    }
+    const cells = [];
+    cards.forEach((card) => {
+      const img = card.querySelector(".m-card__image img, .m-card__media img");
+      const heading = card.querySelector("h2.m-card__title, .m-card__title, h2");
+      const link = card.querySelector("a.m-card-link, a[href]");
+      const imageCell = [];
+      if (img) {
+        imageCell.push(img);
+      }
+      const textCell = [];
+      if (heading) {
+        const h = document.createElement("h2");
+        h.textContent = heading.textContent;
+        textCell.push(h);
+      }
+      if (link) {
+        const a = document.createElement("a");
+        a.href = link.href || link.getAttribute("href");
+        a.textContent = heading ? heading.textContent : link.textContent || link.getAttribute("aria-label") || "Learn More";
+        textCell.push(a);
+      }
+      if (imageCell.length > 0 || textCell.length > 0) {
+        cells.push([imageCell, textCell]);
       }
     });
-    if (cells.length > 0) {
-      const block = WebImporter.Blocks.createBlock(document, { name: "cards", cells });
-      element.replaceWith(block);
+    const block = WebImporter.Blocks.createBlock(document, { name: "cards-navigation", cells });
+    element.replaceWith(block);
+  }
+
+  // tools/importer/transformers/ensure-cleanup.js
+  var TransformHook = { beforeTransform: "beforeTransform", afterTransform: "afterTransform" };
+  function transform(hookName, element, payload) {
+    if (hookName === TransformHook.beforeTransform) {
+      WebImporter.DOMUtils.remove(element, [
+        "#consent-banner",
+        "#truste-consent-track",
+        ".trustarc-banner-wrapper",
+        "#teconsent"
+      ]);
+      WebImporter.DOMUtils.remove(element, [
+        ".modal",
+        ".generic-modal",
+        "#site-leaving-popup-content",
+        "#site-entering-popup-content",
+        "#tender-product-disclaimer-content",
+        ".popup-wrapper",
+        ".m-popup"
+      ]);
+      WebImporter.DOMUtils.remove(element, [
+        "access-widget-ui",
+        ".acsb-sr-alert",
+        'a[href*="accessibe.com"]'
+      ]);
+      WebImporter.DOMUtils.remove(element, [".a-spinner"]);
+    }
+    if (hookName === TransformHook.afterTransform) {
+      WebImporter.DOMUtils.remove(element, [
+        ".o-header",
+        "#section-ensure-header",
+        ".a-container--header"
+      ]);
+      WebImporter.DOMUtils.remove(element, [".o-footer"]);
+      WebImporter.DOMUtils.remove(element, [".abbott-alert"]);
+      WebImporter.DOMUtils.remove(element, [
+        "link",
+        "noscript",
+        'input[id="onetrust-url"]',
+        'input[id="cmpidField"]',
+        'input[id="selfValue"]',
+        'input[id="wcmMode"]'
+      ]);
     }
   }
 
-  // tools/importer/transformers/psoriasis-cleanup.js
-  var H = { before: "beforeTransform", after: "afterTransform" };
-  function transform(hookName, element, payload) {
-    if (hookName === H.before) {
-      WebImporter.DOMUtils.remove(element, [
-        ".newpar",
-        ".par.iparys_inherited"
-      ]);
-      WebImporter.DOMUtils.remove(element, [
-        ".modal.parbase",
-        ".abbv-modal"
-      ]);
-      WebImporter.DOMUtils.remove(element, [
-        "#onetrust-consent-sdk",
-        "#onetrust-pc-sdk",
-        "#onetrust-style"
-      ]);
-      WebImporter.DOMUtils.remove(element, [
-        ".abbv-quick-poll .answer",
-        ".abbv-quick-poll .loading",
-        ".abbv-quick-poll .qPoll-options"
-      ]);
-      element.querySelectorAll("picture > source:not([srcset])").forEach((src) => src.remove());
-    }
-    if (hookName === H.after) {
-      WebImporter.DOMUtils.remove(element, [
-        ".header-v2.parbase",
-        "header.abbv-header-v2",
-        "footer.abbv-footer",
-        ".abv-footer-container",
-        ".abbv-clear",
-        "noscript",
-        "link"
-      ]);
-      WebImporter.DOMUtils.remove(element, [
-        "a#target-rcmd-touts-id",
-        'img[src*="t.co/i/adsct"]',
-        'img[src*="analytics.twitter.com"]'
-      ]);
+  // tools/importer/transformers/ensure-sections.js
+  var TransformHook2 = { beforeTransform: "beforeTransform", afterTransform: "afterTransform" };
+  function transform2(hookName, element, payload) {
+    if (hookName === TransformHook2.afterTransform) {
+      const { document } = payload;
+      const sections = payload.template && payload.template.sections;
+      if (!sections || sections.length < 2) {
+        return;
+      }
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        const sectionEl = element.querySelector(section.selector);
+        if (!sectionEl) {
+          continue;
+        }
+        if (section.style) {
+          const sectionMetadata = WebImporter.Blocks.createBlock(document, {
+            name: "Section Metadata",
+            cells: { style: section.style }
+          });
+          sectionEl.after(sectionMetadata);
+        }
+        if (i > 0) {
+          const hr = document.createElement("hr");
+          sectionEl.before(hr);
+        }
+      }
     }
   }
 
   // tools/importer/import-listing-page.js
+  var parsers = {
+    "hero-blog": parse,
+    "cards-navigation": parse2
+  };
   var PAGE_TEMPLATE = {
     name: "listing-page",
-    description: "Article listing page with intro text and a multi-row grid of article cards",
-    urls: [
-      "https://www.psoriasis.com/psoriasis-patients/tips"
-    ],
+    description: "Category listing page showing cards/grids of sub-pages",
     blocks: [
-      {
-        name: "cards",
-        instances: [".abbv-row-container.target-rcmd-touts"]
-      }
+      { name: "hero-blog", instances: [".m-hero"] },
+      { name: "cards-navigation", instances: [".m-card.m-card--large"] }
+    ],
+    sections: [
+      { id: "section-1-hero", name: "Category Hero", selector: ".m-hero", style: null, blocks: ["hero-blog"], defaultContent: [] },
+      { id: "section-2-content", name: "Listing Content", selector: ".columncontrol, .cmp-container", style: null, blocks: ["cards-navigation"], defaultContent: [] }
     ]
   };
-  var parsers = {
-    "cards": parse
-  };
   var transformers = [
-    transform
+    transform,
+    ...PAGE_TEMPLATE.sections && PAGE_TEMPLATE.sections.length > 1 ? [transform2] : []
   ];
   function executeTransformers(hookName, element, payload) {
-    const enhancedPayload = __spreadProps(__spreadValues({}, payload), {
-      template: PAGE_TEMPLATE
-    });
+    const enhancedPayload = __spreadProps(__spreadValues({}, payload), { template: PAGE_TEMPLATE });
     transformers.forEach((transformerFn) => {
       try {
         transformerFn.call(null, hookName, element, enhancedPayload);
@@ -145,18 +207,13 @@ var CustomImportScript = (() => {
     const pageBlocks = [];
     template.blocks.forEach((blockDef) => {
       blockDef.instances.forEach((selector) => {
-        const elements = document.querySelectorAll(selector);
-        if (elements.length === 0) {
-          console.warn(`Block "${blockDef.name}" selector not found: ${selector}`);
-        }
-        elements.forEach((element) => {
-          pageBlocks.push({
-            name: blockDef.name,
-            selector,
-            element,
-            section: blockDef.section || null
+        try {
+          const elements = document.querySelectorAll(selector);
+          elements.forEach((element) => {
+            pageBlocks.push({ name: blockDef.name, selector, element, section: blockDef.section || null });
           });
-        });
+        } catch (e) {
+        }
       });
     });
     console.log(`Found ${pageBlocks.length} block instances on page`);
@@ -174,10 +231,8 @@ var CustomImportScript = (() => {
           try {
             parser(block.element, { document, url, params });
           } catch (e) {
-            console.error(`Failed to parse ${block.name} (${block.selector}):`, e);
+            console.error(`Failed to parse ${block.name}:`, e);
           }
-        } else {
-          console.warn(`No parser found for block: ${block.name}`);
         }
       });
       executeTransformers("afterTransform", main, payload);
@@ -188,15 +243,7 @@ var CustomImportScript = (() => {
       WebImporter.rules.adjustImageUrls(main, url, params.originalURL);
       let path = new URL(params.originalURL).pathname.replace(/\/$/, "").replace(/\.html$/, "");
       if (!path || path === "") path = "/index";
-      return [{
-        element: main,
-        path,
-        report: {
-          title: document.title,
-          template: PAGE_TEMPLATE.name,
-          blocks: pageBlocks.map((b) => b.name)
-        }
-      }];
+      return [{ element: main, path, report: { title: document.title, template: PAGE_TEMPLATE.name, blocks: pageBlocks.map((b) => b.name) } }];
     }
   };
   return __toCommonJS(import_listing_page_exports);

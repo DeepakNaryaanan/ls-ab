@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/dessert/chocolate-chip-banana-bread",
+  "path": "recipes/dessert/chocolate-chip-banana-bread",
+  "timestamp": "2026-05-24T06:10:56.902Z",
+  "title": "Chocolate Chip Banana Bread Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

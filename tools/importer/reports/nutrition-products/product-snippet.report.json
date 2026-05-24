@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/nutrition-products/product-snippet",
+  "path": "nutrition-products/product-snippet",
+  "timestamp": "2026-05-24T07:29:51.133Z",
+  "title": "Ensure® Original Nutrition Powder | Ensure® Powders",
+  "template": "listing-page",
+  "blocks": [
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

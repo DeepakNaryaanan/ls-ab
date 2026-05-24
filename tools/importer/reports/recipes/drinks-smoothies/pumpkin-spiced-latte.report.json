@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/drinks-smoothies/pumpkin-spiced-latte",
+  "path": "recipes/drinks-smoothies/pumpkin-spiced-latte",
+  "timestamp": "2026-05-22T12:12:34.281Z",
+  "title": "Ensure® Max Protein Pumpkin Spiced Latte Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

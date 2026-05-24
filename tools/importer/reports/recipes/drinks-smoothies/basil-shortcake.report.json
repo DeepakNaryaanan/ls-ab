@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/drinks-smoothies/basil-shortcake",
+  "path": "recipes/drinks-smoothies/basil-shortcake",
+  "timestamp": "2026-05-22T12:22:57.805Z",
+  "title": "Ensure® Max Protein Strawberry Basil Shortcake Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/nutrition-products/ensure-max-protein-42g-complete-protein/chocolate",
+  "path": "nutrition-products/ensure-max-protein-42g-complete-protein/chocolate",
+  "timestamp": "2026-05-22T11:34:09.507Z",
+  "title": "Ensure® Max Protein 42g Complete Protein Nutrition Shake",
+  "template": "product-flavor-page",
+  "blocks": [
+    "columns-product",
+    "columns-product",
+    "columns-product",
+    "columns-product",
+    "cards-flavor",
+    "cards-flavor",
+    "cards-flavor",
+    "cards-flavor",
+    "cards-flavor",
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "embed-reviews",
+    "embed-reviews"
+  ]
+}

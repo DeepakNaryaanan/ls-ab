@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/drinks-smoothies/peppermint-fudge",
+  "path": "recipes/drinks-smoothies/peppermint-fudge",
+  "timestamp": "2026-05-22T12:15:58.140Z",
+  "title": "Ensure® Max Protein Peppermint Fudge Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

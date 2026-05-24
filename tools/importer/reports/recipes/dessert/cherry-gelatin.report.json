@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/dessert/cherry-gelatin",
+  "path": "recipes/dessert/cherry-gelatin",
+  "timestamp": "2026-05-24T06:16:27.824Z",
+  "title": "Ensure® COMPLETE Cherry Gelatin Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

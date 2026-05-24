@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/nutrition-products/product-demystification-test",
+  "path": "nutrition-products/product-demystification-test",
+  "timestamp": "2026-05-24T07:32:40.219Z",
+  "title": "Ensure ׀ Product Demystification",
+  "template": "listing-page",
+  "blocks": [
+    "hero-blog",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/appetizers-meals",
+  "path": "recipes/appetizers-meals",
+  "timestamp": "2026-05-24T07:42:55.384Z",
+  "title": "Appetizer Recipes| Healthy and Nutritious Appetizers | Ensure®",
+  "template": "listing-page",
+  "blocks": [
+    "hero-blog",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

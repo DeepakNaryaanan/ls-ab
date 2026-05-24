@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/health-articles-tips/fitness/feel-marvelous-30-minutes",
+  "path": "health-articles-tips/fitness/feel-marvelous-30-minutes",
+  "timestamp": "2026-05-24T07:15:45.392Z",
+  "title": "Tips for Finding Time for 30 Minute Exercise | Ensure®",
+  "template": "health-article",
+  "blocks": [
+    "hero-blog",
+    "columns-blog",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

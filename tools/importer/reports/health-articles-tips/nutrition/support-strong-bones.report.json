@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/health-articles-tips/nutrition/support-strong-bones",
+  "path": "health-articles-tips/nutrition/support-strong-bones",
+  "timestamp": "2026-05-24T07:09:48.967Z",
+  "title": "Calcium Absorption to Support Strong Bones | Ensure®",
+  "template": "health-article",
+  "blocks": [
+    "hero-blog",
+    "columns-blog",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

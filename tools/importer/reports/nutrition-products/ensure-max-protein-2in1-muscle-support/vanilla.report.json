@@ -1,0 +1,28 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/nutrition-products/ensure-max-protein-2in1-muscle-support/vanilla",
+  "path": "nutrition-products/ensure-max-protein-2in1-muscle-support/vanilla",
+  "timestamp": "2026-05-22T11:38:18.434Z",
+  "title": "Ensure® Max Protein 2-in-1 Muscle Support",
+  "template": "product-flavor-page",
+  "blocks": [
+    "columns-product",
+    "columns-product",
+    "columns-product",
+    "columns-product",
+    "cards-flavor",
+    "cards-flavor",
+    "cards-flavor",
+    "cards-flavor",
+    "cards-flavor",
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "columns-nutrition",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation",
+    "embed-reviews",
+    "embed-reviews"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "variantName": "embed-video",
+  "baseBlock": "embed",
+  "version": "1.0.0",
+  "created": "2026-05-22T11:41:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.ensure.com/recipes/drinks-smoothies/banana-smoothie",
+    "originPage": "recipe detail page - recipe video tutorial",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "video-embed",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "video URL embed (Brightcove/YouTube/Vimeo)",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "recipe tutorial videos",
+      "product demonstration videos",
+      "how-to video embeds",
+      "any page with embedded video content from external platforms"
+    ],
+    "notSuitableFor": [
+      "third-party review widget embeds",
+      "social media post embeds",
+      "interactive widget embeds (calculators, forms)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/recipes/drinks-smoothies/banana-smoothie"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-22T11:41:00.000Z"
+  }
+}

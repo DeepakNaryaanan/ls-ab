@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/drinks-smoothies/banana-smoothie",
+  "path": "recipes/drinks-smoothies/banana-smoothie",
+  "timestamp": "2026-05-24T05:47:21.776Z",
+  "title": "Banana Smoothie Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "embed-video",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

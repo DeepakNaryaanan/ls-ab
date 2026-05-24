@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/drinks-smoothies/chocolate-pecan-turtle-smoothie",
+  "path": "recipes/drinks-smoothies/chocolate-pecan-turtle-smoothie",
+  "timestamp": "2026-05-24T05:44:35.715Z",
+  "title": "Ensure® Max Protein Chocolate Pecan Turtle Smoothie Recipe | Ensure®",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

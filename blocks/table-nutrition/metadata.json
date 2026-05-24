@@ -1,0 +1,40 @@
+{
+  "variantName": "table-nutrition",
+  "baseBlock": "table",
+  "version": "1.0.0",
+  "created": "2026-05-22T11:41:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.ensure.com/recipes/drinks-smoothies/banana-smoothie",
+    "originPage": "recipe detail page - nutrition facts table",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "nutrition-facts",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "2-column table with nutrient labels and values",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "recipe nutrition facts displays",
+      "product nutrition information tables",
+      "structured label-value data tables",
+      "ingredient and supplement facts"
+    ],
+    "notSuitableFor": [
+      "complex multi-column comparison tables",
+      "image-heavy data tables",
+      "interactive sortable tables"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/recipes/drinks-smoothies/banana-smoothie"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-22T11:41:00.000Z"
+  }
+}

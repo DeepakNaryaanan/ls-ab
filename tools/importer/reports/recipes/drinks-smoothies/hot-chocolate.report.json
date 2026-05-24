@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/recipes/drinks-smoothies/hot-chocolate",
+  "path": "recipes/drinks-smoothies/hot-chocolate",
+  "timestamp": "2026-05-24T05:48:44.884Z",
+  "title": "Simple Hot Chocolate Recipe | Ensure® COMPLETE",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

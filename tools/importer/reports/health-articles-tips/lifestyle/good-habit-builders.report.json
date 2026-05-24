@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/health-articles-tips/lifestyle/good-habit-builders",
+  "path": "health-articles-tips/lifestyle/good-habit-builders",
+  "timestamp": "2026-05-24T07:19:54.155Z",
+  "title": "Healthy Habits | Builders for Better Health | Ensure®",
+  "template": "health-article",
+  "blocks": [
+    "hero-blog",
+    "columns-blog",
+    "cards-navigation",
+    "cards-navigation",
+    "cards-navigation"
+  ]
+}

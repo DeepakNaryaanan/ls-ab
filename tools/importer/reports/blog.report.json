@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.ensure.com/blog",
+  "path": "blog",
+  "timestamp": "2026-05-24T07:46:05.914Z",
+  "title": "Healthy Matters Blog | Ensure®",
+  "template": "listing-page",
+  "blocks": [
+    "hero-blog",
+    "cards-navigation"
+  ]
+}
