@@ -1,27 +1,83 @@
-.cards-navigation > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.cards-navigation-container {
+  padding: 30px 20px;
+}
+
+.cards-navigation-container .cards-navigation-wrapper {
+  max-width: var(--content-max-width, 1200px);
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
-.cards-navigation > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+.cards-navigation {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #ffffff;
 }
 
-.cards-navigation .cards-navigation-card-body {
-  margin: 16px;
+.cards-navigation:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
-.cards-navigation .cards-navigation-card-image {
+.cards-navigation > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-navigation > div > div:first-child {
   line-height: 0;
 }
 
-.cards-navigation > ul > li img {
+.cards-navigation > div > div:first-child picture {
+  display: block;
+}
+
+.cards-navigation img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+.cards-navigation > div > div:last-child {
+  padding: 16px;
+  text-align: center;
+}
+
+.cards-navigation h2 {
+  font-size: var(--heading-size-s, 18px);
+  color: var(--primary-color, #002d72);
+  margin: 0;
+}
+
+.cards-navigation p {
+  display: none;
+}
+
+.cards-navigation a {
+  color: var(--primary-color, #002d72);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media (min-width: 900px) {
+  .cards-navigation-container .cards-navigation-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .cards-navigation img {
+    aspect-ratio: 1 / 1;
+  }
+
+  .cards-navigation > div > div:last-child {
+    padding: 20px;
+  }
+
+  .cards-navigation h2 {
+    font-size: var(--heading-size-m, 20px);
+  }
 }

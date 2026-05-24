@@ -1,33 +1,57 @@
+.columns-nutrition-container {
+  padding: 30px 20px;
+}
+
+.columns-nutrition-container .columns-nutrition-wrapper {
+  max-width: var(--content-max-width, 1200px);
+  margin: 0 auto;
+}
+
 .columns-nutrition > div {
   display: flex;
   flex-direction: column;
+  gap: 24px;
+}
+
+.columns-nutrition > div > div {
+  flex: 1;
 }
 
 .columns-nutrition img {
   width: 100%;
+  height: auto;
+  border-radius: var(--border-radius, 4px);
 }
 
-.columns-nutrition > div > div {
-  order: 1;
+.columns-nutrition h3 {
+  color: var(--primary-color, #002d72);
+  font-size: var(--heading-size-l, 24px);
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--primary-color, #002d72);
 }
 
-.columns-nutrition > div > .columns-nutrition-img-col {
-  order: 0;
+.columns-nutrition ul {
+  padding-left: 20px;
 }
 
-.columns-nutrition > div > .columns-nutrition-img-col img {
-  display: block;
+.columns-nutrition li {
+  margin-bottom: 8px;
+  line-height: 1.5;
 }
 
-@media (width >= 900px) {
+.columns-nutrition p {
+  line-height: 1.6;
+}
+
+@media (min-width: 900px) {
   .columns-nutrition > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
   }
 
   .columns-nutrition > div > div {
     flex: 1;
-    order: unset;
   }
 }

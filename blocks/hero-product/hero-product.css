@@ -5,43 +5,96 @@
 
 .hero-product {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  background: linear-gradient(135deg, #001d4f 0%, #002d72 50%, #003a8c 100%);
+  padding: 40px 20px;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
 }
 
-.hero-product h1,
-.hero-product h2,
-.hero-product h3,
-.hero-product h4,
-.hero-product h5,
-.hero-product h6,
-.hero-product p {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+.hero-product > div:first-child {
+  order: 2;
+  max-width: 300px;
+  margin: 20px auto 0;
 }
 
-.hero-product.no-image * {
-  color: var(--text-color);
+.hero-product > div:last-child {
+  order: 1;
+  z-index: 1;
+}
+
+.hero-product h1 {
+  color: #ffffff;
+  font-size: var(--heading-size-xxl);
+  text-transform: uppercase;
+  margin: 0 0 12px;
+  letter-spacing: 1px;
+}
+
+.hero-product h2 {
+  color: #ffffff;
+  font-size: var(--heading-size-l);
+  font-weight: 400;
+  margin: 0 0 24px;
+}
+
+.hero-product a {
+  display: inline-block;
+  background: #ffffff;
+  color: var(--primary-color);
+  padding: 12px 32px;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  font-family: var(--heading-font-family);
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.hero-product a:hover {
+  background: #f0f0f0;
+  text-decoration: none;
 }
 
 .hero-product picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+  position: relative;
 }
 
 .hero-product img {
-  object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-width: 300px;
 }
 
-@media (width >= 900px) {
+@media (min-width: 900px) {
   .hero-product {
-    padding: 40px 32px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 40px;
+    min-height: 400px;
+    text-align: left;
+  }
+
+  .hero-product > div:first-child {
+    order: 2;
+    flex: 0 0 40%;
+    max-width: 450px;
+  }
+
+  .hero-product > div:last-child {
+    order: 1;
+    flex: 0 0 50%;
+    padding-right: 40px;
+  }
+
+  .hero-product h1 {
+    font-size: 42px;
+  }
+
+  .hero-product img {
+    max-width: 100%;
   }
 }
