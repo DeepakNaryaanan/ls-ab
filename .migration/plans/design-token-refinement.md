@@ -1,121 +1,124 @@
-Now I can see the issue. Let me also check the `decoratePictures` function — the error in console was `TypeError: Cannot read properties of null (reading 'cloneNode')`:Now I have a complete picture. Let me look at the content file to understand the DOM structure that's being loaded:# CSS Debugging Plan: Styles Not Being Applied
+# Navigation Migration Plan: https://www.ensure.com/
 
-## Status: ROOT CAUSES IDENTIFIED
+## Status: ALREADY IMPLEMENTED
 
-After investigating the codebase, I've identified multiple issues preventing CSS from being properly applied to the migrated pages.
-
----
-
-## Root Causes
-
-### Issue 1: `decoratePictures` Error Breaks Page Decoration
-
-**File:** `scripts/ak.js` line 92-104
-
-The `decoratePictures` function crashes with `TypeError: Cannot read properties of null (reading 'cloneNode')` because it calls `source.cloneNode()` on `<picture>` elements that have no `<source>` child (the imported HTML uses `<picture><img>` without `<source>` elements).
-
-```javascript
-function decoratePictures(el) {
-  const pics = el.querySelectorAll('picture');
-  for (const pic of pics) {
-    const source = pic.querySelector('source'); // Returns null!
-    const clone = source.cloneNode(); // CRASHES HERE
-    ...
-  }
-}
-```
-
-**Impact:** This error may halt the `loadArea()` execution flow, preventing sections from being decorated and blocks from loading their CSS.
+The navigation structure from ensure.com has been migrated. Both header and footer are implemented using the AuthorKit fragment pattern (`fragments/nav/header.html` and `fragments/nav/footer.html`).
 
 ---
 
-### Issue 2: Circular CSS Variable References
+## Current Implementation
 
-**File:** `styles/styles.css` lines 38-40
+### Header (`fragments/nav/header.html`)
 
-```css
---body-font-family: var(--body-font-family);
---heading-font-family: var(--heading-font-family);
---font-family: var(--body-font-family);
-```
+3-section structure matching the AuthorKit header block pattern:
 
-These re-declare `--body-font-family` and `--heading-font-family` as referencing themselves. While `brand.css` defines them first (via `@import`), browsers may not resolve this correctly if the import hasn't loaded yet or if CSS spec treats the same-named re-declaration as circular.
+| Section | Role | Content |
+|---------|------|---------|
+| **1. Brand** | Logo + mobile menu toggle | Ensure logo → `/home`, hamburger menu button |
+| **2. Sections** | Main navigation links | Products, Sign Up & Save, Recipes, Health Articles |
+| **3. Tools** | Utility CTA | Buy Now → `/where-to-buy-ensure` |
 
----
+### Footer (`fragments/nav/footer.html`)
 
-### Issue 3: Block CSS Not Loading (Script Error Cascade)
+3-section structure:
 
-**File:** `scripts/ak.js` line 296-299
+| Section | Role | Content |
+|---------|------|---------|
+| **1. Link Columns** | Site navigation | Site Pages (6 links), Abbott (3 links), Abbott Brands (3 links) |
+| **2. Legal** | Compliance links | Unsubscribe, Privacy Policy, Terms of Use, Your Privacy Choices |
+| **3. Copyright** | Legal notice | © 2026 Abbott. All rights reserved. |
 
-Block CSS is loaded dynamically by `loadBlock()` (line 75: `loadStyle(\`${blockPath}.css\`)`). If `decoratePictures` crashes (Issue 1) before `loadArea()` reaches the block-loading loop, block-specific CSS files (`blocks/hero-product/hero-product.css`, etc.) never get injected into the page.
+### Also Exists: `nav.md` + `footer.md`
 
----
-
-### Issue 4: `@import url('brand.css')` Path Resolution
-
-**File:** `styles/styles.css` line 1
-
-The `@import url('brand.css')` uses a relative path. In EDS local dev, this resolves to `/styles/brand.css` which should work. However, if the dev server doesn't serve it correctly or there's a CORS/path issue, the entire brand variable set would be undefined.
+Markdown versions exist at the project root for DA-based authoring (alternative to fragment HTML). The AuthorKit header/footer blocks currently load from `fragments/nav/` path.
 
 ---
 
-### Issue 5: Section Wrappers Missing
+## Comparison with Original Site
 
-**File:** `styles/styles.css` lines 142-143
+### Header
 
-The CSS targets `.section > .default-content-wrapper` but the EDS framework creates `.default-content` class (line 238 of ak.js: `'default-content'`). The mismatch means section content styling doesn't apply.
+| Original Feature | Migrated | Notes |
+|-----------------|----------|-------|
+| Ensure logo (links to /home) | ✅ | In brand section |
+| Abbott logo (links to abbott.com) | ❌ | Could add as second image in brand |
+| Products nav link | ✅ | `/nutrition-products` |
+| Sign Up & Save nav link | ✅ | `/coupons` |
+| Recipes nav link | ✅ | `/recipes` |
+| Health Articles nav link | ✅ | `/health-articles-tips` |
+| Buy Now CTA | ✅ | In tools section |
+| Search icon + overlay | ❌ | Requires custom JS widget |
+| Mobile hamburger menu | ✅ | Handled by header block JS |
+| Alert banner (strawberry notice) | ❌ | Ephemeral — not migrated |
+
+### Footer
+
+| Original Feature | Migrated | Notes |
+|-----------------|----------|-------|
+| Site Pages column (6 links) | ✅ | Products, Recipes, Health, Coupons, Where to Buy, Contact |
+| Abbott column (3 links) | ✅ | Abbott.com, Abbott Nutrition, Careers |
+| Abbott Brands column (3 links) | ✅ | Glucerna, PediaSure, Similac |
+| Legal links (4 links) | ✅ | Unsubscribe, Privacy, Terms, Privacy Choices |
+| Copyright | ✅ | © 2026 Abbott |
+| Ensure footer logo | ❌ | Not in current fragment |
+| Social icons (Instagram, Facebook) | ❌ | Not in current fragment (exists in footer.md) |
 
 ---
 
-## Fixes Required
+## Potential Enhancements
 
-| # | Fix | File | Priority |
-|---|-----|------|----------|
-| 1 | Add null-check in `decoratePictures` for `source` element | `scripts/ak.js` | **Critical** |
-| 2 | Remove circular variable declarations — use brand.css values directly or use different names | `styles/styles.css` | High |
-| 3 | Fix `.default-content-wrapper` → `.default-content` class name mismatch | `styles/styles.css` | High |
-| 4 | Verify `@import url('brand.css')` resolves at `/styles/brand.css` | `styles/styles.css` | Medium |
-| 5 | Ensure imported HTML has valid `<picture>` structure or handle gracefully | Content files | Low |
+The following could be added to bring the navigation closer to the original:
+
+- [ ] Add Abbott logo as dual-brand in header
+- [ ] Add Ensure logo to footer section 2
+- [ ] Add Instagram + Facebook social icons to footer
+- [ ] Add search widget to header tools section
+- [ ] Add product mega-menu dropdown (sub-categories per product line)
+- [ ] Style header with ensure.com navy blue sticky bar
+- [ ] Style Buy Now as a prominent button (not plain link)
+- [ ] Add CCPA privacy icon next to "Your Privacy Choices"
 
 ---
 
 ## Checklist
 
-- [ ] Fix `decoratePictures` null-check — add guard: `if (!source) continue;` before `cloneNode()`
-- [ ] Fix circular CSS variables — rename to avoid self-reference (e.g., use brand.css values directly in `:root`)
-- [ ] Fix section wrapper class mismatch — change `.default-content-wrapper` to `.default-content` in styles.css
-- [ ] Verify `@import url('brand.css')` resolves correctly in local dev server
-- [ ] Test page renders after fixes — confirm blocks get `.section` class and block CSS loads
-- [ ] Verify heading styles apply (font-family, font-size, color)
-- [ ] Verify button styles apply (background, padding, border-radius)
-- [ ] Verify section background variants work (`.navy-blue`, `.dark-header`)
+- [x] Analyze original ensure.com header structure
+- [x] Map header content to 3-section EDS pattern (brand / sections / tools)
+- [x] Create `fragments/nav/header.html` with ensure.com links
+- [x] Include Ensure logo in brand section
+- [x] Include main navigation links (Products, Sign Up & Save, Recipes, Health Articles)
+- [x] Include Buy Now CTA in tools section
+- [x] Analyze original ensure.com footer structure
+- [x] Create `fragments/nav/footer.html` with ensure.com content
+- [x] Include 3 link columns (Site Pages, Abbott, Abbott Brands)
+- [x] Include legal/privacy links
+- [x] Include copyright notice
+- [x] Verify header renders on page preview
+- [x] Verify footer renders on page preview
+- [ ] Add Abbott dual-logo to header brand section
+- [ ] Add social media icons to footer
+- [ ] Add search functionality
+- [ ] Style header/footer to match ensure.com design
 
 ---
 
-## Files to Modify
+## Files
 
-| File | Changes Needed |
-|------|----------------|
-| `scripts/ak.js` | Line 95: Add `if (!source) continue;` null guard |
-| `styles/styles.css` | Lines 38-40: Remove circular var declarations; Line 142: Fix class name |
-| `styles/brand.css` | No changes needed (correctly defines root variables) |
-
----
-
-## Verification Steps (After Fixes)
-
-1. Navigate to `http://localhost:3000/content/home`
-2. Confirm no JS errors in console
-3. Confirm `styles.css` and `brand.css` both load (Network tab)
-4. Confirm block CSS files load for `hero-product` and `cards-navigation`
-5. Confirm headings show navy blue color and correct font sizes
-6. Confirm hero section has gradient navy background
-7. Confirm cards display in a grid with images
+| File | Purpose | Status |
+|------|---------|--------|
+| `fragments/nav/header.html` | Header fragment (AuthorKit pattern) | ✅ Ensure.com content |
+| `fragments/nav/footer.html` | Footer fragment (AuthorKit pattern) | ✅ Ensure.com content |
+| `nav.md` | Header content (DA markdown format) | ✅ Created |
+| `footer.md` | Footer content (DA markdown format) | ✅ Created |
+| `blocks/header/header.js` | Header block decoration | ✅ Loads from `/fragments/nav/header` |
+| `blocks/header/header.css` | Header styling | ✅ Exists |
+| `blocks/footer/footer.js` | Footer block decoration | ✅ Loads from `/fragments/nav/footer` |
+| `blocks/footer/footer.css` | Footer styling | ✅ Exists |
 
 ---
 
 ## Notes
 
-- The most critical fix is Issue 1 (`decoratePictures` crash) — this single error cascades and prevents all downstream decoration including block CSS loading
-- The imported content uses `<picture><img>` without `<source>` elements because images come from external CDN URLs, not from AEM's image optimization pipeline
-- Execution of these fixes requires switching to Execute mode
+- The AuthorKit project uses the **fragment pattern** for navigation — header/footer blocks fetch HTML from `fragments/nav/` rather than reading `nav.md` directly
+- The `nav.md` and `footer.md` files exist as a DA-authoring alternative but are not currently consumed by the block JS
+- To implement enhancements (dual logos, search, mega-menus), switch to Execute mode and modify the fragment HTML + header CSS/JS
