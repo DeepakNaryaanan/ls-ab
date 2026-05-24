@@ -35,8 +35,6 @@
   --color-gray-light: #f5f5f5;
   --color-gray-medium: #6c757d;
 
-  --body-font-family: var(--body-font-family);
-  --heading-font-family: var(--heading-font-family);
   --font-family: var(--body-font-family);
 
   --heading-font-size-xxl: var(--heading-size-xxl);
@@ -139,7 +137,7 @@ main a.button.secondary:any-link:hover {
 .section {
   padding: var(--section-padding) 0;
 
-  > .default-content-wrapper {
+  > .default-content {
     max-width: var(--content-max-width);
     margin: 0 auto;
     padding: 0 20px;
@@ -233,7 +231,7 @@ img {
     --body-font-size-m: 16px;
   }
 
-  .section > .default-content-wrapper {
+  .section > .default-content {
     padding: 0 40px;
   }
 }
