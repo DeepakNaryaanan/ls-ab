@@ -1,22 +1,68 @@
 :root {
+  /* Typography - Fonts */
   --heading-font-family: "gotham-black", sans-serif;
-  --body-font-family: "brandon_textblack", sans-serif;
-  --background-color: #ffffff;
-  --text-color: #222731;
-  --link-color: #007acc;
-  --link-hover-color: #005a99;
-  --primary-color: #002d72;
-  --primary-light: #003087;
-  --section-padding: 40px;
-  --content-max-width: 1200px;
-  --nav-height: 64px;
+  --body-font-family: "brandon_textregular", sans-serif;
+  --body-font-family-bold: "brandon_textblack", sans-serif;
+
+  /* Typography - Sizes */
   --heading-size-xxl: 36px;
   --heading-size-xl: 28px;
   --heading-size-l: 24px;
   --heading-size-m: 20px;
   --heading-size-s: 18px;
   --heading-size-xs: 16px;
+  --body-font-size: 18px;
+  --body-line-height: 24px;
+
+  /* Colors - Brand */
+  --primary-color: #002d72;
+  --primary-light: #003087;
+  --primary-dark: #001d4f;
+
+  /* Colors - Neutrals */
+  --background-color: #ffffff;
+  --text-color: #222731;
+  --text-secondary: #63666a;
+  --link-color: #007acc;
+  --link-hover-color: #005a99;
+
+  /* Colors - Grays */
+  --gray-100: #f5f5f5;
+  --gray-200: #e0e0e0;
+  --gray-300: #d4d4d4;
+  --gray-400: #afafaf;
+  --gray-500: #6c757d;
+  --gray-600: #63666a;
+  --gray-700: #50535a;
+  --gray-800: #222731;
+
+  /* Spacing */
+  --spacing-xxl: 48px;
+  --spacing-xl: 32px;
+  --spacing-l: 24px;
+  --spacing-m: 16px;
+  --spacing-s: 8px;
+  --spacing-xs: 4px;
+  --section-padding: 40px;
+  --content-max-width: 1200px;
+  --nav-height: 64px;
+
+  /* Borders & Radius */
   --border-radius: 4px;
+  --border-color: #e0e0e0;
+
+  /* Shadows */
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-default: 0.3s ease;
+
+  /* Buttons */
+  --button-font-family: "brandon_textblack", sans-serif;
+  --button-letter-spacing: 1.25px;
+  --button-border-radius: 4px;
+  --button-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 @media (min-width: 900px) {
