@@ -1,7 +1,7 @@
 {
   "type": "da",
   "contentHostUrl": "https://content.da.live/deepaknaryaanan/ls-ab/",
-  "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json",
+  "libraryUrl": "https://github.com/DeepakNaryaanan/eds-migration-exmod",
   "previewOrg": "deepaknaryaanan",
   "previewSite": "ls-ab"
 }
