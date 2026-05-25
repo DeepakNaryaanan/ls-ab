@@ -1,65 +1,58 @@
-# Design Token Extraction Plan for Skyrizi.com Psoriasis
+# Navigation Setup Plan for Skyrizi.com Psoriasis
 
 ## Overview
 
-Extract design tokens (colors, typography, spacing) from https://www.skyrizi.com/psoriasis and update the existing `styles/brand.css` and `migration-work/brand.json` files to reflect the Skyrizi brand identity instead of the previously migrated Ensure.com brand.
+The navigation content files (`nav.md` and `footer.md`) have already been authored with Skyrizi content. However, the navigation is not rendering correctly in the preview — it still shows the old Ensure.com navigation. This plan addresses verifying and fixing the navigation setup to ensure it renders properly.
 
-**Current State:** The project already contains design token files (`styles/brand.css`, `migration-work/brand.json`) populated with **Ensure.com** brand values from the prior migration. These need to be replaced with Skyrizi psoriasis brand tokens.
+**Current State:**
+- `nav.md` — Already authored with Skyrizi structure (logo, 3 dropdown menus, tools section)
+- `footer.md` — Already authored with 3-column Skyrizi footer (product links, safety info, AbbVie links)
+- `blocks/header/header.js` + `header.css` — Exist (from previous Ensure migration)
+- `blocks/footer/footer.js` + `footer.css` — Exist (from previous Ensure migration)
+- **Missing:** `/icons/skyrizi-logo.svg` referenced in nav.md does not exist
 
-## What Needs to Change
+## Issues to Resolve
 
-The existing brand files contain Ensure.com values (Abbott blue `#002d72`, Brandon Text font, etc.). Skyrizi uses a different brand palette and typography that needs to be extracted from the live site.
-
-**Expected Skyrizi brand characteristics (to be confirmed via extraction):**
-- Primary color: dark blue/navy (likely different shade from Ensure)
-- Fonts: Likely AbbVie corporate fonts (not Brandon Text)
-- Spacing/layout: Pharmaceutical page patterns with ISI sections
-- Buttons: Rounded CTA buttons with specific brand colors
-
-## Approach
-
-Use the `excat-complete-design-expert` skill to:
-1. Inspect computed styles on the live Skyrizi psoriasis page
-2. Extract actual brand colors, fonts, and spacing
-3. Overwrite `styles/brand.css` with Skyrizi-specific CSS custom properties
-4. Update `migration-work/brand.json` with the structured token data
-5. Update `styles/styles.css` base styles if needed
+1. **Missing logo asset:** `nav.md` references `/icons/skyrizi-logo.svg` which does not exist in the project
+2. **Preview cache:** The local preview server may be serving cached old Ensure nav content
+3. **Header/footer block code:** May still reference Ensure-specific patterns or need updating for Skyrizi structure
 
 ## Checklist
 
-- [ ] **Extract typography tokens** — Font families, sizes, weights, line-heights from headings, body text, and CTAs on https://www.skyrizi.com/psoriasis
-- [ ] **Extract color tokens** — Primary brand color, secondary colors, background colors, text colors, link colors, button colors, section background colors (grey section, hero overlays)
-- [ ] **Extract spacing tokens** — Section padding, content max-width, card gaps, nav height, margin patterns
-- [ ] **Extract button styles** — Primary CTA, secondary CTA, border-radius, padding, font, hover states
-- [ ] **Extract border/shadow/transition tokens** — Card shadows, border-radius, border colors, animation timings
-- [ ] **Extract responsive breakpoints** — Mobile/tablet/desktop thresholds observed in the site's CSS
-- [ ] **Update `styles/brand.css`** — Replace Ensure values with Skyrizi CSS custom properties
-- [ ] **Update `migration-work/brand.json`** — Replace Ensure JSON with Skyrizi structured token data
-- [ ] **Update `styles/styles.css`** — Adjust base typography, link styles, and section styles to match Skyrizi
-- [ ] **Update `styles/fonts.css`** — Update @font-face declarations if Skyrizi uses different web fonts
-- [ ] **Validate in preview** — Confirm imported homepage picks up new brand tokens correctly
+- [ ] **Download Skyrizi logo SVG** — Fetch the SKYRIZI logo from the source site and save to `/icons/skyrizi-logo.svg`
+- [ ] **Verify header block code** — Review `blocks/header/header.js` to ensure it handles the 3-section nav structure (brand, sections with dropdowns, tools)
+- [ ] **Verify footer block code** — Review `blocks/footer/footer.js` to ensure it handles the 3-column link layout with legal section
+- [ ] **Update header CSS** — Adjust `blocks/header/header.css` for Skyrizi brand (nav height 156px, colors, font family)
+- [ ] **Update footer CSS** — Adjust `blocks/footer/footer.css` for Skyrizi brand (cyan #00a3df background, white text)
+- [ ] **Refresh preview** — Clear cached nav and verify header/footer render with Skyrizi content
+- [ ] **Test dropdowns** — Verify Psoriasis, About SKYRIZI, and SKYRIZI Complete dropdown menus open/close correctly
+- [ ] **Test mobile** — Verify hamburger menu works on mobile viewport
+- [ ] **Test footer links** — Verify all 3 footer columns display correctly with proper link targets
+- [ ] **Verify across pages** — Check nav/footer renders consistently on treatment, about, and disease-info pages
 
-## Artifacts to Update
+## File References
 
-| File | Current Content | Target |
-|------|----------------|--------|
-| `styles/brand.css` | Ensure.com CSS variables | Skyrizi psoriasis CSS variables |
-| `migration-work/brand.json` | Ensure.com token JSON | Skyrizi token JSON |
-| `styles/styles.css` | Ensure base styles | Skyrizi base styles |
-| `styles/fonts.css` | Ensure @font-face rules | Skyrizi @font-face rules |
+| File | Status | Action Needed |
+|------|--------|---------------|
+| `nav.md` | ✅ Authored | Verify rendering |
+| `footer.md` | ✅ Authored | Verify rendering |
+| `blocks/header/header.js` | Exists | Review compatibility |
+| `blocks/header/header.css` | Exists | Update brand styles |
+| `blocks/footer/footer.js` | Exists | Review compatibility |
+| `blocks/footer/footer.css` | Exists | Update brand styles |
+| `icons/skyrizi-logo.svg` | ❌ Missing | Download from source |
 
-## Extraction Sources
+## Navigation Structure
 
-- **Live page:** https://www.skyrizi.com/psoriasis (computed styles via browser inspection)
-- **Existing screenshot:** `migration-work/screenshot.png` (visual reference)
-- **Cleaned HTML:** `migration-work/cleaned.html` (class names and inline styles)
+### Header (3 sections)
+1. **Brand:** SKYRIZI logo → /
+2. **Sections:** Psoriasis (5 items), About SKYRIZI (3 items), SKYRIZI Complete (3 items)
+3. **Tools:** Full Prescribing Information (external PDF), Sign Up
 
-## Dependencies
-
-- Homepage content is already imported (`content/psoriasis.plain.html`)
-- Block variant code exists (`blocks/carousel-hero/`)
-- Preview server available for validation after token update
+### Footer (2 sections)
+1. **Links:** 3 columns — Product Pages, Safety Info, AbbVie Corporate
+2. **Legal:** Job code US-SKZ-240247, AbbVie logo, copyright notice
 
 ---
 
-*Switch to Execute mode to run the design token extraction using the design expert skill.*
+*Switch to Execute mode to download the logo asset, update header/footer CSS, and verify navigation rendering.*

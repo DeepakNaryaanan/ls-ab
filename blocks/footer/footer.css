@@ -1,12 +1,41 @@
 footer {
+  background-color: var(--footer-bg, #00a3df);
+  color: var(--footer-text, #fff);
+  padding: 40px 20px;
+
   a {
     text-decoration: none;
+    color: #fff;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 
   .footer-content {
     max-width: var(--grid-container-width);
-    margin: 48px auto;
+    margin: 0 auto;
     font-size: 14px;
+  }
+
+  h5 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--heading-font-family-bold);
+    margin: 0 0 12px;
+  }
+
+  ul {
+    margin: 0 0 24px;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    margin-block: 6px;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .section-legal ul {
@@ -15,8 +44,21 @@ footer {
     list-style: none;
   }
 
+  .section-copyright {
+    border-top: 1px solid rgb(255 255 255 / 30%);
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+
   .section-copyright p {
-    margin: 0;
+    margin: 0 0 8px;
+  }
+
+  .section-copyright img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
   }
 
   .section {
@@ -29,11 +71,11 @@ footer {
 
 @media (width >= 900px) {
   footer {
-    margin: 0;
+    padding: 48px 40px;
 
     .section:not(.section-legal, .section-copyright) {
       .default-content {
-        columns: 4;
+        columns: 3;
         column-gap: var(--spacing-xl);
       }
 
@@ -42,27 +84,19 @@ footer {
       }
 
       ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
         break-before: avoid;
         break-inside: avoid;
-      }
-
-      li {
-        margin-block: 8px;
       }
     }
 
     .section-legal {
       display: flex;
-      justify-content: end;
+      justify-content: start;
       gap: var(--spacing-xl);
       margin-bottom: 24px;
 
       ul {
         display: flex;
-        justify-content: end;
         gap: var(--spacing-xl);
       }
 
@@ -73,8 +107,8 @@ footer {
 
     .section-copyright {
       display: flex;
-      justify-content: end;
-      gap: var(--spacing-xl);
+      align-items: center;
+      gap: var(--spacing-l);
     }
   }
 }
