@@ -1,0 +1,41 @@
+{
+  "variantName": "columns-icontext",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-25T06:50:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.skyrizi.com/psoriasis/about-skyrizi/how-skyrizi-works",
+    "originPage": "educational page - immune system science explanation section",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "icon-text-list",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "multiple rows of icon + heading + text (2 columns per row: small icon left, heading+paragraph right)",
+    "buttonCount": 0,
+    "imageCount": 3
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "educational pages with icon-text explanation lists",
+      "feature/benefit lists with icons and descriptions",
+      "science or mechanism explanation sections with illustrations",
+      "step-by-step process explanations with icons"
+    ],
+    "notSuitableFor": [
+      "product detail layouts with large images",
+      "blog article sidebar layouts",
+      "statistics or data displays",
+      "poll or interactive widgets"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/psoriasis/about-skyrizi/how-skyrizi-works"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-25T06:50:00.000Z"
+  }
+}

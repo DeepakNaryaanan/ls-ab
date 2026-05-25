@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-stats",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-25T06:42:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.skyrizi.com/psoriasis/psoriasis-treatment/skyrizi-results",
+    "originPage": "treatment results page - key statistics display",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "statistics",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "3-column equal statistics with heading + supporting text per column",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "clinical trial results pages showing key statistics",
+      "data-driven pages with multiple side-by-side data points",
+      "product benefit summaries with numbered/percentage highlights"
+    ],
+    "notSuitableFor": [
+      "product detail layouts with image and text",
+      "article body with sidebar",
+      "image-heavy side-by-side content"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/psoriasis/psoriasis-treatment/skyrizi-results"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-25T06:42:00.000Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-poll",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-25T06:42:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.skyrizi.com/psoriasis/psoriasis-treatment/skyrizi-results",
+    "originPage": "treatment results page - interactive quick poll widget",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "poll-widget",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "image/icon + interactive poll content (question + buttons + response)",
+    "buttonCount": 2,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "interactive poll or survey widgets on treatment pages",
+      "engagement widgets with icon and question/answer format",
+      "two-column layouts with small image and interactive content"
+    ],
+    "notSuitableFor": [
+      "product detail layouts",
+      "pure text side-by-side content",
+      "statistics or data display columns"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/psoriasis/psoriasis-treatment/skyrizi-results", "/psoriasis/about-skyrizi/how-skyrizi-works"],
+    "reuseCount": 2,
+    "lastUsed": "2026-05-25T06:50:00.000Z"
+  }
+}

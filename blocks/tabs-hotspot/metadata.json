@@ -1,0 +1,39 @@
+{
+  "variantName": "tabs-hotspot",
+  "baseBlock": "tabs",
+  "version": "1.0.0",
+  "created": "2026-05-25T06:42:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.skyrizi.com/psoriasis/psoriasis-treatment/skyrizi-results",
+    "originPage": "treatment results page - body area hotspot diagram",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "hotspot-navigation",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "6 tabs representing body areas with study results in each panel",
+    "buttonCount": 0,
+    "imageCount": 6
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "treatment pages with body area-specific results",
+      "interactive diagrams with clickable regions showing details",
+      "multi-topic content organized by category tabs"
+    ],
+    "notSuitableFor": [
+      "simple 2-3 tab interfaces with minimal content",
+      "before/after image comparisons",
+      "sequential step-by-step content"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/psoriasis/psoriasis-treatment/skyrizi-results"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-25T06:42:00.000Z"
+  }
+}

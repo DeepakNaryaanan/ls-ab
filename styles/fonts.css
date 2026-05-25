@@ -1,5 +1,38 @@
-/* psoriasisSPEAKS Design System - Font Loading
- * Body: Karla (400, 700)
- * Headings: Rubik (400, 500, 700)
+/* Skyrizi Design System - Font Loading
+ * Univers LT family is proprietary (AbbVie) and self-hosted on skyrizi.com.
+ * We use system font fallbacks for local development.
+ * In production, the AbbVie font CDN delivers the Univers family.
  */
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Rubik:wght@400;500;700&display=swap');
+
+/* Fallback font definitions for local rendering */
+@font-face {
+  font-family: "Univers LT W01_45 Light1475944";
+  src: local("Helvetica Neue Light"), local("Helvetica Neue"), local("Arial");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Univers LT W01_47 Light1475998";
+  src: local("Helvetica Neue Light"), local("Helvetica Neue"), local("Arial");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Univers LT W01_65 Bold1475968";
+  src: local("Helvetica Neue Bold"), local("Helvetica Neue"), local("Arial Bold"), local("Arial");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Univers LT W01_67 Bold_1476016";
+  src: local("Helvetica Neue Bold"), local("Helvetica Neue"), local("Arial Bold"), local("Arial");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

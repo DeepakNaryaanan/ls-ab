@@ -1,65 +1,49 @@
 @import url('brand.css');
 
 @font-face {
-  font-family: gotham-black-fallback;
-  size-adjust: 95%;
-  src: local('Arial Black');
+  font-family: univers-light-fallback;
+  size-adjust: 100%;
+  src: local('Helvetica Neue'), local('Arial');
 }
 
 @font-face {
-  font-family: brandon-text-fallback;
+  font-family: univers-bold-fallback;
   size-adjust: 100%;
-  src: local('Arial');
+  src: local('Arial Bold'), local('Arial');
 }
 
 :root {
   --grid-container-width: 90%;
   --grid-column-width: calc(var(--grid-container-width) / 12);
 
-  --spacing-xxl: 48px;
-  --spacing-xl: 32px;
-  --spacing-l: 24px;
-  --spacing-m: 16px;
-  --spacing-s: 8px;
-  --spacing-xs: 4px;
-
   color-scheme: light;
 
   --color-primary: var(--primary-color);
   --color-primary-light: var(--primary-light);
+  --color-accent: var(--accent-color);
+  --color-accent-dark: var(--accent-dark);
   --color-text: var(--text-color);
   --color-link: var(--link-color);
   --color-background: var(--background-color);
-  --color-light: #ffffff;
-  --color-dark: #002d72;
+  --color-light: #fff;
+  --color-dark: #071d49;
   --color-gray-light: #f5f5f5;
   --color-gray-medium: #6c757d;
-
   --font-family: var(--body-font-family);
-
   --heading-font-size-xxl: var(--heading-size-xxl);
   --heading-font-size-xl: var(--heading-size-xl);
   --heading-font-size-l: var(--heading-size-l);
   --heading-font-size-m: var(--heading-size-m);
   --heading-font-size-s: var(--heading-size-s);
   --heading-font-size-xs: var(--heading-size-xs);
-  --heading-line-height: 1.2;
-
+  --heading-line-height: 1.1;
   --body-font-size-l: 18px;
   --body-font-size-m: 16px;
   --body-font-size-s: 14px;
   --body-font-size-xs: 12px;
-  --body-line-height: 1.5;
-
-  --button-bg: var(--primary-color);
-  --button-color: #ffffff;
-  --button-border-radius: var(--border-radius);
-  --button-padding: 12px 24px;
-  --button-font-family: var(--heading-font-family);
-  --button-font-weight: 700;
-  --button-letter-spacing: 0.5px;
-  --button-transition: background 0.3s ease;
-
+  --body-line-height: 1.55;
+  --button-font-weight: 400;
+  --button-transition: background 0.3s ease, border-color 0.3s ease;
   --header-height: var(--nav-height);
 }
 
@@ -86,7 +70,7 @@ header {
 /* Links */
 a {
   color: var(--color-link);
-  text-decoration: none;
+  text-decoration: underline;
 
   &:hover {
     color: var(--link-hover-color);
@@ -101,12 +85,12 @@ main .button-container {
 
 main a.button:any-link {
   background: var(--button-bg);
-  border: 2px solid var(--button-bg);
+  border: none;
   border-radius: var(--button-border-radius);
   color: var(--button-color);
   font-family: var(--button-font-family);
   font-weight: var(--button-font-weight);
-  font-size: var(--body-font-size-m);
+  font-size: var(--button-font-size);
   padding: var(--button-padding);
   text-decoration: none;
   letter-spacing: var(--button-letter-spacing);
@@ -117,8 +101,7 @@ main a.button:any-link {
 }
 
 main a.button:any-link:hover {
-  background: #001d4f;
-  border-color: #001d4f;
+  background: var(--primary-dark);
   text-decoration: none;
 }
 
@@ -130,7 +113,7 @@ main a.button.secondary:any-link {
 
 main a.button.secondary:any-link:hover {
   background: var(--primary-color);
-  color: #ffffff;
+  color: #fff;
 }
 
 /* Sections */
@@ -143,49 +126,43 @@ main a.button.secondary:any-link:hover {
     padding: 0 20px;
   }
 
-  &.navy-blue {
+  &.grey {
+    background-color: var(--gray-100);
+  }
+
+  &.dark {
     background-color: var(--color-dark);
-    color: #ffffff;
+    color: #fff;
 
     h1, h2, h3, h4, h5, h6 {
-      color: #ffffff;
+      color: #fff;
     }
 
     a {
-      color: #ffffff;
+      color: #fff;
     }
   }
 
-  &.dark-header {
-    background-color: var(--color-dark);
-    color: #ffffff;
-    padding: var(--spacing-l) 0;
+  &.accent {
+    background-color: var(--accent-color);
+    color: #fff;
 
     h1, h2, h3, h4, h5, h6 {
-      color: #ffffff;
+      color: #fff;
     }
-  }
 
-  &.blue-wave {
-    background-color: var(--color-dark);
-    color: #ffffff;
-
-    h1, h2, h3 {
-      color: #ffffff;
+    a {
+      color: #fff;
     }
-  }
-
-  &.light-gray {
-    background-color: var(--color-gray-light);
   }
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font-family);
-  font-weight: 700;
+  font-weight: 400;
   line-height: var(--heading-line-height);
-  color: var(--color-dark);
+  color: var(--accent-color);
   margin-top: 0;
 }
 
@@ -197,12 +174,13 @@ h5 { font-size: var(--heading-font-size-s); }
 h6 { font-size: var(--heading-font-size-xs); }
 
 p {
-  margin: 12px 0;
+  margin: 0 0 22px;
   line-height: var(--body-line-height);
 }
 
 strong {
-  font-weight: 700;
+  font-family: var(--heading-font-family-bold);
+  font-weight: 400;
 }
 
 main {
@@ -214,6 +192,8 @@ main {
 
 li {
   margin-block: 0.4em;
+  font-size: 17px;
+  line-height: 22px;
 }
 
 input, textarea, select, button {
@@ -226,9 +206,9 @@ img {
 }
 
 /* Desktop breakpoints */
-@media (min-width: 900px) {
+@media (width >= 992px) {
   :root {
-    --body-font-size-m: 16px;
+    --body-font-size-m: 18px;
   }
 
   .section > .default-content {
@@ -236,7 +216,7 @@ img {
   }
 }
 
-@media (min-width: 1440px) {
+@media (width >= 1440px) {
   :root {
     --grid-container-width: 1200px;
   }

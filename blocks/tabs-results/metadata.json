@@ -1,0 +1,39 @@
+{
+  "variantName": "tabs-results",
+  "baseBlock": "tabs",
+  "version": "1.0.0",
+  "created": "2026-05-25T06:42:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.skyrizi.com/psoriasis/psoriasis-treatment/skyrizi-results",
+    "originPage": "treatment results page - before/after skin clearance images",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "before-after",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "3 tabs (0%, 90%, 100%) with before/after comparison images",
+    "buttonCount": 1,
+    "imageCount": 3
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "treatment before/after comparison pages",
+      "product result progression displays",
+      "image-heavy tabbed comparisons showing stages or levels"
+    ],
+    "notSuitableFor": [
+      "text-heavy tabbed content",
+      "multi-topic navigation tabs",
+      "body diagram or hotspot interfaces"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/psoriasis/psoriasis-treatment/skyrizi-results"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-25T06:42:00.000Z"
+  }
+}

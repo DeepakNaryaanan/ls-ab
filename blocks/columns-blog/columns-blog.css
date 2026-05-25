@@ -1,33 +1,183 @@
+/* Block: columns-blog
+   Two-column layout: left (66%) with stacked icon+text items, right (33%) CTA card.
+   Extracted from source computed styles at https://www.skyrizi.com/psoriasis */
+
+.columns-blog {
+  color: var(--text-color);
+  padding: 0 20px;
+}
+
+/* Row layout - stacks on mobile, side-by-side on desktop */
 .columns-blog > div {
   display: flex;
   flex-direction: column;
 }
 
-.columns-blog img {
-  width: 100%;
+/* Cell base styles */
+.columns-blog > div > div {
+  padding: 0;
 }
 
-.columns-blog > div > div {
+/* Left column: icon + text content items */
+.columns-blog > div > div:first-child {
   order: 1;
 }
 
-.columns-blog > div > .columns-blog-img-col {
+/* Icon images in left column - float left so text flows beside them */
+.columns-blog > div > div:first-child > p:has(picture) {
+  float: left;
+  width: 50px;
+  margin: 0 31px 10px 0;
+  margin-left: 0;
+  clear: both;
+  padding-top: 20px;
+  border-top: 1px solid rgb(233 234 232);
+}
+
+/* First icon paragraph should not have a top border */
+.columns-blog > div > div:first-child > p:has(picture):first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.columns-blog > div > div:first-child > p:has(picture) img {
+  width: 50px;
+  height: auto;
+}
+
+/* Headings in left column */
+.columns-blog > div > div:first-child h3 {
+  font-size: 32px;
+  font-weight: 400;
+  font-family: var(--heading-font-family-bold);
+  line-height: 31px;
+  letter-spacing: -0.5px;
+  color: var(--accent-color);
+  margin: 0 0 15px 81px;
+  padding-top: 20px;
+}
+
+/* First h3 should not have extra top padding */
+.columns-blog > div > div:first-child > p:has(picture):first-child + h3 {
+  padding-top: 0;
+}
+
+/* Paragraphs in left column */
+.columns-blog > div > div:first-child p {
+  font-size: 18px;
+  font-family: var(--body-font-family);
+  line-height: 28px;
+  color: var(--text-color);
+  margin: 0 0 10px 81px;
+}
+
+/* Links in left column */
+.columns-blog > div > div:first-child a {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--button-font-family);
+  text-decoration: none;
+}
+
+.columns-blog > div > div:first-child a:hover {
+  text-decoration: underline;
+}
+
+/* Footnote text at bottom */
+.columns-blog > div > div:first-child > p:last-child {
+  font-size: 14px;
+  line-height: 20px;
+  margin-left: 0;
+  clear: both;
+  border-top: 1px solid rgb(233 234 232);
+  padding-top: 15px;
+  margin-top: 10px;
+}
+
+.columns-blog > div > div:first-child > p:last-child sup {
+  font-size: 14px;
+}
+
+/* Right column: CTA card with blue background */
+.columns-blog > div > div:last-child {
+  background-color: var(--accent-color);
+  background-image: linear-gradient(180deg, var(--accent-color) 0%, #0090c4 60%, #e8f8ff 100%);
+  text-align: center;
+  padding: 30px 20px 40px;
+  border-radius: 16px;
+  overflow: hidden;
   order: 0;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.columns-blog > div > .columns-blog-img-col img {
-  display: block;
+/* Logo image in right column */
+.columns-blog > div > div:last-child > p:first-child {
+  margin: 0 0 20px;
 }
 
+.columns-blog > div > div:last-child > p:first-child img {
+  width: 150px;
+  height: auto;
+}
+
+/* Heading in right column */
+.columns-blog > div > div:last-child h2 {
+  font-size: 32px;
+  font-weight: 400;
+  font-family: var(--heading-font-family);
+  line-height: 38px;
+  letter-spacing: -0.8px;
+  color: #fff;
+  margin: 0 0 20px;
+}
+
+/* CTA button in right column */
+.columns-blog > div > div:last-child > p:last-child {
+  margin: 0;
+}
+
+.columns-blog > div > div:last-child > p:last-child a {
+  display: inline-block;
+  background-color: var(--button-bg);
+  color: var(--button-color);
+  padding: 12px 40px;
+  border-radius: var(--button-border-radius);
+  font-size: 16px;
+  font-family: var(--button-font-family);
+  font-weight: 400;
+  text-decoration: none;
+  transition: var(--button-transition);
+}
+
+.columns-blog > div > div:last-child > p:last-child a:hover {
+  background-color: var(--primary-dark);
+  text-decoration: none;
+}
+
+/* Desktop layout */
 @media (width >= 900px) {
   .columns-blog > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    padding-top: 20px;
   }
 
-  .columns-blog > div > div {
-    flex: 1;
+  .columns-blog > div > div:first-child {
+    flex: 0 0 66.67%;
     order: unset;
+    padding-right: 40px;
+  }
+
+  .columns-blog > div > div:last-child {
+    flex: 0 0 33.33%;
+    order: unset;
+    margin-bottom: 0;
+    padding: 40px 20px;
+    min-height: 380px;
   }
 }

@@ -1,0 +1,39 @@
+{
+  "variantName": "hero-treatment",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-05-25T06:42:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.skyrizi.com/psoriasis/psoriasis-treatment/skyrizi-results",
+    "originPage": "treatment results page - pharma treatment hero",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "purpose": "treatment-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading only",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "treatment results pages with background patient imagery",
+      "pharma product pages with simple heading and background photo",
+      "health condition pages with minimal text overlay on lifestyle photography"
+    ],
+    "notSuitableFor": [
+      "heroes with multiple CTAs and subheadings",
+      "product showcase heroes with product imagery",
+      "blog/article hero banners"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/psoriasis/psoriasis-treatment/skyrizi-results", "/psoriasis/about-skyrizi/how-skyrizi-works"],
+    "reuseCount": 2,
+    "lastUsed": "2026-05-25T06:50:00.000Z"
+  }
+}
