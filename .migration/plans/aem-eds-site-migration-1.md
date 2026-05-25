@@ -1,58 +1,86 @@
-# Navigation Setup Plan for Skyrizi.com Psoriasis
+Now I have a good understanding of the architecture. Let me look at how blocks are discovered by the EDS framework.Now I understand the full picture. The EDS framework in this project discovers blocks by looking for `div[class]` elements inside sections. The content HTML has `<div class="carousel-hero">`, `<div class="cards-navigation">`, and `<div class="columns-blog">` — these should be found and decorated. The key line is `section.blocks = [...section.querySelectorAll('.block-content > div[class]')]` (line 256).
+
+The issue is likely that all content is in one `<div>` (one section), so there are no section breaks (`<hr>` elements), and the blocks might not be grouped correctly by `groupChildren()`. Let me check how the content structure maps to sections.Good - there are 4 top-level `<div>` elements (sections). The framework wraps each top-level `<div>` under `main` as a section. Within each section, it looks for `div[class]` elements. The content has blocks with classes like `carousel-hero`, `cards-navigation`, `columns-blog` — these are inside the first section. They should get detected by `section.blocks = [...section.querySelectorAll('.block-content > div[class]')]`.
+
+The key question is: does the page actually render the blocks, or is something failing? Let me look at what the previous snapshot showed — the carousel IS rendering (it has slide controls, navigation dots). The cards-navigation renders as a list. The columns-blog renders. So the blocks ARE rendering from a DOM perspective.
+
+The likely issue is **visual styling** — the blocks render but may not look correct without proper CSS being loaded. Let me check what CSS errors might exist.# Block Rendering Debug Plan for Skyrizi.com Psoriasis
 
 ## Overview
 
-The navigation content files (`nav.md` and `footer.md`) have already been authored with Skyrizi content. However, the navigation is not rendering correctly in the preview — it still shows the old Ensure.com navigation. This plan addresses verifying and fixing the navigation setup to ensure it renders properly.
+Investigate why blocks are not rendering correctly in the local preview at `http://localhost:3000/content/psoriasis`. The page content is imported and the DOM structure appears correct (blocks have proper class names), but visual rendering may be off.
 
-**Current State:**
-- `nav.md` — Already authored with Skyrizi structure (logo, 3 dropdown menus, tools section)
-- `footer.md` — Already authored with 3-column Skyrizi footer (product links, safety info, AbbVie links)
-- `blocks/header/header.js` + `header.css` — Exist (from previous Ensure migration)
-- `blocks/footer/footer.js` + `footer.css` — Exist (from previous Ensure migration)
-- **Missing:** `/icons/skyrizi-logo.svg` referenced in nav.md does not exist
+**Current State (from previous preview snapshot inspection):**
+- The carousel-hero block IS rendering — it has slide controls, navigation dots, Previous/Next buttons
+- The cards-navigation block IS rendering — 4 list items with images and headings appear
+- The columns-blog block IS rendering — 2-column layout with headings and links visible
+- The ISI section renders as default content
 
-## Issues to Resolve
+## Diagnosis
 
-1. **Missing logo asset:** `nav.md` references `/icons/skyrizi-logo.svg` which does not exist in the project
-2. **Preview cache:** The local preview server may be serving cached old Ensure nav content
-3. **Header/footer block code:** May still reference Ensure-specific patterns or need updating for Skyrizi structure
+Based on analysis of the content HTML (`content/psoriasis.plain.html`) and the project's block loading framework (`scripts/ak.js`):
+
+1. **Content structure is correct:** 4 top-level `<div>` elements = 4 sections. Block `<div>` elements have proper class names (`carousel-hero`, `cards-navigation`, `columns-blog`)
+2. **Block JS is loading:** The carousel has interactive slide controls in the DOM, meaning `carousel-hero.js` executed successfully
+3. **Framework discovery works:** `ak.js` line 256 finds blocks via `.block-content > div[class]` — matches our structure
+
+## Potential Issues to Investigate
+
+| Issue | Likelihood | How to Verify |
+|-------|-----------|---------------|
+| Block CSS not loading (404) | Medium | Check HTTP status of `/blocks/carousel-hero/carousel-hero.css` etc. |
+| CSS syntax errors preventing render | Low | Run stylelint or check browser console for CSS parse errors |
+| Missing CSS variables (brand.css not imported) | Low | Check if `--accent-color`, `--button-bg` resolve |
+| Image URLs broken (external skyrizi.com assets) | High | Images reference `https://www.skyrizi.com/content/dam/...` which may fail cross-origin |
+| Section wrapper classes missing | Medium | Check if `.section` class is applied, affecting `.section > .default-content` |
+| Cleanup transformer removed too much | Low | ISI section content is present, so likely fine |
+| JS errors in block decoration | Medium | Check browser console for JS exceptions |
 
 ## Checklist
 
-- [ ] **Download Skyrizi logo SVG** — Fetch the SKYRIZI logo from the source site and save to `/icons/skyrizi-logo.svg`
-- [ ] **Verify header block code** — Review `blocks/header/header.js` to ensure it handles the 3-section nav structure (brand, sections with dropdowns, tools)
-- [ ] **Verify footer block code** — Review `blocks/footer/footer.js` to ensure it handles the 3-column link layout with legal section
-- [ ] **Update header CSS** — Adjust `blocks/header/header.css` for Skyrizi brand (nav height 156px, colors, font family)
-- [ ] **Update footer CSS** — Adjust `blocks/footer/footer.css` for Skyrizi brand (cyan #00a3df background, white text)
-- [ ] **Refresh preview** — Clear cached nav and verify header/footer render with Skyrizi content
-- [ ] **Test dropdowns** — Verify Psoriasis, About SKYRIZI, and SKYRIZI Complete dropdown menus open/close correctly
-- [ ] **Test mobile** — Verify hamburger menu works on mobile viewport
-- [ ] **Test footer links** — Verify all 3 footer columns display correctly with proper link targets
-- [ ] **Verify across pages** — Check nav/footer renders consistently on treatment, about, and disease-info pages
+- [ ] **Check block CSS accessibility** — Verify `/blocks/carousel-hero/carousel-hero.css`, `/blocks/cards-navigation/cards-navigation.css`, `/blocks/columns-blog/columns-blog.css` return 200
+- [ ] **Check browser console for errors** — Look for JS exceptions or failed resource loads in preview
+- [ ] **Verify CSS variables resolve** — Inspect computed styles to confirm `--accent-color`, `--button-bg`, `--heading-font-family` are set
+- [ ] **Check image loading** — Verify external skyrizi.com images load correctly (no CORS blocking)
+- [ ] **Inspect section/block class structure** — Verify the DOM has `.section > .block-content > .carousel-hero` etc.
+- [ ] **Check carousel-hero slide visibility** — Only first slide should be visible; others hidden via CSS
+- [ ] **Check cards-navigation grid layout** — Verify 4-column grid applies on desktop viewport
+- [ ] **Check columns-blog 2-column layout** — Verify flex layout splits into 66/33 columns
+- [ ] **Fix any broken CSS selectors** — Update selectors if DOM structure doesn't match expected patterns
+- [ ] **Fix any broken image references** — Download critical images locally if cross-origin fails
+- [ ] **Verify after fixes** — Take screenshot to confirm visual rendering matches expectations
 
-## File References
+## Key Files to Inspect
 
-| File | Status | Action Needed |
-|------|--------|---------------|
-| `nav.md` | ✅ Authored | Verify rendering |
-| `footer.md` | ✅ Authored | Verify rendering |
-| `blocks/header/header.js` | Exists | Review compatibility |
-| `blocks/header/header.css` | Exists | Update brand styles |
-| `blocks/footer/footer.js` | Exists | Review compatibility |
-| `blocks/footer/footer.css` | Exists | Update brand styles |
-| `icons/skyrizi-logo.svg` | ❌ Missing | Download from source |
+| File | Purpose |
+|------|---------|
+| `blocks/carousel-hero/carousel-hero.css` | Hero carousel styles (slides, dots, arrows) |
+| `blocks/carousel-hero/carousel-hero.js` | Carousel decoration logic |
+| `blocks/cards-navigation/cards-navigation.css` | Navigation cards grid + card styles |
+| `blocks/cards-navigation/cards-navigation.js` | Cards decoration (restructures to `ul > li`) |
+| `blocks/columns-blog/columns-blog.css` | 2-column layout + icon float + CTA card |
+| `blocks/columns-blog/columns-blog.js` | Columns decoration |
+| `scripts/ak.js` | Block discovery and loading framework |
+| `content/psoriasis.plain.html` | Imported page content |
 
-## Navigation Structure
+## Expected DOM After Decoration
 
-### Header (3 sections)
-1. **Brand:** SKYRIZI logo → /
-2. **Sections:** Psoriasis (5 items), About SKYRIZI (3 items), SKYRIZI Complete (3 items)
-3. **Tools:** Full Prescribing Information (external PDF), Sign Up
-
-### Footer (2 sections)
-1. **Links:** 3 columns — Product Pages, Safety Info, AbbVie Corporate
-2. **Legal:** Job code US-SKZ-240247, AbbVie logo, copyright notice
+```
+main
+├── .section (section 1)
+│   ├── .default-content (contains the skip link <p><a href="#">___</a></p>)
+│   └── .block-content
+│       ├── .carousel-hero (decorated by carousel-hero.js)
+│       ├── .cards-navigation (decorated by cards-navigation.js)
+│       └── .columns-blog (decorated by columns-blog.js)
+├── .section (section 2 - CRM image)
+│   └── .default-content
+├── .section (section 3 - ISI)
+│   └── .default-content (h3, h4, p, ul elements)
+└── .section (section 4 - metadata)
+    └── .block-content > .metadata
+```
 
 ---
 
-*Switch to Execute mode to download the logo asset, update header/footer CSS, and verify navigation rendering.*
+*Switch to Execute mode to run diagnostic checks in the browser, inspect computed styles, and fix any rendering issues found.*
