@@ -1,88 +1,65 @@
-# Full Site Migration to AEM Edge Delivery Services
+# Design Token Extraction Plan for Skyrizi.com Psoriasis
 
 ## Overview
 
-Migrate an entire website to AEM Edge Delivery Services with equal priority on content accuracy and design fidelity. This plan covers URL discovery, template cataloging, block mapping, design extraction, content import, and visual validation.
+Extract design tokens (colors, typography, spacing) from https://www.skyrizi.com/psoriasis and update the existing `styles/brand.css` and `migration-work/brand.json` files to reflect the Skyrizi brand identity instead of the previously migrated Ensure.com brand.
 
-**Status:** Awaiting website URL to begin execution.
+**Current State:** The project already contains design token files (`styles/brand.css`, `migration-work/brand.json`) populated with **Ensure.com** brand values from the prior migration. These need to be replaced with Skyrizi psoriasis brand tokens.
 
-## Prerequisites
+## What Needs to Change
 
-- [ ] Obtain the target website URL from the user
-- [ ] Verify the local AEM EDS project is set up and the preview server is running
-- [ ] Confirm project type (Document-based, DA, or CrossWalk)
+The existing brand files contain Ensure.com values (Abbott blue `#002d72`, Brandon Text font, etc.). Skyrizi uses a different brand palette and typography that needs to be extracted from the live site.
 
-## Phase 1: Site Discovery & Scoping
+**Expected Skyrizi brand characteristics (to be confirmed via extraction):**
+- Primary color: dark blue/navy (likely different shade from Ensure)
+- Fonts: Likely AbbVie corporate fonts (not Brandon Text)
+- Spacing/layout: Pharmaceutical page patterns with ISI sections
+- Buttons: Rounded CTA buttons with specific brand colors
 
-- [ ] Discover all URLs from the site (via sitemap.xml or crawling)
-- [ ] Analyze URL patterns and group pages by type
-- [ ] Generate a site scope report (total pages, templates, estimated effort)
-- [ ] Review scope with user and confirm which templates/pages to prioritize
+## Approach
 
-## Phase 2: Template Cataloging
+Use the `excat-complete-design-expert` skill to:
+1. Inspect computed styles on the live Skyrizi psoriasis page
+2. Extract actual brand colors, fonts, and spacing
+3. Overwrite `styles/brand.css` with Skyrizi-specific CSS custom properties
+4. Update `migration-work/brand.json` with the structured token data
+5. Update `styles/styles.css` base styles if needed
 
-- [ ] Analyze representative pages from each URL group
-- [ ] Identify unique page templates (e.g., homepage, product page, blog post, landing page)
-- [ ] Create `page-templates.json` with template definitions, names, and sample URLs
-- [ ] Review template catalog with user for accuracy
+## Checklist
 
-## Phase 3: Page Analysis & Block Mapping
+- [ ] **Extract typography tokens** — Font families, sizes, weights, line-heights from headings, body text, and CTAs on https://www.skyrizi.com/psoriasis
+- [ ] **Extract color tokens** — Primary brand color, secondary colors, background colors, text colors, link colors, button colors, section background colors (grey section, hero overlays)
+- [ ] **Extract spacing tokens** — Section padding, content max-width, card gaps, nav height, margin patterns
+- [ ] **Extract button styles** — Primary CTA, secondary CTA, border-radius, padding, font, hover states
+- [ ] **Extract border/shadow/transition tokens** — Card shadows, border-radius, border colors, animation timings
+- [ ] **Extract responsive breakpoints** — Mobile/tablet/desktop thresholds observed in the site's CSS
+- [ ] **Update `styles/brand.css`** — Replace Ensure values with Skyrizi CSS custom properties
+- [ ] **Update `migration-work/brand.json`** — Replace Ensure JSON with Skyrizi structured token data
+- [ ] **Update `styles/styles.css`** — Adjust base typography, link styles, and section styles to match Skyrizi
+- [ ] **Update `styles/fonts.css`** — Update @font-face declarations if Skyrizi uses different web fonts
+- [ ] **Validate in preview** — Confirm imported homepage picks up new brand tokens correctly
 
-- [ ] For each template, perform deep page analysis on a representative page
-- [ ] Identify all content sections, blocks, and authoring patterns
-- [ ] Map source DOM elements to EDS block variants
-- [ ] Catalog all unique block variants across the site
-- [ ] Check for reusable existing blocks vs. new variants needed
+## Artifacts to Update
 
-## Phase 4: Design System Migration
+| File | Current Content | Target |
+|------|----------------|--------|
+| `styles/brand.css` | Ensure.com CSS variables | Skyrizi psoriasis CSS variables |
+| `migration-work/brand.json` | Ensure.com token JSON | Skyrizi token JSON |
+| `styles/styles.css` | Ensure base styles | Skyrizi base styles |
+| `styles/fonts.css` | Ensure @font-face rules | Skyrizi @font-face rules |
 
-- [ ] Extract global design tokens (colors, typography, spacing, breakpoints)
-- [ ] Migrate site-level styles (header, footer, navigation, base typography)
-- [ ] For each block variant, extract computed styles from the source
-- [ ] Write EDS-compatible CSS for each block
-- [ ] Validate design fidelity against the original site
+## Extraction Sources
 
-## Phase 5: Import Infrastructure
+- **Live page:** https://www.skyrizi.com/psoriasis (computed styles via browser inspection)
+- **Existing screenshot:** `migration-work/screenshot.png` (visual reference)
+- **Cleaned HTML:** `migration-work/cleaned.html` (class names and inline styles)
 
-- [ ] Generate block parsers for each unique block variant
-- [ ] Generate page transformers (cleanup + section transformers)
-- [ ] Create import scripts that combine templates, parsers, and transformers
-- [ ] Test import infrastructure against sample pages
+## Dependencies
 
-## Phase 6: Content Import
-
-- [ ] Run bulk content import for each template group
-- [ ] Verify imported HTML structure in the preview server
-- [ ] Fix any import errors or malformed content
-- [ ] Validate all pages render correctly
-
-## Phase 7: Visual Validation & Refinement
-
-- [ ] Compare migrated pages against originals (visual regression)
-- [ ] Identify and fix CSS discrepancies per block
-- [ ] Iterate on design fixes until achieving pixel-level fidelity
-- [ ] Final QA pass across all templates
-
-## Phase 8: Navigation & Global Elements
-
-- [ ] Migrate navigation structure (nav.html)
-- [ ] Migrate footer content
-- [ ] Ensure header/nav/footer render consistently across all pages
-- [ ] Validate responsive behavior (mobile, tablet, desktop)
-
-## Checklist Summary
-
-- [ ] **Website URL provided** — required to start
-- [ ] Site discovery complete
-- [ ] Template catalog created and approved
-- [ ] All pages analyzed and blocks mapped
-- [ ] Design system migrated (global + per-block)
-- [ ] Import infrastructure built and tested
-- [ ] Content imported for all templates
-- [ ] Visual validation passed
-- [ ] Navigation and global elements working
-- [ ] Final review and sign-off
+- Homepage content is already imported (`content/psoriasis.plain.html`)
+- Block variant code exists (`blocks/carousel-hero/`)
+- Preview server available for validation after token update
 
 ---
 
-*To begin execution, please provide the website URL and switch to Execute mode.*
+*Switch to Execute mode to run the design token extraction using the design expert skill.*
