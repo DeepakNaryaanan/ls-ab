@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.skyrizi.com/psoriasis",
+  "path": "psoriasis",
+  "timestamp": "2026-05-24T19:48:33.510Z",
+  "title": "SKYRIZI® (risankizumab-rzaa): A Biologic Treatment for Psoriasis",
+  "template": "psoriasis-homepage",
+  "blocks": [
+    "carousel-hero",
+    "cards-navigation",
+    "columns-blog",
+    "columns-blog"
+  ]
+}

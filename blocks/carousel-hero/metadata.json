@@ -1,0 +1,41 @@
+{
+  "variantName": "carousel-hero",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-05-24T19:28:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.skyrizi.com/psoriasis",
+    "originPage": "psoriasis landing page - hero carousel banner",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "hero-carousel",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "4 slides with background photo + overlay text + CTA button",
+    "buttonCount": 4,
+    "imageCount": 4
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage hero banners with rotating slides",
+      "landing page carousels with lifestyle photography",
+      "product showcase carousels with statistics and CTAs",
+      "pharma/health landing pages with rotating key messages"
+    ],
+    "notSuitableFor": [
+      "simple image galleries without text overlay",
+      "product thumbnail carousels",
+      "testimonial carousels without background images",
+      "small inline carousels within content sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/psoriasis"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-24T19:28:00.000Z"
+  }
+}
