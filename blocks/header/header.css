@@ -2,6 +2,7 @@ header {
   --logo-width: 120px;
   --logo-height: 40px;
   --mega-columns: 4;
+  --mobile-header-height: 64px;
 
   display: block;
   position: fixed;
@@ -10,7 +11,7 @@ header {
   right: 0;
   z-index: 1000;
   overflow: hidden;
-  max-height: var(--header-height);
+  max-height: var(--mobile-header-height);
   background-color: var(--accent-dark, #071d49);
   color: #fff;
 
@@ -40,7 +41,7 @@ header {
       "brand"
       "nav"
       "actions";
-    grid-template-rows: var(--header-height) auto 1fr;
+    grid-template-rows: var(--mobile-header-height) auto 1fr;
   }
 
   .action-wrapper {
@@ -252,6 +253,7 @@ header {
 @media (width >= 900px) {
   header {
     overflow: initial;
+    max-height: var(--header-height);
 
     .header-content {
       max-width: var(--grid-container-width);

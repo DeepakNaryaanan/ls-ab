@@ -63,8 +63,14 @@ body {
 
 header {
   display: none;
-  height: var(--header-height);
+  height: 64px;
   position: fixed;
+}
+
+@media (width >= 900px) {
+  header {
+    height: var(--header-height);
+  }
 }
 
 /* Links */
