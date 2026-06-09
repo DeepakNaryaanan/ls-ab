@@ -1,41 +1,65 @@
 :root {
   /* Typography - Fonts */
-  --heading-font-family: "Univers LT W01_47 Light1475998", sans-serif;
-  --heading-font-family-bold: "Univers LT W01_67 Bold_1476016", sans-serif;
-  --body-font-family: "Univers LT W01_45 Light1475944", roboto, "Helvetica Neue", helvetica, arial, sans-serif;
-  --button-font-family: "Univers LT W01_65 Bold1475968", sans-serif;
+  --heading-font-family: "Roboto Slab", sans-serif, arial;
+  --heading-font-family-bold: "Roboto Slab", sans-serif, arial;
+  --heading-font-family-condensed: "Roboto Condensed", sans-serif, arial;
+  --body-font-family: "Roboto Slab", sans-serif, arial;
+  --button-font-family: "Roboto Slab", sans-serif, arial;
 
-  /* Typography - Sizes */
-  --heading-size-xxl: 42px;
-  --heading-size-xl: 32px;
-  --heading-size-l: 24px;
-  --heading-size-m: 20px;
-  --heading-size-s: 18px;
-  --heading-size-xs: 16px;
+  /* Typography - Desktop Sizes */
+  --heading-size-xxl: 60px;
+  --heading-size-xl: 58px;
+  --heading-size-l: 40px;
+  --heading-size-m: 30px;
+  --heading-size-s: 22px;
+  --heading-size-xs: 18px;
+
+  /* Typography - Line Heights */
+  --heading-line-height-xxl: 65px;
+  --heading-line-height-xl: 61px;
+  --heading-line-height-l: 45px;
+  --heading-line-height-m: 34px;
+  --heading-line-height-s: 28px;
+  --heading-line-height-xs: 24px;
+
+  /* Typography - Body */
   --body-font-size: 18px;
-  --body-line-height: 28px;
+  --body-line-height: 26px;
+  --body-font-size-s: 16px;
+  --body-font-size-xs: 14px;
+  --body-font-size-xxs: 12px;
 
   /* Colors - Brand */
-  --primary-color: #910048;
-  --primary-light: #962e69;
-  --primary-dark: #71003a;
-  --accent-color: #00a3df;
-  --accent-dark: #071d49;
+  --primary-color: #004877;
+  --primary-light: #004f7d;
+  --primary-dark: #003659;
+  --accent-color: #00a1bd;
+  --accent-light: #00aec7;
+  --accent-dark: #004877;
+
+  /* Colors - UI */
+  --color-teal: #00a1bd;
+  --color-teal-dark: #005195;
+  --color-blue-heading: #004877;
+  --color-blue-section: #004f7d;
+  --color-blue-callout: #005195;
+  --color-orange: #f26c22;
+  --color-cyan-light: #a1f1ff;
 
   /* Colors - Neutrals */
   --background-color: #fff;
-  --text-color: #575756;
-  --text-secondary: #575756;
-  --link-color: #962e69;
-  --link-hover-color: #910048;
+  --text-color: #4a4a4a;
+  --text-secondary: #4a4a4a;
+  --link-color: #004877;
+  --link-hover-color: #003659;
 
   /* Colors - Grays */
-  --gray-100: #f5f5f5;
-  --gray-200: #e8e8e8;
+  --gray-100: #f2f2f2;
+  --gray-200: #e4e4e4;
   --gray-300: #d4d4d4;
   --gray-400: #afafaf;
   --gray-500: #6c757d;
-  --gray-600: #575756;
+  --gray-600: #4a4a4a;
   --gray-700: #333;
   --gray-800: #1a1a1a;
 
@@ -46,15 +70,16 @@
   --spacing-m: 16px;
   --spacing-s: 8px;
   --spacing-xs: 4px;
-  --section-padding: 40px;
+  --section-padding: 20px;
   --content-max-width: 1200px;
-  --nav-height: 156px;
+  --nav-height: 110px;
 
   /* Borders & Radius */
-  --border-radius: 7px;
-  --border-color: #e8e8e8;
+  --border-radius: 5px;
+  --border-color: #e4e4e4;
 
   /* Shadows */
+  --shadow-header: 0 2px 4px rgb(0 0 0 / 10%);
   --shadow-card-hover: 0 4px 12px rgb(0 0 0 / 10%);
 
   /* Transitions */
@@ -62,25 +87,51 @@
   --transition-default: 0.3s ease;
 
   /* Buttons */
-  --button-bg: #910048;
+  --button-bg: #00a1bd;
   --button-color: #fff;
-  --button-padding: 12px 30px 15px;
-  --button-font-size: 16px;
-  --button-border-radius: 7px;
+  --button-padding: 10px 14px;
+  --button-font-size: 20px;
+  --button-font-weight: 700;
+  --button-border-radius: 5px;
   --button-letter-spacing: normal;
+  --button-text-transform: uppercase;
+
+  /* CTA / Next-page Links */
+  --cta-color: #00aec7;
+  --cta-font-size: 26px;
+  --cta-font-weight: 700;
+
+  /* Section Nav */
+  --section-nav-bg: #e4e4e4;
+  --section-nav-color: #f26c22;
+  --section-nav-font-size: 18px;
+
+  /* Header */
+  --header-bg: #fff;
+  --header-text: #004877;
+  --header-height: 110px;
+  --header-nav-font-size: 14px;
 
   /* Footer */
-  --footer-bg: #00a3df;
+  --footer-bg: #005195;
   --footer-text: #fff;
+  --footer-link-size: 20px;
+  --footer-legal-size: 12px;
 }
 
 @media (width <= 767px) {
   :root {
-    --heading-size-xxl: 36px;
+    --heading-size-xxl: 30px;
     --heading-size-xl: 28px;
-    --heading-size-l: 22px;
-    --heading-size-m: 18px;
-    --heading-size-s: 16px;
-    --heading-size-xs: 14px;
+    --heading-size-l: 24px;
+    --heading-size-m: 22px;
+    --heading-size-s: 20px;
+    --heading-size-xs: 16px;
+    --heading-line-height-xxl: 34px;
+    --heading-line-height-xl: 30px;
+    --heading-line-height-l: 28px;
+    --heading-line-height-m: 26px;
+    --heading-line-height-s: 24px;
+    --heading-line-height-xs: 22px;
   }
 }

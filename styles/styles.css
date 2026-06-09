@@ -1,15 +1,9 @@
 @import url('brand.css');
 
 @font-face {
-  font-family: univers-light-fallback;
+  font-family: roboto-slab-fallback;
   size-adjust: 100%;
-  src: local('Helvetica Neue'), local('Arial');
-}
-
-@font-face {
-  font-family: univers-bold-fallback;
-  size-adjust: 100%;
-  src: local('Arial Bold'), local('Arial');
+  src: local('Georgia'), local('Times New Roman');
 }
 
 :root {
@@ -26,9 +20,10 @@
   --color-link: var(--link-color);
   --color-background: var(--background-color);
   --color-light: #fff;
-  --color-dark: #071d49;
-  --color-gray-light: #f5f5f5;
-  --color-gray-medium: #6c757d;
+  --color-dark: var(--accent-dark);
+  --color-gray-light: var(--gray-100);
+  --color-gray-medium: var(--gray-500);
+  --color-shaded: var(--gray-100);
   --font-family: var(--body-font-family);
   --heading-font-size-xxl: var(--heading-size-xxl);
   --heading-font-size-xl: var(--heading-size-xl);
@@ -41,8 +36,7 @@
   --body-font-size-m: 16px;
   --body-font-size-s: 14px;
   --body-font-size-xs: 12px;
-  --body-line-height: 1.55;
-  --button-font-weight: 400;
+  --body-line-height: 1.45;
   --button-transition: background 0.3s ease, border-color 0.3s ease;
   --header-height: var(--nav-height);
 }
@@ -99,6 +93,7 @@ main a.button:any-link {
   font-size: var(--button-font-size);
   padding: var(--button-padding);
   text-decoration: none;
+  text-transform: var(--button-text-transform, uppercase);
   letter-spacing: var(--button-letter-spacing);
   transition: var(--button-transition);
   display: inline-block;
@@ -166,10 +161,15 @@ main a.button.secondary:any-link:hover {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font-family);
-  font-weight: 400;
+  font-weight: 700;
   line-height: var(--heading-line-height);
-  color: var(--accent-color);
+  color: var(--color-blue-heading, #004877);
   margin-top: 0;
+}
+
+h3, h4, h5, h6 {
+  font-family: var(--heading-font-family-condensed, var(--heading-font-family));
+  color: var(--color-blue-section, #004f7d);
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
@@ -186,7 +186,7 @@ p {
 
 strong {
   font-family: var(--heading-font-family-bold);
-  font-weight: 400;
+  font-weight: 700;
 }
 
 main {

@@ -1,0 +1,41 @@
+{
+  "variantName": "columns-callout",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-06-09T05:32:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.duopa.com/carrying-case",
+    "originPage": "product detail page - promotional callout box",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "compact",
+    "purpose": "promotional-callout",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "heading + paragraph with phone link and enrollment link",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "promotional callout boxes with colored background",
+      "peer mentor/support program CTAs",
+      "highlighted message boxes with contact information",
+      "pharma patient engagement callouts"
+    ],
+    "notSuitableFor": [
+      "multi-column side-by-side layouts",
+      "icon-text pair layouts",
+      "product detail image+text layouts",
+      "data/statistics displays"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/carrying-case"],
+    "reuseCount": 1,
+    "lastUsed": "2026-06-09T05:32:00.000Z"
+  }
+}

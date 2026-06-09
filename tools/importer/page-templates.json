@@ -4,96 +4,122 @@
   },
   "templates": [
     {
-      "name": "psoriasis-homepage",
-      "urls": ["https://www.skyrizi.com/psoriasis"],
-      "description": "Main psoriasis landing page with hero, treatment overview, and navigation to sub-sections",
+      "name": "homepage",
+      "urls": ["https://www.duopa.com"],
+      "description": "Landing page with hero section and content blocks",
+      "blocks": []
+    },
+    {
+      "name": "disease-education",
+      "urls": ["https://www.duopa.com/advanced-parkinsons", "https://www.duopa.com/as-parkinsons-advances"],
+      "description": "Disease information page with section navigation and multi-block content layout",
+      "blocks": []
+    },
+    {
+      "name": "product-detail",
+      "urls": ["https://www.duopa.com/carrying-case", "https://www.duopa.com/duopa-your-day", "https://www.duopa.com/how-duopa-works", "https://www.duopa.com/resources"],
+      "description": "Product feature page with hero banner, section navigation, columns, and carousel",
       "blocks": [
         {
-          "name": "carousel-hero",
-          "instances": [".home-hero-carousel"]
+          "name": "hero-treatment",
+          "instances": ["#background-container-582095465"]
+        },
+        {
+          "name": "columns-icontext",
+          "instances": [".abbv-row-container.duopa-icon-tout-2"]
         },
         {
           "name": "cards-navigation",
-          "instances": [".psoriasis-tail-cards.gray-bg-colm"]
+          "instances": [".abbv-row-container.duopa-carrying-cases"]
         },
         {
-          "name": "columns-blog",
-          "instances": [".abbv-flex-item.flex-col-lg-8, .abbv-flex-item.flex-col-lg-4"]
+          "name": "columns-callout",
+          "instances": [".abbv-container.duopa-blue-container-3"]
         }
       ],
       "sections": [
         {
           "id": "section-1",
-          "name": "Hero Carousel",
-          "selector": ".home-hero-carousel",
+          "name": "Hero Banner",
+          "selector": "#background-container-582095465",
           "style": null,
-          "blocks": ["carousel-hero"],
+          "blocks": ["hero-treatment"],
           "defaultContent": []
         },
         {
           "id": "section-2",
-          "name": "Navigation Cards Row",
-          "selector": ".psoriasis-tail-cards.gray-bg-colm",
-          "style": "grey",
-          "blocks": ["cards-navigation"],
+          "name": "Activities",
+          "selector": "#duopa-activities",
+          "style": null,
+          "blocks": ["columns-icontext"],
           "defaultContent": []
         },
         {
           "id": "section-3",
-          "name": "Content Listing with Sidebar",
-          "selector": [".abbv-flex-item.flex-col-lg-8", ".abbv-flex-item.flex-col-lg-4"],
-          "style": null,
-          "blocks": ["columns-blog"],
-          "defaultContent": []
+          "name": "Carrying Cases",
+          "selector": ".abbv-container.bg-lightest-gray",
+          "style": "grey",
+          "blocks": ["cards-navigation"],
+          "defaultContent": [".abbv-title.abbv-text-center h1", ".abbv-rich-text.Body-text-3.abbv-text-center p", ".abbv-button-primary"]
         },
         {
           "id": "section-4",
-          "name": "Important Safety Information",
+          "name": "Safety Information",
+          "selector": ".abbv-container.abbv-margin-top-20",
+          "style": null,
+          "blocks": ["columns-callout"],
+          "defaultContent": [".abbv-rich-text h3", ".abbv-rich-text p", ".duopa-button-next-page"]
+        },
+        {
+          "id": "section-5",
+          "name": "ISI",
           "selector": ".abbv-inline-use-isi",
           "style": null,
           "blocks": [],
-          "defaultContent": [".abbv-inline-use-isi h2", ".abbv-inline-use-isi h3", ".abbv-isi-content p", ".abbv-isi-content ul"]
+          "defaultContent": [".abbv-inline-use-isi h3", ".abbv-inline-use-isi p", ".abbv-inline-use-isi ul"]
         }
       ]
     },
     {
-      "name": "treatment-page",
-      "urls": [
-        "https://www.skyrizi.com/psoriasis/psoriasis-treatment/skyrizi-results",
-        "https://www.skyrizi.com/psoriasis/psoriasis-treatment/before-and-after-pictures",
-        "https://www.skyrizi.com/psoriasis/psoriasis-treatment/oral-treatment-for-psoriasis",
-        "https://www.skyrizi.com/psoriasis/psoriasis-treatment/skyrizi-vs-other-injections"
-      ],
-      "description": "Treatment information pages showing Skyrizi results, comparisons, and before/after photos",
+      "name": "content-detail",
+      "urls": ["https://www.duopa.com/how-duopa-may-help", "https://www.duopa.com/patient-stories", "https://www.duopa.com/resources-paul-video-transcript", "https://www.duopa.com/what-is-duopa"],
+      "description": "Content page with hero, video or media section, and supporting content blocks",
       "blocks": []
     },
     {
-      "name": "about-skyrizi-page",
-      "urls": [
-        "https://www.skyrizi.com/psoriasis/about-skyrizi/how-skyrizi-works",
-        "https://www.skyrizi.com/psoriasis/about-skyrizi/how-skyrizi-works/skyrizi-science-story-transcript"
-      ],
-      "description": "Pages explaining how Skyrizi works, including science details and video transcripts",
+      "name": "video-transcript",
+      "urls": ["https://www.duopa.com/my-duopa-materials-evening-routine-transcript", "https://www.duopa.com/my-duopa-materials-morning-routine-transcript", "https://www.duopa.com/my-duopa-materials-pump-cassette-care-transcript", "https://www.duopa.com/resources-dale-video-transcript", "https://www.duopa.com/resources-david-video-transcript", "https://www.duopa.com/resources-kern-video-transcript", "https://www.duopa.com/sitemap"],
+      "description": "Minimal text-only page for video transcript content with no block components",
       "blocks": []
     },
     {
-      "name": "disease-info-page",
-      "urls": [
-        "https://www.skyrizi.com/psoriasis/plaque-psoriasis/what-is-plaque-psoriasis",
-        "https://www.skyrizi.com/psoriasis/plaque-psoriasis/symptoms",
-        "https://www.skyrizi.com/psoriasis/plaque-psoriasis/causes",
-        "https://www.skyrizi.com/psoriasis/plaque-psoriasis/inflammation-and-psoriasis"
-      ],
-      "description": "Educational pages about plaque psoriasis covering symptoms, causes, and inflammation",
+      "name": "materials-hub",
+      "urls": ["https://www.duopa.com/my-duopa-materials"],
+      "description": "Multi-block resource hub page with section navigation and video content",
       "blocks": []
     },
     {
-      "name": "utility-page",
-      "urls": [
-        "https://www.skyrizi.com/psoriasis/talk-to-dermatologist/find-a-dermatologist",
-        "https://www.skyrizi.com/psoriasis/sitemap"
-      ],
-      "description": "Utility pages including doctor finder and sitemap",
+      "name": "mentor-program",
+      "urls": ["https://www.duopa.com/mentor-program"],
+      "description": "Two-block page with program information and enrollment form",
+      "blocks": []
+    },
+    {
+      "name": "form-page",
+      "urls": ["https://www.duopa.com/duopa-share"],
+      "description": "Single-block form page for patient engagement and sign-up",
+      "blocks": []
+    },
+    {
+      "name": "program-signup",
+      "urls": ["https://www.duopa.com/education-program"],
+      "description": "Single-block page for program enrollment with minimal layout",
+      "blocks": []
+    },
+    {
+      "name": "search-results",
+      "urls": ["https://www.duopa.com/search-results"],
+      "description": "Single-block page with search functionality and results display",
       "blocks": []
     }
   ]

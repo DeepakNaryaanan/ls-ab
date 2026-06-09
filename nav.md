@@ -1,23 +1,15 @@
-- [![SKYRIZI](/icons/skyrizi-logo.svg)](/)
+- [![Duopa Logo](https://www.duopa.com/content/dam/duopa/images/duopa-logo.png)](/)
 
 ---
 
-- **Psoriasis**
-  - [See SKYRIZI Results](/psoriasis/psoriasis-treatment/skyrizi-results)
-  - [Before & After Photos](/psoriasis/psoriasis-treatment/before-and-after-pictures)
-  - [How SKYRIZI Works](/psoriasis/about-skyrizi/how-skyrizi-works)
-  - [What Is Plaque Psoriasis?](/psoriasis/plaque-psoriasis/what-is-plaque-psoriasis)
-  - [Find a Dermatologist](/psoriasis/talk-to-dermatologist/find-a-dermatologist)
-- **About SKYRIZI**
-  - [What Is SKYRIZI?](/psoriasis/about-skyrizi/how-skyrizi-works)
-  - [Dosing & Taking SKYRIZI](/psoriasis-psoriatic-arthritis/about-skyrizi/dosing-and-taking-skyrizi)
-  - [Cost & Savings](/psoriasis-psoriatic-arthritis/cost-and-savings)
-- **SKYRIZI Complete**
-  - [About Skyrizi Complete](/skyrizi-complete/about-skyrizi-complete)
-  - [Save on SKYRIZI Costs](/skyrizi-complete/save-on-skyrizi-costs)
-  - [Nurse Ambassador](/skyrizi-complete/nurse-ambassador)
+- [Understanding Advancing Parkinson's](/advanced-parkinsons)
+- [What Is Duopa?](/what-is-duopa)
+- [How Duopa Works](/how-duopa-works)
+- [Carrying Case Styles](/carrying-case)
+- [Patient Stories](/patient-stories)
+- [Patient Resources](/resources)
 
 ---
 
-- [Full Prescribing Information](https://www.rxabbvie.com/pdf/skyrizi_pi.pdf)
-- [Sign Up](/signup)
+- [Full Prescribing Information](https://www.rxabbvie.com/pdf/duopa_pi.pdf)
+- [Talk With a Real Duopa Patient](/mentor-program)

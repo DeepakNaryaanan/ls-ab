@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.duopa.com/carrying-case",
+  "path": "carrying-case",
+  "timestamp": "2026-06-09T05:44:08.988Z",
+  "title": "Carrying Case Styles | DUOPA™ (carbidopa/levodopa)",
+  "template": "product-detail",
+  "blocks": [
+    "hero-treatment",
+    "columns-icontext",
+    "columns-icontext",
+    "cards-navigation",
+    "columns-callout"
+  ]
+}

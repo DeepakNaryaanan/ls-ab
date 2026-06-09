@@ -1,31 +1,24 @@
 ---
 
-- **SKYRIZI (risankizumab-rzaa)**
-  - [Moderate to Severe Plaque Psoriasis Home](/psoriasis)
-  - [See SKYRIZI Results](/psoriasis/psoriasis-treatment/skyrizi-results)
-  - [What Is SKYRIZI?](/psoriasis-psoriatic-arthritis/about-skyrizi/what-is-skyrizi)
-  - [What Is Plaque Psoriasis?](/psoriasis/plaque-psoriasis/what-is-plaque-psoriasis)
-  - [Find a Dermatologist](/psoriasis/talk-to-dermatologist/find-a-dermatologist)
-  - [About Skyrizi Complete](/skyrizi-complete/about-skyrizi-complete)
-  - [Cost & Savings](/psoriasis-psoriatic-arthritis/cost-and-savings)
-  - [Sitemap](/psoriasis/sitemap)
-- **Important Safety Information for Patients**
-  - [Important Safety Information](#abbv_use_statement)
-  - [Medication Guide](https://www.rxabbvie.com/pdf/skyrizi_medguide.pdf)
-  - [Full Prescribing Information](https://www.rxabbvie.com/pdf/skyrizi_pi.pdf)
-- **Information from AbbVie**
-  - [Healthcare Professionals Site](https://www.skyrizihcp.com/)
-  - [Accessibility Statement](https://www.abbvie.com/accessibility-statement.html)
-  - [Contact Us](https://www.abbvie.com/contactus.html)
-  - [Terms of Use](https://www.abbvie.com/termsofuse.html)
-  - [Privacy Notice](https://privacy.abbvie/privacy-policies/us-privacy-policy.html)
-  - [Consumer Health Data Privacy Notice](https://abbv.ie/PrivacyConsumerHealth)
-  - [Your Privacy Choices](https://abbviemetadata.my.site.com/AbbvieDSRM)
+- [Important Safety Information](#important-safety-information)
+- [Full Prescribing Information](https://www.rxabbvie.com/pdf/duopa_pi.pdf)
+- [Instructions for Use](https://www.rxabbvie.com/pdf/duopa_pi.pdf#page=27)
+- [AbbVie](https://www.abbvie.com/)
+- [Sitemap](/sitemap)
 
 ---
 
-US-SKZ-240247
+- [Accessibility Statement](https://www.abbvie.com/accessibility-statement.html)
+- [Contact Us](https://www.abbvie.com/contactus.html)
+- [Terms of Use](https://www.abbvie.com/termsofuse.html)
+- [Privacy Notice](https://privacy.abbvie/privacy-policies/us-privacy-policy.html)
+- [Consumer Health Data Privacy Notice](https://abbv.ie/PrivacyConsumerHealth)
+- [Your Privacy Choices](https://abbviemetadata.my.site.com/AbbvieDSRM)
 
-[![AbbVie Logo](https://www.skyrizi.com/content/dam/skyrizi/images/logos/abbvie-logo.svg)](https://www.abbvie.com/)
+---
 
-© 2024 AbbVie. All rights reserved. SKYRIZI® and its design are registered trademarks of AbbVie Biotechnology Ltd.
+US-DUOP-230168
+
+[![AbbVie Logo](https://www.abbvie.com/content/dam/abbvie-com2/images/abbvie-logo.svg)](https://www.abbvie.com/)
+
+©2021 AbbVie Inc. North Chicago, IL 60064, U.S.A. If you have any questions about AbbVie's Duopa.com website that have not been answered, [contact us](https://www.abbvie.com/contactus.html). This website and the information contained herein is intended for use by US residents only, is provided for informational purposes only and is not intended to replace a discussion with a healthcare provider.

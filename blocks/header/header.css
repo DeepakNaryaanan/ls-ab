@@ -1,6 +1,6 @@
 header {
-  --logo-width: 120px;
-  --logo-height: 40px;
+  --logo-width: 76px;
+  --logo-height: 54px;
   --mega-columns: 4;
   --mobile-header-height: 64px;
 
@@ -12,8 +12,9 @@ header {
   z-index: 1000;
   overflow: hidden;
   max-height: var(--mobile-header-height);
-  background-color: var(--accent-dark, #071d49);
-  color: #fff;
+  background-color: var(--header-bg, #fff);
+  color: var(--header-text, #004877);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
 
   ul {
     margin: 0;
@@ -28,7 +29,9 @@ header {
 
   a {
     text-decoration: none;
-    color: #fff;
+    color: var(--header-text, #004877);
+    font-weight: 700;
+    font-size: 14px;
   }
 
   .btn {
@@ -139,7 +142,7 @@ header {
         font-weight: 700;
         text-decoration: none;
         margin: 0;
-        color: var(--color-brand);
+        color: var(--header-text, #004877);
 
         img {
           height: var(--logo-height);
@@ -177,7 +180,7 @@ header {
     }
 
     > .block-content {
-      border-bottom: 1px solid light-dark(var(--color-gray-200), var(--color-gray-600));
+      border-bottom: 1px solid var(--gray-200, #e8e8e8);
     }
 
     .action-wrapper {
@@ -204,7 +207,7 @@ header {
     }
 
     .main-nav-item {
-      border-bottom: 1px solid light-dark(var(--color-gray-200), var(--color-gray-600));
+      border-bottom: 1px solid var(--gray-200, #e8e8e8);
 
       > * {
         max-width: var(--grid-container-width);
@@ -224,7 +227,7 @@ header {
 
     .is-open {
       .main-nav-link {
-        border-bottom: 1px solid light-dark(var(--color-gray-200), var(--color-gray-600));
+        border-bottom: 1px solid var(--gray-200, #e8e8e8);
       }
 
       .menu,
@@ -245,7 +248,7 @@ header {
     }
 
     .brand-section {
-      border-bottom: 1px solid light-dark(var(--color-gray-200), var(--color-gray-600));
+      border-bottom: 1px solid var(--gray-200, #e8e8e8);
     }
   }
 }
