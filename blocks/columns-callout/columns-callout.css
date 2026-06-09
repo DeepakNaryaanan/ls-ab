@@ -1,33 +1,52 @@
+.columns-callout {
+  background-color: var(--color-blue-callout, #005195);
+  border-radius: var(--border-radius, 5px);
+  padding: 24px 32px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.columns-callout h1,
+.columns-callout h2,
+.columns-callout h3,
+.columns-callout h4,
+.columns-callout h5,
+.columns-callout h6 {
+  color: var(--color-cyan-light, #a1f1ff);
+  font-size: var(--heading-size-s, 22px);
+  margin: 0 0 8px;
+}
+
+.columns-callout p,
+.columns-callout span,
+.columns-callout div {
+  color: #fff;
+  font-size: var(--body-font-size, 18px);
+  line-height: var(--body-line-height, 26px);
+}
+
+.columns-callout a {
+  color: var(--color-cyan-light, #a1f1ff);
+  text-decoration: underline;
+}
+
+.columns-callout a:hover {
+  color: #fff;
+}
+
 .columns-callout > div {
   display: flex;
   flex-direction: column;
-}
-
-.columns-callout img {
-  width: 100%;
-}
-
-.columns-callout > div > div {
-  order: 1;
-}
-
-.columns-callout > div > .columns-callout-img-col {
-  order: 0;
-}
-
-.columns-callout > div > .columns-callout-img-col img {
-  display: block;
+  gap: 8px;
 }
 
 @media (width >= 900px) {
-  .columns-callout > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+  .columns-callout {
+    padding: 32px 48px;
+    text-align: center;
   }
 
-  .columns-callout > div > div {
-    flex: 1;
-    order: unset;
+  .columns-callout > div {
+    align-items: center;
   }
 }

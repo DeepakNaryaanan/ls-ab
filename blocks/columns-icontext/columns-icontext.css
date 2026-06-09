@@ -1,33 +1,52 @@
+.columns-icontext {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .columns-icontext > div {
   display: flex;
-  flex-direction: column;
-}
-
-.columns-icontext img {
-  width: 100%;
-}
-
-.columns-icontext > div > div {
-  order: 1;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 12px 0;
 }
 
 .columns-icontext > div > .columns-icontext-img-col {
-  order: 0;
+  flex: 0 0 48px;
+  max-width: 48px;
 }
 
 .columns-icontext > div > .columns-icontext-img-col img {
   display: block;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.columns-icontext > div > div:not(.columns-icontext-img-col) {
+  flex: 1;
+  font-size: var(--body-font-size, 18px);
+  line-height: var(--body-line-height, 26px);
+  color: var(--text-color, #4a4a4a);
 }
 
 @media (width >= 900px) {
+  .columns-icontext {
+    padding: 30px 40px;
+  }
+
   .columns-icontext > div {
-    align-items: center;
-    flex-direction: unset;
     gap: 24px;
   }
 
-  .columns-icontext > div > div {
-    flex: 1;
-    order: unset;
+  .columns-icontext > div > .columns-icontext-img-col {
+    flex: 0 0 56px;
+    max-width: 56px;
+  }
+
+  .columns-icontext > div > .columns-icontext-img-col img {
+    width: 56px;
+    height: 56px;
   }
 }
