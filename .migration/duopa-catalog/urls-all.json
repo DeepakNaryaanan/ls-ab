@@ -1,0 +1,85 @@
+{
+  "analysis-urls-all": {
+    "captured": "2026-06-08T17:32:18.371Z",
+    "totalUrls": 23,
+    "totalDocuments": 0,
+    "method": "sitemap",
+    "sitemapURL": "/sitemap.pages.xml,/sitemap.documents.xml",
+    "robotsTxtFound": false,
+    "robotsTxtRulesApplied": false,
+    "limitations": "",
+    "confidence": "95%",
+    "urls": [
+      {
+        "url": "https://www.duopa.com"
+      },
+      {
+        "url": "https://www.duopa.com/search-results"
+      },
+      {
+        "url": "https://www.duopa.com/as-parkinsons-advances"
+      },
+      {
+        "url": "https://www.duopa.com/how-duopa-may-help"
+      },
+      {
+        "url": "https://www.duopa.com/how-duopa-works"
+      },
+      {
+        "url": "https://www.duopa.com/duopa-your-day"
+      },
+      {
+        "url": "https://www.duopa.com/resources"
+      },
+      {
+        "url": "https://www.duopa.com/sitemap"
+      },
+      {
+        "url": "https://www.duopa.com/my-duopa-materials"
+      },
+      {
+        "url": "https://www.duopa.com/resources-kern-video-transcript"
+      },
+      {
+        "url": "https://www.duopa.com/resources-paul-video-transcript"
+      },
+      {
+        "url": "https://www.duopa.com/my-duopa-materials-morning-routine-transcript"
+      },
+      {
+        "url": "https://www.duopa.com/my-duopa-materials-evening-routine-transcript"
+      },
+      {
+        "url": "https://www.duopa.com/my-duopa-materials-pump-cassette-care-transcript"
+      },
+      {
+        "url": "https://www.duopa.com/resources-dale-video-transcript"
+      },
+      {
+        "url": "https://www.duopa.com/duopa-share"
+      },
+      {
+        "url": "https://www.duopa.com/education-program"
+      },
+      {
+        "url": "https://www.duopa.com/mentor-program"
+      },
+      {
+        "url": "https://www.duopa.com/advanced-parkinsons"
+      },
+      {
+        "url": "https://www.duopa.com/carrying-case"
+      },
+      {
+        "url": "https://www.duopa.com/patient-stories"
+      },
+      {
+        "url": "https://www.duopa.com/what-is-duopa"
+      },
+      {
+        "url": "https://www.duopa.com/resources-david-video-transcript"
+      }
+    ],
+    "documents": []
+  }
+}

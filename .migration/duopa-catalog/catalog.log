@@ -1,0 +1,88 @@
+2026-06-08 17:32:00 | INFO | Agent 1 Started - URL discovery (trying sitemap first)
+2026-06-08 17:32:00 | INFO | Checking root page for sitemap-like links...
+2026-06-08 17:32:00 | INFO | Found 2 sitemap-like candidate(s) on the root page
+2026-06-08 17:32:00 | INFO | Trying sitemap candidates...
+2026-06-08 17:32:00 | INFO | Trying sitemap candidate: https://www.duopa.com/sitemap.xml
+2026-06-08 17:32:00 | WARNING | HTTP status: 404
+2026-06-08 17:32:00 | INFO | Trying sitemap candidate: https://www.duopa.com/sitemap.xml.gz
+2026-06-08 17:32:00 | WARNING | HTTP status: 404
+2026-06-08 17:32:00 | INFO | Trying sitemap candidate: https://www.duopa.com/sitemap_index.xml
+2026-06-08 17:32:00 | WARNING | HTTP status: 404
+2026-06-08 17:32:00 | INFO | Trying sitemap candidate: https://www.duopa.com/sitemap-index.xml
+2026-06-08 17:32:00 | WARNING | HTTP status: 404
+2026-06-08 17:32:00 | INFO | Trying sitemap candidate: https://www.duopa.com/sitemap.txt
+2026-06-08 17:32:00 | WARNING | Got 200 but not a valid sitemap. Preview: <!DOCTYPE HTML> <html lang="en-US"> <head> <meta http-equiv="content-type" content="text/html; charset=UTF-8"/> <meta charset="utf-8"/> <meta name="viewport" content="width=...
+2026-06-08 17:32:00 | INFO | Trying sitemap candidate: https://www.duopa.com/content/duopa/en-us/sitemap
+2026-06-08 17:32:00 | WARNING | HTTP status: 404
+2026-06-08 17:32:00 | INFO | Trying sitemap candidate: https://www.duopa.com/sitemap
+2026-06-08 17:32:01 | WARNING | Got 200 but not a valid sitemap. Preview: <!DOCTYPE HTML> <html lang="en-US"> <head> <meta http-equiv="content-type" content="text/html; charset=UTF-8"/> <meta charset="utf-8"/> <meta name="viewport" content="width=...
+2026-06-08 17:32:01 | INFO | Checking robots.txt for sitemap references...
+2026-06-08 17:32:01 | INFO | Found 2 sitemap(s) in robots.txt
+2026-06-08 17:32:01 | INFO | Processing 2 unique sitemap(s) from robots.txt...
+2026-06-08 17:32:01 | INFO | [1/2] Fetching sitemap: https://www.duopa.com/sitemap.pages.xml
+2026-06-08 17:32:01 | INFO | Fetched sitemap successfully (urlset)
+2026-06-08 17:32:01 | INFO | [2/2] Fetching sitemap: https://www.duopa.com/sitemap.documents.xml
+2026-06-08 17:32:01 | INFO | Fetched sitemap successfully (urlset)
+2026-06-08 17:32:01 | INFO | Successfully fetched 2 sitemap(s)
+2026-06-08 17:32:01 | INFO | Fetching sitemap for site root: https://www.duopa.com
+2026-06-08 17:32:01 | INFO | Processing 2 sitemap(s)...
+2026-06-08 17:32:01 | INFO | [1/2] Processing sitemap: https://www.duopa.com/sitemap.pages.xml
+2026-06-08 17:32:01 | INFO | Sitemap type: urlset
+2026-06-08 17:32:01 | INFO | Extracted 23 URLs
+2026-06-08 17:32:01 | INFO | [2/2] Processing sitemap: https://www.duopa.com/sitemap.documents.xml
+2026-06-08 17:32:01 | INFO | Sitemap type: urlset
+2026-06-08 17:32:01 | INFO | Extracted 10 URLs
+2026-06-08 17:32:01 | INFO | Filtered 10 non-page asset URLs (images, PDFs, etc.)
+2026-06-08 17:32:01 | INFO | Sitemap fetch complete
+2026-06-08 17:32:01 | INFO | Total sitemaps processed: 2
+2026-06-08 17:32:01 | INFO | Total URLs discovered: 23
+2026-06-08 17:32:01 | INFO | Sitemap location 1: https://www.duopa.com/sitemap.pages.xml
+2026-06-08 17:32:01 | INFO | Sitemap location 2: https://www.duopa.com/sitemap.documents.xml
+2026-06-08 17:32:17 | INFO | Checking root page for sitemap-like links...
+2026-06-08 17:32:17 | INFO | Found 2 sitemap-like candidate(s) on the root page
+2026-06-08 17:32:17 | INFO | Trying sitemap candidates...
+2026-06-08 17:32:17 | INFO | Trying sitemap candidate: https://www.duopa.com/sitemap.xml
+2026-06-08 17:32:17 | WARNING | HTTP status: 404
+2026-06-08 17:32:17 | INFO | Trying sitemap candidate: https://www.duopa.com/sitemap.xml.gz
+2026-06-08 17:32:17 | WARNING | HTTP status: 404
+2026-06-08 17:32:17 | INFO | Trying sitemap candidate: https://www.duopa.com/sitemap_index.xml
+2026-06-08 17:32:17 | WARNING | HTTP status: 404
+2026-06-08 17:32:17 | INFO | Trying sitemap candidate: https://www.duopa.com/sitemap-index.xml
+2026-06-08 17:32:18 | WARNING | HTTP status: 404
+2026-06-08 17:32:18 | INFO | Trying sitemap candidate: https://www.duopa.com/sitemap.txt
+2026-06-08 17:32:18 | WARNING | Got 200 but not a valid sitemap. Preview: <!DOCTYPE HTML> <html lang="en-US"> <head> <meta http-equiv="content-type" content="text/html; charset=UTF-8"/> <meta charset="utf-8"/> <meta name="viewport" content="width=...
+2026-06-08 17:32:18 | INFO | Trying sitemap candidate: https://www.duopa.com/content/duopa/en-us/sitemap
+2026-06-08 17:32:18 | WARNING | HTTP status: 404
+2026-06-08 17:32:18 | INFO | Trying sitemap candidate: https://www.duopa.com/sitemap
+2026-06-08 17:32:18 | WARNING | Got 200 but not a valid sitemap. Preview: <!DOCTYPE HTML> <html lang="en-US"> <head> <meta http-equiv="content-type" content="text/html; charset=UTF-8"/> <meta charset="utf-8"/> <meta name="viewport" content="width=...
+2026-06-08 17:32:18 | INFO | Checking robots.txt for sitemap references...
+2026-06-08 17:32:18 | INFO | Found 2 sitemap(s) in robots.txt
+2026-06-08 17:32:18 | INFO | Processing 2 unique sitemap(s) from robots.txt...
+2026-06-08 17:32:18 | INFO | [1/2] Fetching sitemap: https://www.duopa.com/sitemap.pages.xml
+2026-06-08 17:32:18 | INFO | Fetched sitemap successfully (urlset)
+2026-06-08 17:32:18 | INFO | [2/2] Fetching sitemap: https://www.duopa.com/sitemap.documents.xml
+2026-06-08 17:32:18 | INFO | Fetched sitemap successfully (urlset)
+2026-06-08 17:32:18 | INFO | Successfully fetched 2 sitemap(s)
+2026-06-08 17:32:18 | INFO | Fetching sitemap for site root: https://www.duopa.com
+2026-06-08 17:32:18 | INFO | Processing 2 sitemap(s)...
+2026-06-08 17:32:18 | INFO | [1/2] Processing sitemap: https://www.duopa.com/sitemap.pages.xml
+2026-06-08 17:32:18 | INFO | Sitemap type: urlset
+2026-06-08 17:32:18 | INFO | Extracted 23 URLs
+2026-06-08 17:32:18 | INFO | [2/2] Processing sitemap: https://www.duopa.com/sitemap.documents.xml
+2026-06-08 17:32:18 | INFO | Sitemap type: urlset
+2026-06-08 17:32:18 | INFO | Extracted 10 URLs
+2026-06-08 17:32:18 | INFO | Filtered 10 non-page asset URLs (images, PDFs, etc.)
+2026-06-08 17:32:18 | INFO | Sitemap fetch complete
+2026-06-08 17:32:18 | INFO | Total sitemaps processed: 2
+2026-06-08 17:32:18 | INFO | Total URLs discovered: 23
+2026-06-08 17:32:18 | INFO | Sitemap location 1: https://www.duopa.com/sitemap.pages.xml
+2026-06-08 17:32:18 | INFO | Sitemap location 2: https://www.duopa.com/sitemap.documents.xml
+2026-06-08 17:32:32 | INFO | Agent 2 Started - Group URLs by pattern
+2026-06-08 17:33:14 | INFO | Creating sample URLs...
+2026-06-08 17:33:14 | INFO | Total URLs in grouped data: 23
+2026-06-08 17:33:14 | INFO | Total URLs (23) <= 1000, using ALL URLs
+2026-06-08 17:33:14 | INFO | Created urls-sample.json with 23 URLs
+2026-06-08 17:33:14 | INFO | Validating urls-sample.json against schema...
+✅ VALIDATION PASSED: urls-sample.json matches schema
+2026-06-08 17:33:14 | INFO | Schema validation passed
+2026-06-08 17:33:14 | INFO | Sample creation complete - urls-sample.json with 23 URLs

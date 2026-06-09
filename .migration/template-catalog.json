@@ -1,0 +1,119 @@
+{
+  "templates": [
+    {
+      "name": "homepage",
+      "representativePages": [
+        "https://www.duopa.com"
+      ],
+      "urls": [
+        "https://www.duopa.com"
+      ],
+      "description": "Landing page with hero section and content blocks"
+    },
+    {
+      "name": "disease-education",
+      "representativePages": [
+        "https://www.duopa.com/advanced-parkinsons"
+      ],
+      "urls": [
+        "https://www.duopa.com/advanced-parkinsons",
+        "https://www.duopa.com/as-parkinsons-advances"
+      ],
+      "description": "Disease information page with section navigation and multi-block content layout"
+    },
+    {
+      "name": "product-detail",
+      "representativePages": [
+        "https://www.duopa.com/carrying-case",
+        "https://www.duopa.com/resources"
+      ],
+      "urls": [
+        "https://www.duopa.com/carrying-case",
+        "https://www.duopa.com/duopa-your-day",
+        "https://www.duopa.com/how-duopa-works",
+        "https://www.duopa.com/resources"
+      ],
+      "description": "Product feature page with hero banner, section navigation, columns, and carousel"
+    },
+    {
+      "name": "form-page",
+      "representativePages": [
+        "https://www.duopa.com/duopa-share"
+      ],
+      "urls": [
+        "https://www.duopa.com/duopa-share"
+      ],
+      "description": "Single-block form page for patient engagement and sign-up"
+    },
+    {
+      "name": "program-signup",
+      "representativePages": [
+        "https://www.duopa.com/education-program"
+      ],
+      "urls": [
+        "https://www.duopa.com/education-program"
+      ],
+      "description": "Single-block page for program enrollment with minimal layout"
+    },
+    {
+      "name": "content-detail",
+      "representativePages": [
+        "https://www.duopa.com/how-duopa-may-help",
+        "https://www.duopa.com/patient-stories"
+      ],
+      "urls": [
+        "https://www.duopa.com/how-duopa-may-help",
+        "https://www.duopa.com/patient-stories",
+        "https://www.duopa.com/resources-paul-video-transcript",
+        "https://www.duopa.com/what-is-duopa"
+      ],
+      "description": "Content page with hero, video or media section, and supporting content blocks"
+    },
+    {
+      "name": "mentor-program",
+      "representativePages": [
+        "https://www.duopa.com/mentor-program"
+      ],
+      "urls": [
+        "https://www.duopa.com/mentor-program"
+      ],
+      "description": "Two-block page with program information and enrollment form"
+    },
+    {
+      "name": "materials-hub",
+      "representativePages": [
+        "https://www.duopa.com/my-duopa-materials"
+      ],
+      "urls": [
+        "https://www.duopa.com/my-duopa-materials"
+      ],
+      "description": "Multi-block resource hub page with section navigation and video content"
+    },
+    {
+      "name": "video-transcript",
+      "representativePages": [
+        "https://www.duopa.com/my-duopa-materials-evening-routine-transcript"
+      ],
+      "urls": [
+        "https://www.duopa.com/my-duopa-materials-evening-routine-transcript",
+        "https://www.duopa.com/my-duopa-materials-morning-routine-transcript",
+        "https://www.duopa.com/my-duopa-materials-pump-cassette-care-transcript",
+        "https://www.duopa.com/resources-dale-video-transcript",
+        "https://www.duopa.com/resources-david-video-transcript",
+        "https://www.duopa.com/resources-kern-video-transcript",
+        "https://www.duopa.com/sitemap"
+      ],
+      "description": "Minimal text-only page for video transcript content with no block components"
+    },
+    {
+      "name": "search-results",
+      "representativePages": [
+        "https://www.duopa.com/search-results"
+      ],
+      "urls": [
+        "https://www.duopa.com/search-results"
+      ],
+      "description": "Single-block page with search functionality and results display"
+    }
+  ]
+}

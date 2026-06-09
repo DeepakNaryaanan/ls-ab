@@ -1,0 +1,44 @@
+{
+  "analysis-urls-grouped": {
+    "captured": "2026-06-08T17:33:00.000Z",
+    "urlGroupings": 2,
+    "locales": {
+      "en": 23
+    },
+    "groups": {
+      "/": {
+        "confidence": "100%",
+        "urls": [
+          { "url": "https://www.duopa.com" }
+        ]
+      },
+      "unknown": {
+        "confidence": "50%",
+        "urls": [
+          { "url": "https://www.duopa.com/search-results", "pattern": "utility" },
+          { "url": "https://www.duopa.com/as-parkinsons-advances", "pattern": "patient-education" },
+          { "url": "https://www.duopa.com/how-duopa-may-help", "pattern": "product-info" },
+          { "url": "https://www.duopa.com/how-duopa-works", "pattern": "product-info" },
+          { "url": "https://www.duopa.com/duopa-your-day", "pattern": "product-info" },
+          { "url": "https://www.duopa.com/resources", "pattern": "resource" },
+          { "url": "https://www.duopa.com/sitemap", "pattern": "utility" },
+          { "url": "https://www.duopa.com/my-duopa-materials", "pattern": "resource" },
+          { "url": "https://www.duopa.com/resources-kern-video-transcript", "pattern": "video-transcript" },
+          { "url": "https://www.duopa.com/resources-paul-video-transcript", "pattern": "video-transcript" },
+          { "url": "https://www.duopa.com/my-duopa-materials-morning-routine-transcript", "pattern": "video-transcript" },
+          { "url": "https://www.duopa.com/my-duopa-materials-evening-routine-transcript", "pattern": "video-transcript" },
+          { "url": "https://www.duopa.com/my-duopa-materials-pump-cassette-care-transcript", "pattern": "video-transcript" },
+          { "url": "https://www.duopa.com/resources-dale-video-transcript", "pattern": "video-transcript" },
+          { "url": "https://www.duopa.com/duopa-share", "pattern": "patient-engagement" },
+          { "url": "https://www.duopa.com/education-program", "pattern": "patient-engagement" },
+          { "url": "https://www.duopa.com/mentor-program", "pattern": "patient-engagement" },
+          { "url": "https://www.duopa.com/advanced-parkinsons", "pattern": "patient-education" },
+          { "url": "https://www.duopa.com/carrying-case", "pattern": "product-info" },
+          { "url": "https://www.duopa.com/patient-stories", "pattern": "patient-engagement" },
+          { "url": "https://www.duopa.com/what-is-duopa", "pattern": "product-info" },
+          { "url": "https://www.duopa.com/resources-david-video-transcript", "pattern": "video-transcript" }
+        ]
+      }
+    }
+  }
+}
